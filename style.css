@@ -1,6 +1,25 @@
+:root {
+  --dots-color: #fff;
+}
+
 @font-face {
   font-family: Poppins;
   src: url(/assets/Poppins\ Font/Poppins-Light.ttf);
+}
+
+@font-face {
+  font-family: PoppinsB;
+  src: url(/assets/Poppins\ Font/Poppins-Bold.ttf);
+}
+
+@font-face {
+  font-family: PoppinsR;
+  src: url(/assets/Poppins\ Font/Poppins-Regular.ttf);
+}
+
+@font-face {
+  font-family: PoppinsM;
+  src: url(/assets/Poppins\ Font/Poppins-Medium.ttf);
 }
 
 body {
@@ -13,27 +32,26 @@ body {
 
 h3 {
   position: absolute;
-  top: 21px;
-  left: 30px;
+  top: 40px;
+  left: 84px;
   color: white;
 }
 
 .navbar {
-  width: 450px;
-  height: 50px;
+  width: 771px;
+  height: 80px;
   border-radius: 100px;
   margin: 40px auto;
-  background-color: #333;
+  background-color: #1f2125;
 }
 
 .navbar ul {
-  padding: 7px;
-  height: 50px;
+  height: 80px;
 }
 
 .navbar ul li {
-  padding: 0px 11px;
-  font-size: 0.8rem;
+  padding: 24px 39px;
+  font-size: 16px;
   list-style-type: none;
   float: left;
   color: white;
@@ -52,69 +70,171 @@ h3 {
 }
 
 .navbar ul li a:hover {
-  background-color: black;
+  background-color: #ffbf61;
 }
 
-.content {
+.btn-login {
+  position: absolute;
+  height: 58px;
+  width: 120px;
+  background-color: #ffbf61;
+  right: 100px;
+  top: 50px;
+  border-radius: 100px;
+  text-align: center;
+  line-height: 58px;
+  color: black;
+  text-decoration: none;
+  font-size: 20px;
+  font-family: PoppinsR;
+}
+
+.container-content {
+  margin-top: 100pxpx;
   display: grid;
-  grid-template-rows: 100px 100px 100px 100px;
-  grid-template-columns: 1fr 200px 1fr;
-  gap: 20px;
+  grid-template-columns: 50% auto;
+  /* grid-template-rows: 1000px; */
 }
 
-.judul-ctn {
-  font-size: 1.9rem;
-  grid-row: 1;
-  grid-column: 2;
-  justify-self: center;
-  align-self: center;
+.text {
+  grid-column-start: 1;
+  place-self: center;
+  /* position: relative;
+  bottom: 100px; */
 }
 
-.left {
-  height: 287px;
-  width: 287px;
+.Kebudayaan {
+  color: #9a9a9a;
+  font-family: PoppinsB;
+  font-size: 80px;
+  line-height: 60%;
+}
+
+.Kabupaten {
+  color: #9a9a9a;
+  font-family: Poppins;
+  font-size: 100px;
+  line-height: 60%;
+}
+
+.Tegal {
+  color: #9a9a9a;
+  font-family: PoppinsB;
+  font-size: 130px;
+  line-height: 60%;
+}
+
+.eksplore-budaya {
+  width: 360px;
+  height: 80px;
+  background-color: #ffbf61;
   border-radius: 20px;
-  grid-row: 2 / span 3;
-  grid-column: 1;
-  justify-self: end;
-  border: 2px solid #878787;
-  background-color: #333;
+  margin-top: 90px;
 }
 
-.mid {
-  height: 97px;
-  width: 97px;
+.eksplore-budaya a {
+  color: black;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+/* .image-slide {
+  height: 827px;
+  width: 686px;
   border-radius: 20px;
-  background-color: #333;
-}
-
-.mid1 {
-  grid-column: 2;
-  grid-row: 2;
-}
-
-.mid2 {
-  grid-column: 2;
-  grid-row: 3;
-}
-
-.mid3 {
-  grid-column: 2;
-  grid-row: 4;
-}
-
-.box-p {
+  background-color: #9a9a9a;
+  grid-column-start: 2;
   position: relative;
-  bottom: 20px;
-  right: 50px;
-  width: 400px;
-  font-size: 1.1em;
-  grid-column: 3;
-  grid-row: 2;
+  top: 80px;
+  background-image: url(/assets/Images/GamelanHead.png);
+} */
+
+.container-kebudayaan {
+  margin-top: 200px;
+}
+
+.Kebudayaan2 {
+  color: #9a9a9a;
+  font-size: 80px;
+  font-family: PoppinsB;
+  text-align: center;
 }
 
 @media only screen and (max-width: 600px) {
+}
+
+@media only screen and (max-width: 1000px) {
+}
+
+@media only screen and (max-width: 900px) {
   h3 {
     display: none;
   }
+
+  /* .judul-ctn {
+    display: none;
+  } */
+}
+.gallery {
+  /* User transform:scale to resize the gallery (desktop screen) */
+  transform: scale(0.6);
+  /* padding: 2rem; */
+  grid-column-start: 2;
+  place-self: center;
+}
+
+.slider-wrapper {
+  position: relative;
+  max-width: 85%;
+  margin: 0 auto;
+  top: -100px;
+  right: 200px;
+}
+
+.slider {
+  display: flex;
+  /* aspect-ratio: 9/16; */
+  overflow-x: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+  border-radius: 0.5rem;
+}
+
+.slider img {
+  flex: 1 0 100%;
+  scroll-snap-align: start;
+  object-fit: cover;
+  width: 300px;
+  /* height: auto; */
+}
+
+.dots {
+  display: flex;
+  column-gap: 1rem;
+  position: absolute;
+  bottom: 3.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.dots a {
+  /* Use transform:scale to resize the dots navbar (desktop screen) */
+  transform: scale(1);
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background-color: var(--dots-color);
+  opacity: 0.75;
+  transition: opacity ease 250ms;
+}
+
+/* Animation: the dot will be clearer when mouse-hover */
+.dots a:hover {
+  opacity: 1;
+}
+/* Animation: the dot will be bigger when clicked */
+.dots a:active {
+  transform: scale(1.2);
 }
