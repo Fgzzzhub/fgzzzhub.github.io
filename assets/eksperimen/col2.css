@@ -1,0 +1,101 @@
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100%;
+  background-color: aqua;
+  display: flex;
+  flex-direction: row;
+}
+
+.col1 {
+  width: 50%;
+  height: auto;
+  background-color: blue;
+}
+
+h1 {
+}
+
+.text {
+  padding: 100px 300px;
+  align-items: center;
+  justify-content: center;
+}
+
+.col2 {
+  width: 50%;
+  height: auto;
+  background-color: red;
+}
+
+.gallery {
+  /* User transform:scale to resize the gallery (desktop screen) */
+  margin-top: -30px;
+  transform: scale(0.6);
+  /* padding: 2rem; */
+  grid-column-start: 2;
+  place-self: center;
+}
+
+.slider-wrapper {
+  position: relative;
+  max-width: 85%;
+  margin: 0 auto;
+  top: -100px;
+  right: 200px;
+}
+
+.slider {
+  display: flex;
+  /* aspect-ratio: 9/16; */
+  overflow-x: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+  border-radius: 0.5rem;
+}
+
+.slider img {
+  flex: 1 0 100%;
+  scroll-snap-align: start;
+  object-fit: cover;
+  width: 300px;
+  /* height: auto; */
+}
+
+.dots {
+  display: flex;
+  column-gap: 1rem;
+  position: absolute;
+  bottom: 3.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.dots a {
+  /* Use transform:scale to resize the dots navbar (desktop screen) */
+  transform: scale(1);
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background-color: white;
+  opacity: 0.75;
+  transition: opacity ease 250ms;
+}
+
+/* Animation: the dot will be clearer when mouse-hover */
+.dots a:hover {
+  opacity: 1;
+}
+/* Animation: the dot will be bigger when clicked */
+.dots a:active {
+  transform: scale(1.2);
+}
