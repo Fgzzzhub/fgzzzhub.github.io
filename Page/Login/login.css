@@ -53,3 +53,18 @@ label {
   margin-left: 20%;
   margin-bottom: 5px;
 }
+
+.facebook,
+.google {
+  width: 270px;
+  height: 50px;
+  background-color: #1f2125;
+  border: 2px solid #9a9a9a;
+  margin: 0 auto;
+  border-radius: 6px;
+  text-align: center;
+  line-height: 50px;
+  color: #9a9a9a;
+  font-family: PoppinsS;
+  margin-bottom: 20px;
+}
