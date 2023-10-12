@@ -111,7 +111,7 @@ h3 {
 }
 
 .image1 {
-  width: 50vw;
+  width: 100%;
   margin: 0 auto;
   height: 380px;
   background-color: #333;
@@ -141,4 +141,10 @@ h3 {
   height: 779px;
   background-color: #333;
   margin-top: 47px;
+}
+
+@media only screen and (max-width: 1430px) {
+  .content {
+    width: 70vw;
+  }
 }

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="kelas.css" />
+    <title>Kelas Online</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Navbar -->
+      <header class="container-navbar">
+        <div class="navbar">
+          <ul>
+            <li><a href="">Menu 1</a></li>
+            <li><a href="">Menu 2</a></li>
+            <li><a href="">Menu 3</a></li>
+            <li><a href="">Menu 4</a></li>
+            <li><a href="">Menu 5</a></li>
+          </ul>
+        </div>
+      </header>
+      <!-- Navbar End -->
+
+      <!-- Card Content -->
+      <div class="content">
+        <h1 class="title">KELAS ONLINE</h1>
+        <!-- Search Start -->
+        <div class="searchEngine">
+          <input id="searchbar" onkeyup="search()" type="text" name="search" placeholder="Search..." style="color: white" />
+          <!-- Search End -->
+          <!-- DropDown -->
+          <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">Semua</button>
+            <div id="myDropdown" class="dropdown-content">
+              <a href="#card3">Seni Tari</a>
+              <a href="#">Seni Kerajinan</a>
+              <a href="#">Seni Musik</a>
+            </div>
+          </div>
+        </div>
+        <!-- Dropdown End -->
+
+        <div class="card card1">
+          <div class="img img1"></div>
+          <div class="title-card">
+            <h1>KARAWITAN</h1>
+            <p class="fill">Sanggar Satria Laras, Sanggar Arjuna Laras Ki Carito</p>
+          </div>
+          <p class="explanation">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia a aliquid corrupti perferendis neque. Molestias voluptatum nulla distinctio commodi veritatis.</p>
+          <button class="sign-in"><a href="">Daftar</a></button>
+        </div>
+        <div class="card card2">
+          <div class="img img2"></div>
+          <div class="title-card">
+            <h1>WAYANG KULIT</h1>
+            <p class="fill">Sanggar Satria Laras, Sanggar Arjuna Laras Ki Carito</p>
+          </div>
+          <p class="explanation">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia a aliquid corrupti perferendis neque. Molestias voluptatum nulla distinctio commodi veritatis.</p>
+          <button class="sign-in"><a href="">Daftar</a></button>
+        </div>
+        <div class="card" id="card3">
+          <div class="img img3"></div>
+          <div class="title-card">
+            <h1>TARI ENDEL</h1>
+            <p class="fill">Sanggar Tari Perwitasari, Sanggar Sekar Arum, Sanggar Seni Sarwi Retno Budaya</p>
+          </div>
+          <p class="explanation">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia a aliquid corrupti perferendis neque. Molestias voluptatum nulla distinctio commodi veritatis.</p>
+          <button class="sign-in"><a href="">Daftar</a></button>
+        </div>
+        <div class="card card4">
+          <div class="img img4"></div>
+          <div class="title-card">
+            <h1>BATIK</h1>
+            <p class="fill">Sanggar Kegiatan Belajar (SKB KOTA TEGAL),Sanggar Putik'99</p>
+          </div>
+          <p class="explanation">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia a aliquid corrupti perferendis neque. Molestias voluptatum nulla distinctio commodi veritatis.</p>
+          <button class="sign-in"><a href="">Daftar</a></button>
+        </div>
+      </div>
+      <!-- Card Content End -->
+    </div>
+    <script src="kelas.js"></script>
+  </body>
+</html>

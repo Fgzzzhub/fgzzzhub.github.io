@@ -539,7 +539,7 @@ h3 {
     grid-template-rows: 90px 120px auto;
   }
 
-  .card-kebudayaan .jdl {
+  .card-kebudayaan .title-card {
     font-size: 35px;
     padding-left: 90px;
   }
@@ -639,4 +639,90 @@ h3 {
     min-height: 700px;
     min-width: 550px;
   }
+}
+
+/* Animation Text */
+
+@keyframes title {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes kebudayaan {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.title {
+  animation: title 1.5s;
+}
+
+.gallery {
+  animation: slide 1.5s;
+}
+/* .container-content .animate {
+  transition: 1s;
+}
+
+.title.animate {
+  transform: translateX(100%);
+  filter: blur(5px);
+}
+
+.title.show-animate {
+  transform: translateX(0);
+  filter: blur(0);
+}
+
+.gallery.animate {
+  transform: translateX(-100%);
+  filter: blur(5px);
+}
+
+.gallery.show-animate {
+  transform: translateX(0);
+  filter: blur(0);
+} */
+
+.container-kebudayaan-two .animate {
+  transition: 1s;
+}
+
+.card-kebudayaan.animate {
+  transform: translateX(100%);
+  filter: blur(5px);
+  overflow: hidden;
+}
+
+.card-kebudayaan:nth-child(3).animate {
+  transform: translateX(-100%);
+  filter: blur(5px);
+  overflow: hidden;
+}
+
+.card-kebudayaan:nth-child(3).show-animate {
+  transform: translateX(0);
+  filter: blur(0);
+}
+
+.card-kebudayaan.show-animate {
+  transform: translateX(0);
+  filter: blur(0);
 }

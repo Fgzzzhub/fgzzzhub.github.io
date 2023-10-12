@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      .dropbtn {
+        background-color: #1f2125;
+        color: white;
+        padding: 16px;
+        font-size: 30px;
+        border: none;
+        cursor: pointer;
+        border-radius: 20px;
+        width: 300px;
+        height: 80px;
+        margin-bottom: 10px;
+      }
+
+      .dropbtn:hover,
+      .dropbtn:focus {
+        background-color: #222;
+      }
+
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #222;
+        min-width: 300px;
+        border-radius: 20px;
+        overflow: auto;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+      }
+
+      .dropdown-content a {
+        color: white;
+        text-align: center;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        transition: 0.6s;
+      }
+
+      .dropdown a:hover {
+        background-color: black;
+      }
+
+      .show {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="dropdown">
+      <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+      <div id="myDropdown" class="dropdown-content">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+
+    <script>
+      function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+      }
+
+      // Close the dropdown if the user clicks outside of it
+      window.onclick = function (event) {
+        if (!event.target.matches(".dropbtn")) {
+          var dropdowns = document.getElementsByClassName("dropdown-content");
+          var i;
+          for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains("show")) {
+              openDropdown.classList.remove("show");
+            }
+          }
+        }
+      };
+    </script>
+  </body>
+</html>

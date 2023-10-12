@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <link rel="stylesheet" href="signIn.css">
+</head>
+<body>
+    <div class="container">
+        <div class="imageBg"></div>
+        <div class="formDaftar" style="width: 50%;">
+            <div class="top" style="display: flex; justify-content: space-around;">
+                <p >Masuk</p>
+                <p style= "color: #FFBF61;">Daftar</p>
+            </div>
+            <hr>
+                <form action="proses_daftar.php" method="POST" style="display: flex; justify-content: center; flex-direction: column;">
+                    <label for="nama" style="margin-top: 20px;">Nama*</label>
+                    <input type="text" id="nama" name="nama" placeholder="Masukan Nama" required>
+            
+                    <label for="email">Email*</label>
+                    <input type="email" id="email" name="email" placeholder="Masukan Email" required>
+            
+                    <label for="nomor_hp">Nomor HP*</label>
+                    <input type="tel" id="nomor_hp" name="nomor_hp" placeholder="Masukan No. HP" required>
+            
+                    <label for="kata_sandi">Kata Sandi*</label>
+                    <input type="password" id="kata_sandi" name="kata_sandi" placeholder="Masukan Kata Sandi" required>
+            
+                    <label for="konfirmasi_kata_sandi">Konfirmasi Kata Sandi*</label>
+                    <input type="password" id="konfirmasi_kata_sandi" name="konfirmasi_kata_sandi" placeholder="Konfirmasi Kata Sandi" required>
+            
+                    <input type="submit" value="Daftar" style="background-color: #FFBF61; color: white; height: 60px; border-radius: 6px; margin-bottom: 10px;">
+                </form>
+                <hr>
+                <P style="text-align: center;">Sudah punya akun? Silahkan <a href="#" style="text-decoration: none; color: #FFBF61;">Masuk</a></P>
+            </body>
+            </html>
+            
+        </div>
+    </div>
+</body>
+</html>
