@@ -4,28 +4,29 @@
 
 @font-face {
   font-family: Poppins;
-  src: url(/assets/Poppins\ Font/Poppins-Light.ttf);
+  src: url(/Wdc-Harber/assets/Poppins\ Font/Poppins-Light.ttf);
 }
 
 @font-face {
   font-family: PoppinsB;
-  src: url(/assets/Poppins\ Font/Poppins-Bold.ttf);
+  src: url(/Wdc-Harber/assets/Poppins\ Font/Poppins-Bold.ttf);
 }
 
 @font-face {
   font-family: PoppinsR;
-  src: url(/assets/Poppins\ Font/Poppins-Regular.ttf);
+  src: url(/Wdc-Harber/assets/Poppins\ Font/Poppins-Regular.ttf);
 }
 
 @font-face {
   font-family: PoppinsM;
-  src: url(/assets/Poppins\ Font/Poppins-Medium.ttf);
+  src: url(/Wdc-Harber/assets/Poppins\ Font/Poppins-Medium.ttf);
 }
 
 @font-face {
   font-family: PoppinsS;
-  src: url(/assets/Poppins\ Font/Poppins-SemiBold.ttf);
+  src: url(/Wdc-Harber/assets/Poppins\ Font/Poppins-SemiBold.ttf);
 }
+
 
 body {
   margin: 0;
@@ -48,8 +49,8 @@ body {
 }
 
 .navbar {
-  width: 771px;
-  height: 80px;
+  width: 700px;
+  height: 70px;
   border-radius: 100px;
   background-color: #1f2125;
 }
@@ -58,28 +59,33 @@ body {
   height: 80px;
   display: flex;
   width: 100%;
+  margin: 0;
 }
 
 .navbar ul li {
-  padding: 5px 40px;
+  padding:0 40px;
   font-size: 16px;
   list-style-type: none;
   color: white;
+  margin-left: 2%;
+  margin-top: 10px;
+  height: 50px;
+  border-radius: 100px;
+  transition: 0.5s;
 }
 
 .navbar ul li a {
   display: block;
   text-align: center;
   text-decoration: none;
-  line-height: 35px;
-  height: 35px;
-  width: 64px;
+  line-height: 50px;
+  height: 50px;
+  width: auto;
   border-radius: 100px;
-  transition: 0.5s;
   color: white;
 }
 
-.navbar ul li a:hover {
+.navbar ul li:hover {
   background-color: #ffbf61;
 }
 
@@ -153,18 +159,24 @@ body {
 }
 
 .img1 {
-  background-image: url(/assets/Images/KelasOnline/Karawitan.png);
+  background-image: url(/Wdc-Harber/assets/images/KelasOnline/Karawitan.png);
 }
 
 .img2 {
-  background-image: url(/assets/Images/KelasOnline/Wayang.png);
+  background-image: url(/Wdc-Harber/assets/images/KelasOnline/Wayang.png);
 }
 
 .img3 {
-  background-image: url(/assets/Images/KelasOnline/TariEndel.png);
+  background-image: url(/Wdc-Harber/assets/images/KelasOnline/TariEndel.png);
+}
+
+.feature {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
 }
 
 .dropbtn {
+  place-items: center;
   background-color: #1f2125;
   color: white;
   font-family: PoppinsR;
@@ -176,7 +188,7 @@ body {
   border-radius: 20px;
   width: 250px;
   margin-top: 10px;
-  margin-left: 15%;
+  grid-column-start: 3;
 }
 
 .dropbtn:hover,
@@ -185,13 +197,15 @@ body {
 }
 
 .dropdown {
+  justify-self: center;
+  align-self: center;
   position: relative;
   display: inline-block;
 }
 
 .dropdown-content {
   margin-top: 10px;
-  margin-left: 15%;
+  margin-right: 15%;
   display: none;
   position: absolute;
   background-color: #1f2125;
@@ -220,7 +234,9 @@ body {
 }
 
 #searchbar {
-  margin-left: 15%;
+  justify-self: center;
+  align-self: center;
+  grid-column-start: 1;
   padding: 15px;
   border-radius: 20px;
   background-color: #1f2125;

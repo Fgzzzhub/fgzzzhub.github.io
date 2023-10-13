@@ -8,22 +8,22 @@
 
 @font-face {
   font-family: Poppins;
-  src: url(/assets/Poppins\ Font/Poppins-Light.ttf);
+  src: url(/Wdc-Harber/assets/Poppins\ Font/Poppins-Light.ttf);
 }
 
 @font-face {
   font-family: PoppinsB;
-  src: url(/assets/Poppins\ Font/Poppins-Bold.ttf);
+  src: url(/Wdc-Harber/assets/Poppins\ Font/Poppins-Bold.ttf);
 }
 
 @font-face {
   font-family: PoppinsR;
-  src: url(/assets/Poppins\ Font/Poppins-Regular.ttf);
+  src: url(/Wdc-Harber/assets/Poppins\ Font/Poppins-Regular.ttf);
 }
 
 @font-face {
   font-family: PoppinsM;
-  src: url(/assets/Poppins\ Font/Poppins-Medium.ttf);
+  src: url(/Wdc-Harber/assets/Poppins\ Font/Poppins-Medium.ttf);
 }
 
 body {
@@ -51,8 +51,8 @@ h3 {
 }
 
 .navbar {
-  width: 771px;
-  height: 80px;
+  width: 700px;
+  height: 70px;
   border-radius: 100px;
   background-color: #1f2125;
 }
@@ -61,28 +61,33 @@ h3 {
   height: 80px;
   display: flex;
   width: 100%;
+  margin: 0;
 }
 
 .navbar ul li {
-  padding: 5px 40px;
+  padding:0 40px;
   font-size: 16px;
   list-style-type: none;
   color: white;
+  margin-left: 2%;
+  margin-top: 10px;
+  height: 50px;
+  border-radius: 100px;
+  transition: 0.5s;
 }
 
 .navbar ul li a {
   display: block;
   text-align: center;
   text-decoration: none;
-  line-height: 35px;
-  height: 35px;
-  width: 64px;
+  line-height: 50px;
+  height: 50px;
+  width: auto;
   border-radius: 100px;
-  transition: 0.5s;
   color: white;
 }
 
-.navbar ul li a:hover {
+.navbar ul li:hover {
   background-color: #ffbf61;
 }
 
@@ -246,31 +251,31 @@ h3 {
 }
 
 .card:nth-child(1) {
-  background-image: url(/assets/Images/Frame\ 17.png);
+  background-image: url(/Wdc-Harber/assets/images/Frame\ 17.png);
 }
 
 .card:nth-child(2) {
-  background-image: url(/assets/Images/Frame\ 18.png);
+  background-image: url(/Wdc-Harber/assets/images/Frame\ 18.png);
 }
 
 .card:nth-child(3) {
-  background-image: url(/assets/Images/Frame\ 17.png);
+  background-image: url(/Wdc-Harber/assets/images/Frame\ 17.png);
 }
 
 .card:nth-child(4) {
-  background-image: url(/assets/Images/Frame\ 18.png);
+  background-image: url(/Wdc-Harber/assets/images/Frame\ 18.png);
 }
 
 .card:nth-child(5) {
-  background-image: url(/assets/Images/Frame\ 17.png);
+  background-image: url(/Wdc-Harber/assets/images/Frame\ 17.png);
 }
 
 .card:nth-child(6) {
-  background-image: url(/assets/Images/Frame\ 18.png);
+  background-image: url(/Wdc-Harber/assets/images/Frame\ 18.png);
 }
 
 .card:nth-child(7) {
-  background-image: url(/assets/Images/Frame\ 17.png);
+  background-image: url(/Wdc-Harber/assets/images/Frame\ 17.png);
 }
 
 .container-kebudayaan-two {
@@ -576,11 +581,6 @@ h3 {
 
   .navbar ul {
     height: 70px;
-  }
-
-  .navbar ul li {
-    padding: 5px 30px;
-    font-size: 14px;
   }
 
   .btn-login {
