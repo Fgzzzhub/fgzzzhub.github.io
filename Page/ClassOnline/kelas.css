@@ -4,29 +4,28 @@
 
 @font-face {
   font-family: Poppins;
-  src: url(/Wdc-Harber/assets/Poppins\ Font/Poppins-Light.ttf);
+  src: url(/assets/Poppins\ Font/Poppins-Light.ttf);
 }
 
 @font-face {
   font-family: PoppinsB;
-  src: url(/Wdc-Harber/assets/Poppins\ Font/Poppins-Bold.ttf);
+  src: url(/assets/Poppins\ Font/Poppins-Bold.ttf);
 }
 
 @font-face {
   font-family: PoppinsR;
-  src: url(/Wdc-Harber/assets/Poppins\ Font/Poppins-Regular.ttf);
+  src: url(/assets/Poppins\ Font/Poppins-Regular.ttf);
 }
 
 @font-face {
   font-family: PoppinsM;
-  src: url(/Wdc-Harber/assets/Poppins\ Font/Poppins-Medium.ttf);
+  src: url(/assets/Poppins\ Font/Poppins-Medium.ttf);
 }
 
 @font-face {
   font-family: PoppinsS;
-  src: url(/Wdc-Harber/assets/Poppins\ Font/Poppins-SemiBold.ttf);
+  src: url(/assets/Poppins\ Font/Poppins-SemiBold.ttf);
 }
-
 
 body {
   margin: 0;
@@ -63,7 +62,7 @@ body {
 }
 
 .navbar ul li {
-  padding:0 40px;
+  padding: 0 40px;
   font-size: 16px;
   list-style-type: none;
   color: white;
@@ -159,20 +158,20 @@ body {
 }
 
 .img1 {
-  background-image: url(/Wdc-Harber/assets/images/KelasOnline/Karawitan.png);
+  background-image: url(/assets/images/KelasOnline/Karawitan.png);
 }
 
 .img2 {
-  background-image: url(/Wdc-Harber/assets/images/KelasOnline/Wayang.png);
+  background-image: url(/assets/images/KelasOnline/Wayang.png);
 }
 
 .img3 {
-  background-image: url(/Wdc-Harber/assets/images/KelasOnline/TariEndel.png);
+  background-image: url(/assets/images/KelasOnline/TariEndel.png);
 }
 
 .feature {
   display: grid;
-  grid-template-columns: repeat(2,1fr);
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .dropbtn {
@@ -257,5 +256,6 @@ input[type="text"]:focus {
 
 .searchEngine {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-around;
 }

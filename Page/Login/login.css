@@ -16,6 +16,15 @@ body {
   color: white;
 }
 
+@keyframes login {
+  0% {
+    filter: blur(5px);
+  }
+  100% {
+    filter: blur(0);
+  }
+}
+
 .container {
   width: 90%;
   height: 800px;
@@ -23,6 +32,7 @@ body {
   margin: 2% auto;
   border-radius: 20px;
   display: flex;
+  animation: login 2s;
 }
 
 .imageBg {

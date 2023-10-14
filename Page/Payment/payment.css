@@ -1,0 +1,277 @@
+* {
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: Poppins;
+  src: url(/assets/Poppins\ Font/Poppins-Light.ttf);
+}
+
+@font-face {
+  font-family: PoppinsB;
+  src: url(/assets/Poppins\ Font/Poppins-Bold.ttf);
+}
+
+@font-face {
+  font-family: PoppinsR;
+  src: url(/assets/Poppins\ Font/Poppins-Regular.ttf);
+}
+
+@font-face {
+  font-family: PoppinsM;
+  src: url(/assets/Poppins\ Font/Poppins-Medium.ttf);
+}
+
+@font-face {
+  font-family: PoppinsS;
+  src: url(/assets/Poppins\ Font/Poppins-SemiBold.ttf);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Poppins;
+  background-color: black;
+  color: white;
+}
+
+.container {
+  width: 100vw;
+}
+
+.container-navbar {
+  display: flex;
+  width: 100vw;
+  height: 150px;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.navbar {
+  width: 700px;
+  height: 70px;
+  border-radius: 100px;
+  background-color: #1f2125;
+}
+
+.navbar ul {
+  height: 80px;
+  display: flex;
+  width: 100%;
+  margin: 0;
+}
+
+.navbar ul li {
+  padding: 0 40px;
+  font-size: 16px;
+  list-style-type: none;
+  color: white;
+  margin-left: 2%;
+  margin-top: 10px;
+  height: 50px;
+  border-radius: 100px;
+  transition: 0.5s;
+}
+
+.navbar ul li a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  line-height: 50px;
+  height: 50px;
+  width: auto;
+  border-radius: 100px;
+  color: white;
+}
+
+.navbar ul li:hover {
+  background-color: #ffbf61;
+}
+
+.container-content {
+  width: 80%;
+  height: 800px;
+  margin: 200px auto;
+  display: grid;
+  grid-template-columns: 47% auto;
+  grid-template-rows: 50% auto;
+  gap: 50px;
+}
+
+.Ruwat {
+  align-self: start;
+  justify-self: end;
+}
+
+.title-content {
+  font-family: PoppinsM;
+  font-size: 90px;
+  color: #9a9a9a;
+  margin: 0;
+}
+
+.price {
+  grid-column-start: 2;
+  display: grid;
+  grid-template-columns: 100px auto;
+  grid-template-rows: 60px auto;
+}
+
+.percen {
+  width: 96px;
+  height: 48px;
+  border-radius: 5px;
+  background-color: #1f2125;
+  opacity: 100%;
+  color: white;
+  font-family: PoppinsS;
+  text-align: center;
+  line-height: 48px;
+  font-size: 35px;
+}
+
+.price s {
+  font-size: 45px;
+}
+
+.after {
+  font-family: PoppinsS;
+  font-size: 60px;
+  margin: 0;
+}
+
+.container-payment {
+  width: 60%;
+  height: 500px;
+  border: 2px solid #ffbf61;
+  border-radius: 10px;
+  margin: 0 auto;
+}
+
+.method {
+  font-size: 37px;
+  font-family: PoppinsS;
+  margin-left: 20%;
+}
+
+.title-payment {
+  font-family: PoppinsB;
+  font-size: 35px;
+  margin: 20px 0 0 20px;
+}
+
+.fill {
+  font-size: 22px;
+  font-family: PoppinsS;
+  margin: 0 0 50px 20px;
+}
+
+.payment {
+  width: 85%;
+  height: 94px;
+  border-radius: 20px;
+  background-color: #1f1f1f;
+  margin: 15px 0 0 20px;
+  display: flex;
+  align-items: center;
+}
+
+.circle {
+  width: 23px;
+  height: 23px;
+  border-radius: 100px;
+  border: 2px solid #9a9a9a;
+  margin: 0 60px 0 60px;
+  background-color: rgb(31, 33, 37);
+  cursor: pointer;
+}
+
+.container-footer {
+  height: 217px;
+  width: 100%;
+  background-color: #1f2125;
+  margin-top: 150px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.tiket p {
+  font-size: 20px;
+  font-family: PoppinsR;
+}
+
+.tiket-btn {
+  width: 238px;
+  height: 65px;
+  border-radius: 20px;
+  background-color: #ffbf61;
+  font-family: PoppinsB;
+  font-size: 20px;
+  text-align: center;
+  line-height: 65px;
+}
+
+@media only screen and (max-width: 1250px) {
+  .Ruwat {
+    width: 418px;
+    height: 558px;
+  }
+
+  .container-content {
+    grid-template-rows: 40% auto;
+  }
+
+  .title-content {
+    font-size: 80px;
+  }
+
+  .percen {
+    width: 86px;
+    height: 38px;
+    font-size: 25px;
+    line-height: 38px;
+  }
+
+  .price s {
+    font-size: 35px;
+  }
+
+  .after {
+    font-size: 50px;
+  }
+
+  .container-payment {
+    height: 540px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .Ruwat {
+    width: 318px;
+    height: 458px;
+  }
+
+  .container-content {
+    grid-template-rows: 35% auto;
+  }
+
+  .title-content {
+    font-size: 70px;
+  }
+
+  .price s {
+    font-size: 25px;
+  }
+
+  .after {
+    font-size: 40px;
+  }
+}
+
+@media only screen and (max-width: 830px) {
+  .Ruwat {
+    width: 268px;
+    height: 408px;
+  }
+}

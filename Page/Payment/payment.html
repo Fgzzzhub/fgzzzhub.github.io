@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="payment.css" />
+    <title>Payment</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Navbar -->
+      <header class="container-navbar">
+        <div class="navbar">
+          <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">Kelas Online</a></li>
+            <li><a href="">Event</a></li>
+            <li><a href="">Berita</a></li>
+          </ul>
+        </div>
+      </header>
+      <!-- Navbar End -->
+      <!-- Content Start -->
+      <div class="container-content">
+        <img src="/assets/Images/Payment/BannerRuwat.png" alt="" class="Ruwat" />
+        <p class="title-content">RUWAT BUMI GUCI</p>
+        <div class="price">
+          <div class="percen">40%</div>
+          <s>Rp.75.000</s>
+          <p class="after">Rp.45.000</p>
+        </div>
+      </div>
+      <!-- Content End -->
+      <!-- Payment Start -->
+      <p class="method">Pilih Metode Pembayaran</p>
+      <div class="container-payment">
+        <p class="title-payment">E-WALLET</p>
+        <p class="fill">Pembayaran langsung terhubung dengan akun e-wallet kamu</p>
+        <div class="payment">
+          <div class="circle" onclick="setCircleColor(this)"></div>
+          <img src="/assets/Images/Payment/Dana.png" alt="" />
+        </div>
+        <div class="payment">
+          <div class="circle" onclick="setCircleColor(this)"></div>
+          <img src="/assets/Images/Payment/Ovo.png" alt="" />
+        </div>
+        <div class="payment">
+          <div class="circle" onclick="setCircleColor(this)"></div>
+          <img src="/assets/Images/Payment/Gopay.png" alt="" />
+        </div>
+      </div>
+      <!-- Payment End -->
+      <!-- Payment 2 Start -->
+      <div class="container-payment" style="margin-top: 50px; height: 625px">
+        <p class="title-payment">TRANSFER BANK</p>
+        <p class="fill">Pilih Bank</p>
+        <div class="payment">
+          <div class="circle" onclick="setCircleColor(this)"></div>
+          <img src="/assets/Images/Payment/Bri.png" alt="" />
+        </div>
+        <div class="payment">
+          <div class="circle" onclick="setCircleColor(this)"></div>
+          <img src="/assets/Images/Payment/Bca.png" alt="" />
+        </div>
+        <div class="payment">
+          <div class="circle" onclick="setCircleColor(this)"></div>
+          <img src="/assets/Images/Payment/Bni.png" alt="" />
+        </div>
+        <div class="payment">
+          <div class="circle" onclick="setCircleColor(this)"></div>
+          <img src="/assets/Images/Payment/Mandiri.png" alt="" />
+        </div>
+      </div>
+      <!-- Payment 2 End -->
+      <!-- Footer Start -->
+      <div class="container-footer">
+        <div class="price" style="grid-template-rows: 24px auto; grid-template-columns: 50px auto; width: 200px">
+          <div class="percen" style="width: 46px; height: 24px; font-size: 14px; background-color: #b8b8b8; line-height: 24px">40%</div>
+          <s style="font-size: 20px">Rp.75.000</s>
+          <p class="after" style="font-size: 30px">Rp.45.000</p>
+        </div>
+        <div class="tiket">
+            <p>1 7 5&nbsp;&nbsp;&nbsp;T i k e t&nbsp;&nbsp;&nbsp;T e r j u a l</p>
+            <div class="tiket-btn">Beli Tiket</div>
+        </div>
+      </div>
+    <!-- Footer End -->
+
+    <script src="payment.js"></script>
+  </body>
+</html>
