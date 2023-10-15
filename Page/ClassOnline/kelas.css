@@ -259,3 +259,73 @@ input[type="text"]:focus {
   flex-direction: row;
   justify-content: space-around;
 }
+
+@media only screen and (max-width: 1500px) {
+  .title-card h1 {
+    font-size: 40px;
+  }
+
+  .title-card p {
+    font-size: 16px;
+  }
+
+  .explanation {
+    font-size: 18px;
+  }
+
+  .card {
+    grid-template-columns: 400px auto;
+  }
+
+  .img {
+    transform: scale(0.9);
+    margin-left: 30px;
+  }
+}
+
+@media only screen and (max-width: 1120px) {
+  .navbar {
+    width: 600px;
+    height: 60px;
+  }
+
+  .navbar ul {
+    height: 60px;
+  }
+
+  .navbar ul li {
+    padding: 0 30px;
+    margin-top: 5px;
+  }
+
+  .card {
+    grid-template-columns: 100%;
+    grid-template-rows: 20% 40% 20% 20%;
+    height: 800px;
+  }
+
+  .title-card {
+    grid-row-start: 1;
+    place-self: center;
+    text-align: center;
+  }
+
+  .img {
+    grid-row-start: 2;
+    place-self: center;
+    margin-left: 0;
+    margin-top: -100px;
+  }
+
+  .explanation {
+    grid-row-start: 3;
+    grid-column-start: 1;
+    text-align: center;
+  }
+
+  .sign-in {
+    grid-row-start: 4;
+    place-self: center;
+    margin: 0;
+  }
+}
