@@ -1,0 +1,180 @@
+@font-face {
+  font-family: Poppins;
+  src: url(/assets/Poppins\ Font/Poppins-Light.ttf);
+}
+
+@font-face {
+  font-family: PoppinsB;
+  src: url(/assets/Poppins\ Font/Poppins-Bold.ttf);
+}
+
+@font-face {
+  font-family: PoppinsR;
+  src: url(/assets/Poppins\ Font/Poppins-Regular.ttf);
+}
+
+@font-face {
+  font-family: PoppinsM;
+  src: url(/assets/Poppins\ Font/Poppins-Medium.ttf);
+}
+
+@font-face {
+  font-family: PoppinsS;
+  src: url(/assets/Poppins\ Font/Poppins-SemiBold.ttf);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Poppins;
+  background-color: black;
+  color: white;
+}
+
+.container {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container-navbar {
+  display: flex;
+  width: 100vw;
+  height: 150px;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.navbar {
+  width: 700px;
+  height: 70px;
+  border-radius: 100px;
+  background-color: #1f2125;
+}
+
+.navbar ul {
+  height: 80px;
+  display: flex;
+  width: 100%;
+  margin: 0;
+}
+
+.navbar ul li {
+  padding: 0 40px;
+  font-size: 16px;
+  list-style-type: none;
+  color: white;
+  margin-left: 2%;
+  margin-top: 10px;
+  height: 50px;
+  border-radius: 100px;
+  transition: 0.5s;
+}
+
+.navbar ul li a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  line-height: 50px;
+  height: 50px;
+  width: auto;
+  border-radius: 100px;
+  color: white;
+}
+
+.navbar ul li:hover {
+  background-color: #ffbf61;
+}
+
+.container-content {
+  width: 100%;
+  height: 2356px;
+  margin-top: 350px;
+  background-color: #1f2125;
+}
+
+.title {
+  text-align: center;
+  font-size: 90px;
+  font-family: PoppinsM;
+  color: #9a9a9a;
+}
+
+img {
+  margin: 0 auto;
+  position: absolute;
+  top: 450px;
+}
+
+article {
+  margin: 420px auto 0 auto;
+  width: 50%;
+}
+
+.container-content p {
+  text-align: start;
+  font-family: PoppinsR;
+  font-size: 22px;
+}
+
+ul {
+  margin-top: 40px;
+}
+
+ul li {
+  text-align: start;
+  font-family: PoppinsR;
+  font-size: 22px;
+  margin-top: 20px;
+}
+
+.container-footer {
+  height: 217px;
+  width: 100%;
+  background-color: black;
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.tiket p {
+  font-size: 20px;
+  font-family: PoppinsR;
+}
+
+.tiket-btn {
+  width: 238px;
+  height: 65px;
+  border-radius: 20px;
+  background-color: #ffbf61;
+  font-family: PoppinsB;
+  font-size: 20px;
+  text-align: center;
+  line-height: 65px;
+}
+
+.price {
+  grid-column-start: 2;
+  display: grid;
+  grid-template-columns: 100px auto;
+  grid-template-rows: 60px auto;
+}
+
+.percen {
+  width: 96px;
+  height: 48px;
+  border-radius: 5px;
+  background-color: #1f2125;
+  opacity: 100%;
+  color: white;
+  font-family: PoppinsS;
+  text-align: center;
+  line-height: 48px;
+  font-size: 35px;
+}
+
+.price s {
+  font-size: 45px;
+}
