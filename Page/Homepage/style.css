@@ -34,8 +34,7 @@ body {
   color: white;
 }
 
-h3 {
-  color: white;
+.logo {
   animation: left 1.5s;
 }
 
@@ -51,15 +50,13 @@ h3 {
   justify-content: space-around;
   position: fixed;
   top: -5px;
-  transform: scale(0.8);
   z-index: 9;
-  filter: blur(1px);
-  transition: 1.2s;
+  opacity: 0.5;
+  transition: 0.9s;
 }
 
 .container-navbar:hover {
-  filter: blur(0);
-  transform: scale(1);
+  opacity: 1;
 }
 
 .navbar {
@@ -254,6 +251,7 @@ h3 {
 }
 
 .card {
+  animation: carousel 10s infinite forwards;
   border: 1px solid #ffbf61;
   scroll-snap-align: start;
   border-radius: 30px;
@@ -444,7 +442,7 @@ h3 {
 
   .container-isi-berita .beritaL .l-title {
     color: #9a9a9a;
-    font-size: 50px;
+    font-size: 35px;
     font-family: Poppins;
     text-align: start;
     margin-left: 10%;
@@ -484,7 +482,7 @@ h3 {
     font-size: 20px;
     color: #ffbf61;
     text-decoration: none;
-    padding-left: 70%;
+    padding: 15px 10%;
   }
 
   .beritaRT {
@@ -508,7 +506,7 @@ h3 {
 
   .beritaRT .rt-title {
     color: #9a9a9a;
-    font-size: 50px;
+    font-size: 35px;
     font-family: Poppins;
     text-align: start;
     margin: 0 0 0 30px;
@@ -525,7 +523,7 @@ h3 {
     font-size: 20px;
     color: #ffbf61;
     text-decoration: none;
-    padding-left: 80%;
+    padding: 15px 4%;
   }
 
   .beritaRB1 {
@@ -549,7 +547,7 @@ h3 {
 
   .beritaRB1 .rb-title {
     color: #9a9a9a;
-    font-size: 50px;
+    font-size: 35px;
     font-family: Poppins;
     text-align: start;
     margin: 0 0 0 18px;
@@ -566,7 +564,7 @@ h3 {
     font-size: 20px;
     color: #ffbf61;
     text-decoration: none;
-    padding-left: 60%;
+    padding: 15px 10%;
     position: relative;
     top: 37px;
   }
@@ -585,7 +583,7 @@ h3 {
 
   .beritaRB2 .rb-title {
     color: #9a9a9a;
-    font-size: 50px;
+    font-size: 35px;
     font-family: Poppins;
     text-align: start;
     margin: 0 0 0 18px;
@@ -628,6 +626,14 @@ h3 {
     width: 2rem;
     height: 2rem;
   }
+
+  .rt-txt {
+    font-size: 21px;
+  }
+
+  .beritaL-content {
+    margin: 33px auto;
+  }
 }
 
 @media only screen and (max-width: 1400px) {
@@ -667,6 +673,10 @@ h3 {
   .card-kebudayaan img {
     width: 250px;
     height: 250px;
+  }
+
+  .beritaL-content {
+    margin: 65px auto;
   }
 
   .l-txt,
@@ -1026,12 +1036,10 @@ h3 {
 @keyframes top {
   0% {
     transform: translateY(-200%);
-    filter: blur(0);
   }
 
   100% {
     transform: translateX(0);
-    filter: blur(1px);
   }
 }
 
@@ -1050,5 +1058,14 @@ h3 {
   }
   100% {
     transform: translateX(0);
+  }
+}
+
+@keyframes carousel {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
   }
 }

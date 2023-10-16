@@ -43,9 +43,9 @@ h1 {
   color: #9a9a9a;
   font-family: PoppinsM;
   font-size: 140px;
+  text-align: center;
   animation: title 7s;
   animation-fill-mode: forwards;
-  text-align: center;
   margin-top: -300px;
   transform: translateY(550px);
 }

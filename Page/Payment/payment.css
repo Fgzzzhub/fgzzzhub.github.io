@@ -210,6 +210,12 @@ body {
   font-size: 20px;
   text-align: center;
   line-height: 65px;
+  cursor: pointer;
+}
+
+.tiket-btn a {
+  text-decoration: none;
+  color: white;
 }
 
 @media only screen and (max-width: 1250px) {
