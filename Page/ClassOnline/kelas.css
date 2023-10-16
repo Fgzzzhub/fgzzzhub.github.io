@@ -172,6 +172,10 @@ body {
   background-image: url(/assets/images/KelasOnline/TariEndel.png);
 }
 
+.img3 {
+  background-image: url(/assets/images/KelasOnline/BatikBengle.png);
+}
+
 .feature {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
