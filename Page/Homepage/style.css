@@ -49,6 +49,17 @@ h3 {
   height: 150px;
   align-items: center;
   justify-content: space-around;
+  position: fixed;
+  top: -5px;
+  transform: scale(0.8);
+  z-index: 9;
+  filter: blur(1px);
+  transition: 1.2s;
+}
+
+.container-navbar:hover {
+  filter: blur(0);
+  transform: scale(1);
 }
 
 .navbar {
@@ -112,7 +123,7 @@ h3 {
 
 .container-content {
   width: 100vw;
-  margin-top: 100px;
+  margin-top: 175px;
   display: grid;
   grid-template-columns: 50vw auto;
   justify-self: end;
@@ -217,7 +228,7 @@ h3 {
 
 .kebudayaan-title {
   color: #9a9a9a;
-  font-size: 80px;
+  font-size: 6em;
   font-family: PoppinsB;
   text-align: center;
   margin-top: 100px;
@@ -254,31 +265,31 @@ h3 {
 }
 
 .card:nth-child(1) {
-  background-image: url(/assets/images/Frame\ 17.png);
+  background-image: url(/assets/images//HomePage/Frame\ 17.png);
 }
 
 .card:nth-child(2) {
-  background-image: url(/assets/images/Frame\ 18.png);
+  background-image: url(/assets/images//HomePage/Frame\ 18.png);
 }
 
 .card:nth-child(3) {
-  background-image: url(/assets/images/Frame\ 17.png);
+  background-image: url(/assets/images//HomePage/Frame\ 17.png);
 }
 
 .card:nth-child(4) {
-  background-image: url(/assets/images/Frame\ 18.png);
+  background-image: url(/assets/images//HomePage/Frame\ 18.png);
 }
 
 .card:nth-child(5) {
-  background-image: url(/assets/images/Frame\ 17.png);
+  background-image: url(/assets/images//HomePage/Frame\ 17.png);
 }
 
 .card:nth-child(6) {
-  background-image: url(/assets/images/Frame\ 18.png);
+  background-image: url(/assets/images//HomePage/Frame\ 18.png);
 }
 
 .card:nth-child(7) {
-  background-image: url(/assets/images/Frame\ 17.png);
+  background-image: url(/assets/images//HomePage/Frame\ 17.png);
 }
 
 .container-kebudayaan-two {
@@ -336,7 +347,6 @@ h3 {
   width: 339px;
   height: 339px;
   border-radius: 20px;
-  background-color: #9a9a9a;
   grid-column-start: 2;
   grid-row-start: 1;
   grid-row-end: 4;
@@ -453,6 +463,21 @@ h3 {
     border-radius: 20px;
     background-color: #9a9a9a;
     margin: 60px auto;
+  }
+
+  .beritaL-content img {
+    width: 100%;
+    height: 683px;
+  }
+
+  .rb-content img {
+    width: 100%;
+    height: 186px;
+  }
+
+  .rt-content img {
+    width: 100%;
+    height: 186px;
   }
 
   .l-link {
@@ -638,6 +663,17 @@ h3 {
     width: 250px;
     height: 250px;
   }
+
+  .card-kebudayaan img {
+    width: 250px;
+    height: 250px;
+  }
+
+  .l-txt,
+  .rb-txt,
+  .rt-txt {
+    font-size: 16px;
+  }
 }
 
 @media only screen and (max-width: 1200px) {
@@ -806,6 +842,10 @@ h3 {
     margin-top: 200px;
   }
 
+  .kebudayaan-title {
+    font-size: 50px;
+  }
+
   .Kebudayaan {
     font-size: 70px;
   }
@@ -835,6 +875,11 @@ h3 {
   }
 
   .card-kebudayaan div {
+    width: 200px;
+    height: 200px;
+  }
+
+  .card-kebudayaan img {
     width: 200px;
     height: 200px;
   }
@@ -873,8 +918,12 @@ h3 {
     height: 250px;
     width: 80%;
     border-radius: 20px;
-    background-color: #9a9a9a;
     margin: 40px auto;
+  }
+
+  .container-isi-berita img {
+    width: 100%;
+    height: 250px;
   }
 
   .l-txt,
@@ -911,6 +960,31 @@ h3 {
 .card-kebudayaan.show-animate {
   transform: translateX(0);
   filter: blur(0);
+}
+
+@media only screen and (max-width: 800px) {
+  .navbar {
+    width: 500px;
+    height: 50px;
+  }
+
+  .navbar ul {
+    height: 50px;
+    padding-left: 30px;
+  }
+
+  .navbar ul li {
+    padding: 0 26px;
+    margin-top: 0;
+    font-size: 13px;
+  }
+
+  .btn-login {
+    height: 38px;
+    width: 90px;
+    line-height: 38px;
+    font-size: 10px;
+  }
 }
 
 @keyframes title {
@@ -952,9 +1026,12 @@ h3 {
 @keyframes top {
   0% {
     transform: translateY(-200%);
+    filter: blur(0);
   }
+
   100% {
     transform: translateX(0);
+    filter: blur(1px);
   }
 }
 

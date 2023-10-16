@@ -45,39 +45,44 @@ h3 {
 }
 
 .navbar {
-  width: 771px;
-  height: 80px;
+  width: 700px;
+  height: 70px;
   border-radius: 100px;
   background-color: #1f2125;
-  animation: top 1.3s;
+  animation: top 1s;
 }
 
 .navbar ul {
   height: 80px;
   display: flex;
   width: 100%;
+  margin: 0;
 }
 
 .navbar ul li {
-  padding: 5px 40px;
+  padding: 0 40px;
   font-size: 16px;
   list-style-type: none;
   color: white;
+  margin-left: 2%;
+  margin-top: 10px;
+  height: 50px;
+  border-radius: 100px;
+  transition: 0.5s;
 }
 
 .navbar ul li a {
   display: block;
   text-align: center;
   text-decoration: none;
-  line-height: 35px;
-  height: 35px;
-  width: 64px;
+  line-height: 50px;
+  height: 50px;
+  width: auto;
   border-radius: 100px;
-  transition: 0.5s;
   color: white;
 }
 
-.navbar ul li a:hover {
+.navbar ul li:hover {
   background-color: #ffbf61;
 }
 
@@ -152,6 +157,48 @@ h3 {
 @media only screen and (max-width: 1430px) {
   .content {
     width: 70vw;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .navbar {
+    width: 700px;
+    height: 70px;
+  }
+
+  .navbar ul {
+    height: 70px;
+    width: 700px;
+  }
+
+  .btn-login {
+    height: 48px;
+    width: 100px;
+    line-height: 48px;
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .navbar {
+    width: 600px;
+    height: 60px;
+  }
+
+  .navbar ul {
+    height: 60px;
+  }
+
+  .navbar ul li {
+    padding: 0 30px;
+    margin-top: 5px;
+  }
+
+  .btn-login {
+    height: 38px;
+    width: 90px;
+    line-height: 38px;
+    font-size: 10px;
   }
 }
 

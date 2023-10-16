@@ -8,12 +8,36 @@
   src: url(/assets/Poppins\ Font/Poppins-SemiBold.ttf);
 }
 
-@keyframes daftar {
+@keyframes left {
   0% {
     filter: blur(5px);
+    transform: translateX(-100%);
   }
   100% {
     filter: blur(0);
+    transform: translateX(0);
+  }
+}
+
+@keyframes right {
+  0% {
+    filter: blur(5px);
+    transform: translateX(100%);
+  }
+  100% {
+    filter: blur(0);
+    transform: translateX(0);
+  }
+}
+
+@keyframes right2 {
+  0% {
+    filter: blur(5px);
+    transform: translateX(300%);
+  }
+  100% {
+    filter: blur(0);
+    transform: translateX(0);
   }
 }
 
@@ -38,9 +62,10 @@ body {
 .imageBg {
   width: 50%;
   height: 100%;
-  background-image: url(/assets/Images/Frame\ 17.png);
+  background-image: url(/assets/Images/HomePage/Frame\ 17.png);
   object-fit: contain;
   opacity: 40%;
+  animation: left 1.5s;
 }
 
 .formDaftar {
@@ -59,6 +84,7 @@ input {
   margin-bottom: 30px;
   border-radius: 6px;
   color: white;
+  animation: right 2s;
 }
 
 label {

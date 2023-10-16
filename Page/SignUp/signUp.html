@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign In</title>
+    <title>Sign Up</title>
     <link rel="stylesheet" href="signUp.css">
 </head>
 <body>
@@ -11,25 +11,25 @@
         <div class="imageBg"></div>
         <div class="formDaftar">
             <div class="top" style="display: flex; justify-content: space-around;">
-                <p >Masuk</p>
-                <p style= "color: #FFBF61;">Daftar</p>
+                <p style="animation: right2 1s;">Masuk</p>
+                <p style= "color: #FFBF61;animation: right2 1s;">Daftar</p>
             </div>
-            <hr>
+            <hr style="animation: right2 2s;">
                 <form action="proses_daftar.php" method="POST" style="display: flex; justify-content: center; flex-direction: column;">
-                    <label for="nama" style="margin-top: 20px;">Nama*</label>
-                    <input type="text" id="nama" name="nama" placeholder="Masukan Nama" required>
+                    <label for="nama" style="margin-top: 20px;animation: right 0.5s";>Nama*</label>
+                    <input type="text" id="nama" name="nama" placeholder="Masukan Nama" style="animation: right .5s;" required>
             
-                    <label for="email">Email*</label>
-                    <input type="email" id="email" name="email" placeholder="Masukan Email" required>
+                    <label for="email" style= "animation: right 1s";>Email*</label>
+                    <input type="email" id="email" name="email" placeholder="Masukan Email" style="animation: right 1s;" required>
             
-                    <label for="nomor_hp">Nomor HP*</label>
-                    <input type="tel" id="nomor_hp" name="nomor_hp" placeholder="Masukan No. HP" required>
+                    <label for="nomor_hp" style= "animation: right 1.5s";>Nomor HP*</label>
+                    <input type="tel" id="nomor_hp" name="nomor_hp" placeholder="Masukan No. HP" style="animation: right 1.5s;"  required>
             
-                    <label for="kata_sandi">Kata Sandi*</label>
-                    <input type="password" id="kata_sandi" name="kata_sandi" placeholder="Masukan Kata Sandi" required>
+                    <label for="kata_sandi" style= "animation: right 2s";>Kata Sandi*</label>
+                    <input type="password" id="kata_sandi" name="kata_sandi" placeholder="Masukan Kata Sandi" style="animation: right 2s;" required>
             
-                    <label for="konfirmasi_kata_sandi">Konfirmasi Kata Sandi*</label>
-                    <input type="password" id="konfirmasi_kata_sandi" name="konfirmasi_kata_sandi" placeholder="Konfirmasi Kata Sandi" required>
+                    <label for="konfirmasi_kata_sandi" style= "animation: right 2.5s";>Konfirmasi Kata Sandi*</label>
+                    <input type="password" id="konfirmasi_kata_sandi" name="konfirmasi_kata_sandi" placeholder="Konfirmasi Kata Sandi"   style="animation: right 2.5s;" required>
             
                     <input type="submit" value="Daftar" style="background-color: #FFBF61; color: white; height: 60px; border-radius: 6px; margin-bottom: 10px; width: 63%;">
                 </form>
