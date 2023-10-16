@@ -61,7 +61,7 @@ body {
 .imageBg {
   width: 50%;
   height: 100%;
-  background-image: url(/assets/Images/HomePage/Frame\ 17.png);
+  background-image: url(https://fgzzzhub.github.io/assets/images/HomePage/Frame\ 17.png);
   object-fit: contain;
   opacity: 40%;
   animation: left 1.5s;
