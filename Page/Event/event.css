@@ -36,13 +36,15 @@ h1 {
   font-family: PoppinsB;
   line-height: 0;
   margin: 100px 15%;
+  animation: left 1.5s;
 }
 
 p {
   font-size: 70px;
   font-family: PoppinsM;
   line-height: 0;
-  margin: 100px 15%;
+  margin: 100px 0 100px 15%;
+  animation: left 2.5s;
 }
 
 .feature {
@@ -64,6 +66,7 @@ p {
   width: 250px;
   margin-top: 10px;
   grid-column-start: 3;
+  animation: right 2.5s;
 }
 
 .dropbtn:hover,
@@ -117,6 +120,7 @@ p {
   background-color: #1f2125;
   font-size: 16px;
   border: none;
+  animation: left2 2.5s;
 }
 
 input[type="text"] {
@@ -135,97 +139,6 @@ input[type="text"]:focus {
   flex-direction: row;
   justify-content: space-around;
 }
-.feature {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-}
-
-.dropbtn {
-  place-items: center;
-  background-color: #1f2125;
-  color: white;
-  font-family: PoppinsR;
-  padding: 12px;
-  text-align: start;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-  border-radius: 20px;
-  width: 250px;
-  margin-top: 10px;
-  grid-column-start: 3;
-}
-
-.dropbtn:hover,
-.dropbtn:focus {
-  background-color: #1f2125;
-}
-
-.dropdown {
-  justify-self: center;
-  align-self: center;
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-content {
-  margin-top: 10px;
-  margin-right: 15%;
-  display: none;
-  position: absolute;
-  background-color: #1f2125;
-  min-width: 250px;
-  border-radius: 20px;
-  overflow: auto;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-}
-
-.dropdown-content a {
-  color: white;
-  text-align: center;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  transition: 0.6s;
-}
-
-.dropdown a:hover {
-  background-color: black;
-}
-
-.show {
-  display: block;
-}
-
-#searchbar {
-  justify-self: center;
-  align-self: center;
-  grid-column-start: 1;
-  padding: 15px;
-  border-radius: 20px;
-  background-color: #1f2125;
-  font-size: 16px;
-  border: none;
-}
-
-input[type="text"] {
-  border: none;
-  width: 220px;
-  -webkit-transition: width 0.15s ease-in-out;
-  transition: width 0.15s ease-in-out;
-}
-
-input[type="text"]:focus {
-  width: 300px;
-}
-
-.searchEngine {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
-
 .card {
   display: grid;
   width: 80%;
@@ -235,6 +148,7 @@ input[type="text"]:focus {
   grid-template-columns: 25% 35% 20% 20%;
   border-radius: 20px;
   background-color: #1f2125;
+  animation: bot2 2.5s;
 }
 
 img {
@@ -304,67 +218,137 @@ img {
 
 @media only screen and (max-width: 1750px) {
   .card {
-    grid-template-columns: 30% 40% 15% 15%;
+    width: 90%;
+    grid-template-columns: 30% 30% 20% 20%;
   }
-}
 
-@media only screen and (max-width: 1560px) {
   h1 {
-    font-size: 40px;
+    margin: 100px 5%;
   }
 
   p {
-    font-size: 50px;
+    margin: 100px 5%;
+    font-size: 60px;
   }
 
   img {
     transform: scale(0.9);
-  }
-
-  .p2 {
-    font-size: 30px;
-  }
-}
-
-@media only screen and (max-width: 1380px) {
-  h1 {
-    margin: 100px 5%;
-  }
-
-  .card {
-    height: 800px;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 400px auto;
-  }
-
-  img {
-    grid-column-start: 1;
-    grid-row-start: 1;
-  }
-
-  p {
-    margin: 100px 5%;
-  }
-
-  .p2 {
-    grid-column-start: 2;
-    grid-row-start: 1;
-  }
-
-  .tgl {
-    grid-column-start: 1;
-    grid-row-start: 2;
-    font-size: 90px;
     border: none;
-  }
-
-  .tiket {
-    grid-column-start: 2;
-    grid-row-start: 2;
-    transform: scale(1.5);
   }
 
   .c2 {
+    transform: scale(0.9);
     border: none;
+  }
+
+  .tgl {
+    border: none;
+  }
+}
+
+@media only screen and (max-width: 1560px) {
+  img {
+    transform: scale(0.8);
+  }
+
+  p {
+    font-size: 55px;
+  }
+
+  .c2 {
+    transform: scale(0.8);
+  }
+  .p1 {
+    margin: 100px 0;
+  }
+  .p2 {
+    margin: 100px 0;
+  }
+  .p3 {
+    margin: 100px 0;
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  .card {
+    grid-template-columns: 30% 35% 10% 25%;
+  }
+  .p1,
+  .p2,
+  .p3 {
+    margin: 100px 0;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .card {
+    height: 350px;
+    grid-template-rows: 350px;
+    grid-template-columns: 30% 40% 13% 17%;
+  }
+
+  img {
+    transform: scale(0.7);
+  }
+
+  .tgl {
+    font-size: 40px;
+  }
+
+  .p1,
+  .p2,
+  .p3 {
+    margin: 90px 0;
+  }
+  .tiket {
+    transform: scale(0.8);
+  }
+}
+
+@media only screen and (max-width: 926px) {
+}
+
+@keyframes left {
+  0% {
+    transform: translateX(-200%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes left2 {
+  0% {
+    transform: translateX(-1000%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes right {
+  0% {
+    transform: translateX(1000%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes bot {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes bot2 {
+  0% {
+    transform: translateY(1000%);
+  }
+  100% {
+    transform: translateX(0);
   }
 }

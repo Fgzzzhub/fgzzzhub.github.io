@@ -29,6 +29,7 @@ body {
 
 h3 {
   color: white;
+  animation: left 1.3s;
 }
 
 .container {
@@ -48,6 +49,7 @@ h3 {
   height: 80px;
   border-radius: 100px;
   background-color: #1f2125;
+  animation: top 1.3s;
 }
 
 .navbar ul {
@@ -88,6 +90,7 @@ h3 {
   line-height: 58px;
   font-size: 20px;
   font-family: PoppinsR;
+  animation: right 1.3s;
 }
 
 .btn-login a {
@@ -101,12 +104,14 @@ h3 {
 }
 
 .content h1 {
+  animation: bot 1s;
   float: left;
   font-size: 50px;
   margin: 10px;
 }
 
 .content p {
+  animation: bot 1.5s;
   padding-top: 20px;
 }
 
@@ -115,6 +120,7 @@ h3 {
   margin: 0 auto;
   height: 380px;
   background-color: #333;
+  animation: bot2 2s;
 }
 
 .left {
@@ -146,5 +152,50 @@ h3 {
 @media only screen and (max-width: 1430px) {
   .content {
     width: 70vw;
+  }
+}
+
+@keyframes top {
+  0% {
+    transform: translateY(-300%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes bot {
+  0% {
+    transform: translateY(500%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes bot2 {
+  0% {
+    transform: translateY(300%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes left {
+  0% {
+    transform: translateX(-500%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes right {
+  0% {
+    transform: translateX(500%);
+  }
+  100% {
+    transform: translateX(0);
   }
 }

@@ -36,6 +36,7 @@ body {
 
 h3 {
   color: white;
+  animation: left 1.5s;
 }
 
 .container {
@@ -55,6 +56,7 @@ h3 {
   height: 70px;
   border-radius: 100px;
   background-color: #1f2125;
+  animation: top 1.5s;
 }
 
 .navbar ul {
@@ -100,6 +102,7 @@ h3 {
   line-height: 58px;
   font-size: 20px;
   font-family: PoppinsR;
+  animation: right 1.5s;
 }
 
 .btn-login a {
@@ -351,11 +354,11 @@ h3 {
 
 @media only screen and (min-width: 1000px) {
   .title {
-    animation: title 1.5s;
+    animation: title 2.5s;
   }
 
   .gallery {
-    animation: slide 1.5s;
+    animation: slide 2.5s;
   }
 
   .gallery {
@@ -884,42 +887,6 @@ h3 {
   }
 }
 
-@keyframes title {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-
-@keyframes title1000 {
-  0% {
-    transform: translateY(50%);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-
-@keyframes slide {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-
-@keyframes kebudayaan {
-  0% {
-    transform: translateY(100%);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-
 .container-kebudayaan-two .animate {
   transition: 1s;
 }
@@ -944,4 +911,67 @@ h3 {
 .card-kebudayaan.show-animate {
   transform: translateX(0);
   filter: blur(0);
+}
+
+@keyframes title {
+  0% {
+    transform: translateX(-1000%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes title1000 {
+  0% {
+    transform: translateY(50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(1000%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes kebudayaan {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes top {
+  0% {
+    transform: translateY(-200%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes left {
+  0% {
+    transform: translateX(-2000%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes right {
+  0% {
+    transform: translateX(2500%);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }

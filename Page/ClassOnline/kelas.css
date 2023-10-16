@@ -52,6 +52,7 @@ body {
   height: 70px;
   border-radius: 100px;
   background-color: #1f2125;
+  animation: top 1s;
 }
 
 .navbar ul {
@@ -93,6 +94,7 @@ body {
   font-family: PoppinsS;
   font-size: 80px;
   text-align: center;
+  animation: bot2 2s;
 }
 
 .card {
@@ -104,6 +106,7 @@ body {
   display: grid;
   grid-template-columns: 500px auto;
   grid-template-rows: 35% 30% 35%;
+  animation: bot2 3s;
 }
 
 .img {
@@ -188,6 +191,7 @@ body {
   width: 250px;
   margin-top: 10px;
   grid-column-start: 3;
+  animation: bot 2.5s;
 }
 
 .dropbtn:hover,
@@ -241,6 +245,7 @@ body {
   background-color: #1f2125;
   font-size: 16px;
   border: none;
+  animation: bot 2.5s;
 }
 
 input[type="text"] {
@@ -327,5 +332,100 @@ input[type="text"]:focus {
     grid-row-start: 4;
     place-self: center;
     margin: 0;
+  }
+}
+
+@media only screen and (max-width: 679px) {
+  .navbar {
+    transform: scale(0.7);
+  }
+
+  .content .title {
+    font-size: 22px;
+  }
+
+  #searchbar,
+  .dropdown {
+    transform: scale(0.6);
+  }
+
+  .searchEngine {
+    justify-content: center;
+  }
+
+  .card {
+    width: 90%;
+    height: 100px;
+    grid-template-columns: 80px 77%;
+    grid-template-rows: 35% 30% 35%;
+  }
+
+  .img {
+    width: 77px;
+    height: 77px;
+    grid-column-start: 1;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    place-self: center;
+    margin: 0;
+  }
+
+  .title-card {
+    grid-row-start: 1;
+    grid-column-start: 2;
+    text-align: start;
+    place-self: center start;
+    padding-left: 10px;
+  }
+
+  .title-card h1 {
+    padding-top: 10px;
+    font-size: 12px;
+  }
+
+  .title-card p {
+    font-size: 6px;
+  }
+
+  .explanation {
+    text-align: start;
+    padding-left: 10px;
+    font-size: 7px;
+    grid-row-start: 2;
+    grid-column-start: 2;
+  }
+
+  .sign-in {
+    transform: scale(0.2);
+    grid-row-start: 3;
+    grid-column-start: 2;
+    place-self: center end;
+  }
+}
+
+@keyframes bot {
+  0% {
+    transform: translateY(1000%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes bot2 {
+  0% {
+    transform: translateY(500%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes top {
+  0% {
+    transform: translateY(-200%);
+  }
+  100% {
+    transform: translateX(0);
   }
 }
