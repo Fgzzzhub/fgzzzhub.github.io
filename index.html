@@ -51,82 +51,105 @@
 
             <!-- Logo -->
             <div class="flex items-center space-x-3" id="logo-container">
-                <img src="/assets/logo/Logo Web.png" alt="Logo" class="w-36">
+                <img src="/assets/logo/Logo Web.png" alt="Logo" class="w-28 md:w-36">
             </div>
 
-            <!-- Menu -->
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-700 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7">
+                    </path>
+                </svg>
+            </button>
+
+            <!-- Desktop Menu -->
             <nav class="hidden md:flex space-x-6 text-gray-700 font-medium relative">
-                <a href="/"
-                    class="hover:text-hijautua text-sm transition duration-300 hover-underline font-semibold">Beranda</a>
+                <!-- Menu -->
+                <nav class="hidden md:flex space-x-6 text-gray-700 font-medium relative">
+                    <a href="/"
+                        class="hover:text-hijautua text-sm transition duration-300 hover-underline font-semibold">Beranda</a>
 
-                <!-- Dropdown -->
-                <div class="relative group">
-                    <button
-                        class="hover:text-hijautua text-sm transition duration-300 hover-underline flex items-center">
-                        Tentang Kami
-                        <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                        </svg>
-                    </button>
+                    <!-- Dropdown -->
+                    <div class="relative group">
+                        <button
+                            class="hover:text-hijautua text-sm transition duration-300 hover-underline flex items-center">
+                            Tentang Kami
+                            <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
 
-                    <!-- Dropdown Content -->
-                    <div
-                        class="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
-                        <a href="/profil-sekolah.html"
-                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition duration-300 hover-underline">Profil Sekolah</a>
-                        <a href="/kegiatan-kesiswaan.html"
-                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition duration-300 hover-underline">Kegiatan Kesiswaan</a>
-                        <a href="/fasilitas-pendidikan.html"
-                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition duration-300 hover-underline">Fasilitas Pendidikan</a>
+                        <!-- Dropdown Content -->
+                        <div
+                            class="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                            <a href="/profil-sekolah.html"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition duration-300 hover-underline">Profil
+                                Sekolah</a>
+                            <a href="/kegiatan-kesiswaan.html"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition duration-300 hover-underline">Kegiatan
+                                Kesiswaan</a>
+                            <a href="/fasilitas-pendidikan.html"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition duration-300 hover-underline">Fasilitas
+                                Pendidikan</a>
+                        </div>
                     </div>
-                </div>
 
-               <!-- Dropdown -->
-                <div class="relative group">
-                    <button
-                        class="hover:text-hijautua text-sm transition duration-300 hover-underline flex items-center">
-                        Program Studi
-                        <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                        </svg>
-                    </button>
+                    <!-- Dropdown -->
+                    <div class="relative group">
+                        <button
+                            class="hover:text-hijautua text-sm transition duration-300 hover-underline flex items-center">
+                            Program Studi
+                            <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
 
-                    <!-- Dropdown Content -->
-                    <div
-                        class="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
-                        <a href="/profil-sekolah.html"
-                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition duration-300 hover-underline">Teknik Komputer & Jaringan</a>
-                        <a href="/kegiatan-kesiswaan.html"
-                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition duration-300 hover-underline">Teknik Kendaraan Ringan</a>
-                        <a href="/fasilitas-pendidikan.html"
-                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition duration-300 hover-underline">Manajemen Perkantoran</a>
-                        <a href="/fasilitas-pendidikan.html"
-                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition duration-300 hover-underline">Akuntansi Keuangan Lembaga</a>
+                        <!-- Dropdown Content -->
+                        <div
+                            class="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                            <a href="/profil-sekolah.html"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition duration-300 hover-underline">Teknik
+                                Komputer & Jaringan</a>
+                            <a href="/kegiatan-kesiswaan.html"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition duration-300 hover-underline">Teknik
+                                Kendaraan Ringan</a>
+                            <a href="/fasilitas-pendidikan.html"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition duration-300 hover-underline">Manajemen
+                                Perkantoran</a>
+                            <a href="/fasilitas-pendidikan.html"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition duration-300 hover-underline">Akuntansi
+                                Keuangan Lembaga</a>
+                        </div>
                     </div>
-                </div>
-                
-                <!-- Dropdown -->
-                <div class="relative group">
-                    <button
-                        class="hover:text-hijautua text-sm transition duration-300 hover-underline flex items-center">
-                        Layanan
-                        <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                        </svg>
-                    </button>
 
-                    <!-- Dropdown Content -->
-                    <div
-                        class="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
-                        <a href="/profil-sekolah.html"
-                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition duration-300 hover-underline">Kontak Layanan</a>
-                        <a href="/kegiatan-kesiswaan.html"
-                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition duration-300 hover-underline">BKK</a>
-                        <a href="/fasilitas-pendidikan.html"
-                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition duration-300 hover-underline">LSP P-1</a>
+                    <!-- Dropdown -->
+                    <div class="relative group">
+                        <button
+                            class="hover:text-hijautua text-sm transition duration-300 hover-underline flex items-center">
+                            Layanan
+                            <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+
+                        <!-- Dropdown Content -->
+                        <div
+                            class="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                            <a href="/profil-sekolah.html"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition duration-300 hover-underline">Kontak
+                                Layanan</a>
+                            <a href="/kegiatan-kesiswaan.html"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition duration-300 hover-underline">BKK</a>
+                            <a href="/fasilitas-pendidikan.html"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition duration-300 hover-underline">LSP
+                                P-1</a>
+                        </div>
                     </div>
-                </div>
 
+                </nav>
             </nav>
 
             <!-- Buttons -->
@@ -138,8 +161,74 @@
                     up</button>
             </div>
         </div>
-    </header>
 
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white px-6 py-4 rounded-b-xl">
+            <nav class="flex flex-col space-y-4 text-gray-700 font-medium">
+                <a href="/" class="hover:text-hijautua text-sm transition duration-300 font-semibold">Beranda</a>
+
+                <!-- Mobile Dropdown -->
+                <div class="mobile-dropdown">
+                    <button class="flex justify-between w-full text-sm items-center">
+                        Tentang Kami
+                        <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="mobile-dropdown-content hidden pl-4 mt-2 space-y-2">
+                        <a href="/profil-sekolah.html" class="block text-sm text-gray-700">Profil Sekolah</a>
+                        <a href="/kegiatan-kesiswaan.html" class="block text-sm text-gray-700">Kegiatan Kesiswaan</a>
+                        <a href="/fasilitas-pendidikan.html" class="block text-sm text-gray-700">Fasilitas
+                            Pendidikan</a>
+                    </div>
+                </div>
+
+                <!-- Mobile Dropdown -->
+                <div class="mobile-dropdown">
+                    <button class="flex justify-between w-full text-sm items-center">
+                        Program Studi
+                        <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="mobile-dropdown-content hidden pl-4 mt-2 space-y-2">
+                        <a href="/profil-sekolah.html" class="block text-sm text-gray-700">Teknik Komputer &
+                            Jaringan</a>
+                        <a href="/kegiatan-kesiswaan.html" class="block text-sm text-gray-700">Teknik Kendaraan
+                            Ringan</a>
+                        <a href="/fasilitas-pendidikan.html" class="block text-sm text-gray-700">Manajemen
+                            Perkantoran</a>
+                        <a href="/fasilitas-pendidikan.html" class="block text-sm text-gray-700">Akuntansi Keuangan
+                            Lembaga</a>
+                    </div>
+                </div>
+
+                <!-- Mobile Dropdown -->
+                <div class="mobile-dropdown">
+                    <button class="flex justify-between w-full text-sm items-center">
+                        Layanan
+                        <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="mobile-dropdown-content hidden pl-4 mt-2 space-y-2">
+                        <a href="/profil-sekolah.html" class="block text-sm text-gray-700">Kontak Layanan</a>
+                        <a href="/kegiatan-kesiswaan.html" class="block text-sm text-gray-700">BKK</a>
+                        <a href="/fasilitas-pendidikan.html" class="block text-sm text-gray-700">LSP P-1</a>
+                    </div>
+                </div>
+
+                <!-- Mobile Buttons -->
+                <div class="flex space-x-3 pt-2">
+                    <button
+                        class="border-2 border-hijautua text-hijautua px-4 py-2 rounded-lg hover:bg-hijautua hover:text-white transition duration-300 text-sm flex-1">Login</button>
+                    <button
+                        class="bg-hijautua text-white px-4 py-2 rounded-lg hover:bg-white hover:text-hijautua border-2 border-hijautua transition duration-300 text-sm flex-1">Sign
+                        up</button>
+                </div>
+            </nav>
+        </div>
+    </header>
 
     <!-- Hero Section -->
     <section
@@ -149,9 +238,9 @@
     </section>
 
     <!-- Berita Terbaru -->
-    <section class="py-16 bg-bg3">
-        <div class="max-w-6xl mx-auto px-6 ">
-            <h2 class="text-2xl font-bold text-gray-800 mb-8">Berita Umum Terbaru</h2>
+    <section class="py-8 md:py-16 bg-bg3">
+        <div class="max-w-6xl mx-auto px-4 md:px-6">
+            <h2 class="text-xl md:text-2xl font-bold text-gray-800 mb-6 md:mb-8">Berita Umum Terbaru</h2>
 
             <!-- Swiper Container -->
             <div class="swiper mySwiper ">
@@ -168,8 +257,7 @@
                                 <div>
                                     <h3 class="text-lg font-semibold text-gray-800">SMK NU 1 Slawi Laksanakan ANBK 2025
                                     </h3>
-                                    <p class="text-gray-600 mt-2 text-sm">Slawi, 4-5 Agustus 2025 — SMK NU 1 Slawi
-                                        kembali menyelenggarakan ANBK...</p>
+                                    <p class="text-gray-600 mt-2 text-sm">Slawi, 4-5 Agustus 2025-SMK NU 1 Slawi Kembali menyelenggarakan Asesmen Nasional Berbasis komputer (ANBK) bagipeserta didik kelas XI, sebagai bagian dari program evaluasi mutu pendidikan nasional. kegiatan ini berlangsung duahari, mulai tanggal 4 hingga 5....  </p>
                                 </div>
                                 <button
                                     class="mt-6 bg-green-600 text-white px-5 py-2 rounded-lg hover:bg-green-700 transition hover-lift btn-animation">
@@ -191,9 +279,7 @@
                                         Wujudkan Generasi Unggul dan Siap Bersaing</h3>
                                     <p class="text-gray-600 mt-2 text-sm">Slawi, 4–5 Agustus 2025 — SMK NU 1 Slawi
                                         kembali menyelenggarakan Asesmen Nasional Berbasis Komputer (ANBK) bagi peserta
-                                        didik kelas XI, sebagai bagian dari program evaluasi mutu pendidikan nasional.
-                                        Kegiatan ini berlangsung selama dua hari, mulai tanggal 4 hingga 5 Agustus 2025,
-                                        di laboratorium komputer SMK NU 1 Slawi.</p>
+                                        didik kelas XI, sebagai bagian dari program evaluasi mutu pendidikan nasional...</p>
                                 </div>
                                 <button
                                     class="mt-6 bg-green-600 text-white px-5 py-2 rounded-lg hover:bg-green-700 transition hover-lift btn-animation">
@@ -253,9 +339,9 @@
 
 
     <!-- Section Pimpinan -->
-    <section class="py-20 text-white  mx-auto"
+    <section class="py-12 md:py-20 text-white mx-auto"
         style="background: linear-gradient(to bottom, #1CA374, #3CBC90, #0A3D2B);">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 items-center px-4 md:px-6">
 
             <!-- Foto Kepala Sekolah -->
             <div class="flex justify-center">
@@ -290,11 +376,10 @@
 
 
         <!-- Section Alumni -->
-        <hr class="mx-12 border-2 my-8">
-        <div class="max-w-6xl mx-auto px-6 text-center mt-12">
-            <h2 class="text-3xl font-bold mb-12 text-white">Apa kata Alumni?</h2>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <hr class="mx-4 md:mx-12 border-2 my-6 md:my-8">
+        <div class="max-w-6xl mx-auto px-4 md:px-6 text-center mt-8 md:mt-12">
+            <h2 class="text-2xl md:text-3xl font-bold mb-8 md:mb-12 text-white">Apa kata Alumni?</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10">
 
                 <div
                     class="bg-white/10 backdrop-blur-md rounded-2xl p-6 shadow-lg hover:scale-105 transition duration-300">
@@ -372,8 +457,9 @@
     </div>
 
     <!-- Footer Utama -->
-    <footer class="bg-white ">
-        <div class="max-w-6xl mx-auto px-6 py-10 grid grid-cols-1 md:grid-cols-4 gap-10">
+    <footer class="bg-white">
+        <div
+            class="max-w-6xl mx-auto px-4 md:px-6 py-8 md:py-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 md:gap-10">
 
             <!-- Logo dan Deskripsi -->
             <div>
