@@ -24,27 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Call once on page load to set initial state
   handleScroll();
   
-  // Mobile menu toggle
-  const mobileMenuButton = document.getElementById('mobile-menu-button');
-  const mobileMenu = document.getElementById('mobile-menu');
-  
-  if (mobileMenuButton && mobileMenu) {
-    mobileMenuButton.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-    });
     
-    // Handle mobile dropdowns
-    const mobileDropdowns = document.querySelectorAll('.mobile-dropdown');
-    mobileDropdowns.forEach(dropdown => {
-      const button = dropdown.querySelector('button');
-      const content = dropdown.querySelector('.mobile-dropdown-content');
-      
-      button.addEventListener('click', () => {
-        content.classList.toggle('hidden');
-      });
-    });
-  }
-  
   // Add decorative elements to the page
   addDecorativeElements();
 });
