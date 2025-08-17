@@ -10,7 +10,6 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- SwiperJS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
@@ -22,6 +21,17 @@
 
     <!-- FontAwesome CDN untuk ikon -->
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <!-- (opsional) Safety CSS kalau ada stylesheet lain yang menimpa style Swiper -->
+    <style>
+        .swiper-wrapper {
+            display: flex !important;
+        }
+
+        .swiper-slide {
+            flex-shrink: 0 !important;
+        }
+    </style>
 
     <script>
         tailwind.config = {
@@ -75,15 +85,18 @@
                     <div
                         class="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
                         <a href="/profil-sekolah.html"
-                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition duration-300 hover-underline">Profil Sekolah</a>
+                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition duration-300 hover-underline">Profil
+                            Sekolah</a>
                         <a href="/kegiatan-kesiswaan.html"
-                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition duration-300 hover-underline">Kegiatan Kesiswaan</a>
+                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition duration-300 hover-underline">Kegiatan
+                            Kesiswaan</a>
                         <a href="/fasilitas-pendidikan.html"
-                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition duration-300 hover-underline">Fasilitas Pendidikan</a>
+                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition duration-300 hover-underline">Fasilitas
+                            Pendidikan</a>
                     </div>
                 </div>
 
-               <!-- Dropdown -->
+                <!-- Dropdown -->
                 <div class="relative group">
                     <button
                         class="hover:text-hijautua text-xs transition duration-300 hover-underline flex items-center">
@@ -97,16 +110,20 @@
                     <div
                         class="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
                         <a href="/profil-sekolah.html"
-                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition duration-300 hover-underline">Teknik Komputer & Jaringan</a>
+                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition duration-300 hover-underline">Teknik
+                            Komputer & Jaringan</a>
                         <a href="/kegiatan-kesiswaan.html"
-                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition duration-300 hover-underline">Teknik Kendaraan Ringan</a>
+                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition duration-300 hover-underline">Teknik
+                            Kendaraan Ringan</a>
                         <a href="/fasilitas-pendidikan.html"
-                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition duration-300 hover-underline">Manajemen Perkantoran</a>
+                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition duration-300 hover-underline">Manajemen
+                            Perkantoran</a>
                         <a href="/fasilitas-pendidikan.html"
-                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition duration-300 hover-underline">Akuntansi Keuangan Lembaga</a>
+                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition duration-300 hover-underline">Akuntansi
+                            Keuangan Lembaga</a>
                     </div>
                 </div>
-                
+
                 <!-- Dropdown -->
                 <div class="relative group">
                     <button
@@ -121,11 +138,13 @@
                     <div
                         class="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
                         <a href="/profil-sekolah.html"
-                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition duration-300 hover-underline">Kontak Layanan</a>
+                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition duration-300 hover-underline">Kontak
+                            Layanan</a>
                         <a href="/kegiatan-kesiswaan.html"
                             class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition duration-300 hover-underline">BKK</a>
                         <a href="/fasilitas-pendidikan.html"
-                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition duration-300 hover-underline">LSP P-1</a>
+                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition duration-300 hover-underline">LSP
+                            P-1</a>
                     </div>
                 </div>
 
@@ -362,12 +381,10 @@
                                 </div>
                             </div>
 
-                            <!-- Navigasi -->
-                            <div class="swiper-button-next text-greent after:content-['']"></div>
-                            <div class="swiper-button-prev text-greent after:content-['']"></div>
-
-                            <!-- Pagination -->
-                            <div class="swiper-pagination t-24"></div>
+                            <!-- Navigasi & Pagination -->
+                            <div class="swiper-button-next text-greent"></div>
+                            <div class="swiper-button-prev text-greent"></div>
+                            <div class="swiper-pagination mt-4"></div>
                         </div>
                     </div>
                 </section>
@@ -455,37 +472,29 @@
     </footer>
 
 
-    <!-- Swiper JS -->
+    <!-- Swiper JS: MUAT SEKALI SAJA, di bawah sebelum init -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
-        var swiper = new Swiper(".mySwiper", {
-            slidesPerView: 3,
-            spaceBetween: 24,
-            loop: true,
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-            breakpoints: {
-                320: { slidesPerView: 1 },
-                768: { slidesPerView: 2 },
-                1024: { slidesPerView: 3 },
-            },
+        // jalankan setelah DOM siap
+        document.addEventListener('DOMContentLoaded', function () {
+            const swiper = new Swiper(".mySwiper", {
+                slidesPerView: 2,
+                spaceBetween: 24,
+                loop: true,
+                pagination: { el: ".swiper-pagination", clickable: true },
+                navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" }
+                // OPSI B (selalu 3 slide di semua ukuran): hapus blok breakpoints di atas
+            });
         });
     </script>
-
-    <!-- FontAwesome CDN untuk ikon sosmed -->
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
 
     <script src="script.js"></script>
     <script src="scroll-animations.js"></script>
     <script src="loading.js"></script>
     <script src="glass-navbar.js"></script>
+
+
 </body>
 
 </html>
