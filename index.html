@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMK NU 1 Slawi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- SwiperJS CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- SwiperJS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Custom Components -->
+    <script src="components.js"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Custom Animations -->
+    <link rel="stylesheet" href="animations.css">
+    <!-- Glass Effects -->
+    <link rel="stylesheet" href="glass-effects.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        hijautua: '#01665E',
+                        hijauh: '#117F58',
+                        bg1: '#34B589',
+                        bg2: '#1CA374',
+                        bg3: '#99ccaf',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-gray-50 font-poppins">
+
+    <!-- Navbar -->
+    <header
+        class="fixed top-4 left-1/2 transform -translate-x-1/2 w-[90%] max-w-6xl bg-white backdrop-blur-md shadow-lg rounded-xl z-50">
+        <div class="flex items-center justify-between py-3 px-6">
+
+            <!-- Logo -->
+            <div class="flex items-center space-x-3" id="logo-container">
+                <img src="/assets/logo/Logo Web.png" alt="Logo" class="w-36">
+            </div>
+
+            <!-- Menu -->
+            <nav class="hidden md:flex space-x-6 text-gray-700 font-medium relative">
+                <a href="/"
+                    class="hover:text-hijautua text-xs transition duration-300 hover-underline font-semibold">Beranda</a>
+
+                <!-- Dropdown -->
+                <div class="relative group">
+                    <button
+                        class="hover:text-hijautua text-xs transition duration-300 hover-underline flex items-center">
+                        Tentang Kami
+                        <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+
+                    <!-- Dropdown Content -->
+                    <div
+                        class="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                        <a href="/profil-sekolah.html"
+                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition duration-300 hover-underline">Profil Sekolah</a>
+                        <a href="/kegiatan-kesiswaan.html"
+                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition duration-300 hover-underline">Kegiatan Kesiswaan</a>
+                        <a href="/fasilitas-pendidikan.html"
+                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition duration-300 hover-underline">Fasilitas Pendidikan</a>
+                    </div>
+                </div>
+
+               <!-- Dropdown -->
+                <div class="relative group">
+                    <button
+                        class="hover:text-hijautua text-xs transition duration-300 hover-underline flex items-center">
+                        Program Studi
+                        <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+
+                    <!-- Dropdown Content -->
+                    <div
+                        class="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                        <a href="/profil-sekolah.html"
+                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition duration-300 hover-underline">Teknik Komputer & Jaringan</a>
+                        <a href="/kegiatan-kesiswaan.html"
+                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition duration-300 hover-underline">Teknik Kendaraan Ringan</a>
+                        <a href="/fasilitas-pendidikan.html"
+                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition duration-300 hover-underline">Manajemen Perkantoran</a>
+                        <a href="/fasilitas-pendidikan.html"
+                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition duration-300 hover-underline">Akuntansi Keuangan Lembaga</a>
+                    </div>
+                </div>
+                
+                <!-- Dropdown -->
+                <div class="relative group">
+                    <button
+                        class="hover:text-hijautua text-xs transition duration-300 hover-underline flex items-center">
+                        Layanan
+                        <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+
+                    <!-- Dropdown Content -->
+                    <div
+                        class="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                        <a href="/profil-sekolah.html"
+                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition duration-300 hover-underline">Kontak Layanan</a>
+                        <a href="/kegiatan-kesiswaan.html"
+                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition duration-300 hover-underline">BKK</a>
+                        <a href="/fasilitas-pendidikan.html"
+                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition duration-300 hover-underline">LSP P-1</a>
+                    </div>
+                </div>
+
+            </nav>
+
+            <!-- Buttons -->
+            <div class="hidden md:flex space-x-3">
+                <button
+                    class="border-2 border-hijautua text-hijautua px-5 py-2 rounded-lg hover:bg-hijautua hover:text-white transition duration-300 text-xs hover-lift btn-animation">Login</button>
+                <button
+                    class="bg-hijautua text-white px-5 py-2 rounded-lg hover:bg-white hover:text-hijautua border-2 border-hijautua transition duration-300 text-xs hover-lift btn-animation">Sign
+                    up</button>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- Hero Section -->
+    <section
+        class="bg-gradient-to-br from-bg1 to-bg2 text-white h-[120vh] flex items-center justify-center pt-20 flex-col">
+        <!-- <img src="/assets/background/Frame 39 1.png" alt=""> -->
+        <img src="/assets/component/Group 2229.png" alt="" class="w-3/4 -mt-24 hero-animation animate-float">
+    </section>
+
+    <!-- Berita Terbaru -->
+    <section class="py-16 bg-bg3">
+        <div class="max-w-6xl mx-auto px-6 ">
+            <h2 class="text-2xl font-bold text-gray-800 mb-8">Berita Umum Terbaru</h2>
+
+            <!-- Swiper Container -->
+            <div class="swiper mySwiper ">
+                <div class="swiper-wrapper ">
+
+                    <!-- Slide 1 -->
+                    <div class="swiper-slide">
+                        <div class="bg-white shadow-lg rounded-2xl overflow-hidden flex flex-col md:flex-row">
+                            <div class="md:w-1/2">
+                                <img src="/assets/berita/Rectangle 42.png" alt="Berita"
+                                    class="w-full h-80 object-cover">
+                            </div>
+                            <div class="p-6 md:w-1/2 flex flex-col justify-between">
+                                <div>
+                                    <h3 class="text-lg font-semibold text-gray-800">SMK NU 1 Slawi Laksanakan ANBK 2025
+                                    </h3>
+                                    <p class="text-gray-600 mt-2 text-sm">Slawi, 4-5 Agustus 2025 — SMK NU 1 Slawi
+                                        kembali menyelenggarakan ANBK...</p>
+                                </div>
+                                <button
+                                    class="mt-6 bg-green-600 text-white px-5 py-2 rounded-lg hover:bg-green-700 transition hover-lift btn-animation">
+                                    Baca Selengkapnya
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="swiper-slide">
+                        <div class="bg-white shadow-lg rounded-2xl overflow-hidden flex flex-col md:flex-row">
+                            <div class="md:w-1/2">
+                                <img src="/assets/berita/anbk.jpeg" alt="Berita" class="w-full h-80 object-cover">
+                            </div>
+                            <div class="p-6 md:w-1/2 flex flex-col justify-between">
+                                <div>
+                                    <h3 class="text-lg font-semibold text-gray-800">SMK NU 1 Slawi Laksanakan ANBK 2025
+                                        Wujudkan Generasi Unggul dan Siap Bersaing</h3>
+                                    <p class="text-gray-600 mt-2 text-sm">Slawi, 4–5 Agustus 2025 — SMK NU 1 Slawi
+                                        kembali menyelenggarakan Asesmen Nasional Berbasis Komputer (ANBK) bagi peserta
+                                        didik kelas XI, sebagai bagian dari program evaluasi mutu pendidikan nasional.
+                                        Kegiatan ini berlangsung selama dua hari, mulai tanggal 4 hingga 5 Agustus 2025,
+                                        di laboratorium komputer SMK NU 1 Slawi.</p>
+                                </div>
+                                <button
+                                    class="mt-6 bg-green-600 text-white px-5 py-2 rounded-lg hover:bg-green-700 transition hover-lift btn-animation">
+                                    Baca Selengkapnya
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="swiper-slide">
+                        <div class="bg-white shadow-lg rounded-2xl overflow-hidden flex flex-col md:flex-row">
+                            <div class="md:w-1/2">
+                                <img src="/assets/berita/pramuka.jpeg" alt="Berita" class="w-full h-80 object-cover">
+                            </div>
+                            <div class="p-6 md:w-1/2 flex flex-col justify-between">
+                                <div>
+                                    <h3 class="text-lg font-semibold text-gray-800">Pelantikan Alih Golongan Penggalang
+                                        ke Penegak SMK NU 1 Slawi</h3>
+                                    <p class="text-gray-600 mt-2 text-sm">Slawi, 18 Juli 2025 — Gerakan Pramuka Gugus
+                                        Depan 08.123–08.124 Pangkalan SMK NU 1 Slawi kembali menyelenggarakan Pelantikan
+                                        Alih Golongan dari Penggalang ke Penegak sebagai bagian dari program tahunan
+                                        Ambalan Walisongo dan Ratu Balqis Tahun Ajaran 2025/2026.</p>
+                                </div>
+                                <button
+                                    class="mt-6 bg-green-600 text-white px-5 py-2 rounded-lg hover:bg-green-700 transition hover-lift btn-animation">
+                                    Baca Selengkapnya
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Navigasi -->
+                <div class="flex justify-between mt-16">
+                    <!-- <div class="swiper-button-prev !static !text-green-700"></div> -->
+                    <div class="swiper-pagination"></div>
+                    <!-- <div class="swiper-button-next !static !text-green-700"></div> -->
+                </div>
+
+                <script>
+                    // Example of using replaceImagesWithComponent to replace all images in the news section
+                    document.addEventListener('DOMContentLoaded', () => {
+                        // Replace all images in the swiper slides with our img component
+                        replaceImagesWithComponent('.swiper-slide', {
+                            objectFit: 'cover',
+                            rounded: 'lg',
+                            className: 'transition-transform duration-300 hover:scale-105'
+                        });
+                    });
+                </script>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Section Pimpinan -->
+    <section class="py-20 text-white  mx-auto"
+        style="background: linear-gradient(to bottom, #1CA374, #3CBC90, #0A3D2B);">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+
+            <!-- Foto Kepala Sekolah -->
+            <div class="flex justify-center">
+                <img src="/assets/component/Group 2278.png" alt="Kepala Sekolah"
+                    class="w-80 md:w-full rounded-xl object-cover">
+            </div>
+
+            <!-- Sambutan -->
+            <div class="text-left">
+                <h1 class="text-2xl md:text-3xl font-bold mb-4 text-white">
+                    Kepala Sekolah<br>
+                    <span class="text-white">Ali Saefudin, S.H., M.Pd.</span>
+                </h1>
+                <p class="text-white leading-relaxed text-xs mr-12">
+                    Assalamu'alaikum warahmatullahi wabarakatuh, <br><br>
+                    Puji syukur ke hadirat Allah SWT atas segala rahmat dan karunia-Nya, kita dapat berkumpul dalam
+                    suasana yang penuh semangat dan optimisme ini.
+                    <br><br>
+                    SMK NU 1 Slawi senantiasa berkomitmen untuk mencetak generasi muda yang kompeten, kuat, cerdas, dan
+                    berakhlak mulia. Dalam dunia yang semakin maju dan dinamis, lulusan SMK memiliki peran yang sangat
+                    strategis sebagai motor penggerak perubahan di masyarakat. Dengan bekal ilmu pengetahuan,
+                    keterampilan, serta karakter yang baik, siswa-siswi SMK NU 1 Slawi siap menghadapi tantangan global
+                    dan berkontribusi bagi kemajuan bangsa.
+                    <br><br>
+                    Oleh karena itu, di SMK NU 1 Slawi, kami tidak hanya mendidik siswa untuk menguasai keterampilan
+                    teknis, tetapi juga menanamkan nilai-nilai moral dan keagamaan yang kuat, sehingga mereka dapat
+                    menjadi sumber daya manusia yang tidak hanya cerdas dan terampil, tetapi juga berakhlak mulia.
+                </p>
+            </div>
+
+        </div>
+
+
+        <!-- Section Alumni -->
+        <hr class="mx-12 border-2 my-8">
+        <div class="max-w-6xl mx-auto px-6 text-center mt-12">
+            <h2 class="text-3xl font-bold mb-12 text-white">Apa kata Alumni?</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+                <div
+                    class="bg-white/10 backdrop-blur-md rounded-2xl p-6 shadow-lg hover:scale-105 transition duration-300">
+                    <p class="italic text-gray-100">"SMK NU 1 Slawi membentuk saya menjadi pribadi yang siap kerja dan
+                        percaya diri di dunia industri."</p>
+                    <div class="flex items-center mt-6">
+                        <img src="assets/profile/Ellipse 26.png" alt="Alumni"
+                            class="w-14 h-14 rounded-full border-2 border-white">
+                        <div class="ml-4 text-left">
+                            <h4 class="font-semibold">Rizky Maulana</h4>
+                            <p class="text-xs text-gray-200">IT Support - Telkom</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-white/10 backdrop-blur-md rounded-2xl p-6 shadow-lg hover:scale-105 transition duration-300">
+                    <p class="italic text-gray-100">"Berkat pembelajaran di SMK NU 1 Slawi, saya bisa melanjutkan kuliah
+                        di universitas impian."</p>
+                    <div class="flex items-center mt-6">
+                        <img src="assets/profile/Ellipse 25.png" alt="Alumni"
+                            class="w-14 h-14 rounded-full border-2 border-white">
+                        <div class="ml-4 text-left">
+                            <h4 class="font-semibold">Dewi Anggraini</h4>
+                            <p class="text-xs text-gray-200">Mahasiswa - UNDIP</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-white/10 backdrop-blur-md rounded-2xl p-6 shadow-lg hover:scale-105 transition duration-300">
+                    <p class="italic text-gray-100">"SMK NU 1 Slawi memberi pengalaman magang yang luar biasa sehingga
+                        saya cepat diterima kerja."</p>
+                    <div class="flex items-center mt-6">
+                        <img src="/assets/profile/Ellipse 24.png" alt="Alumni"
+                            class="w-14 h-14 rounded-full border-2 border-white">
+                        <div class="ml-4 text-left">
+                            <h4 class="font-semibold">Andi Saputra</h4>
+                            <p class="text-xs text-gray-200">Programmer - Startup Tech</p>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="bg-white/10 backdrop-blur-md rounded-2xl p-6 shadow-lg hover:scale-105 transition duration-300">
+                    <p class="italic text-gray-100">"SMK NU 1 Slawi memberi pengalaman magang yang luar biasa sehingga
+                        saya cepat diterima kerja."</p>
+                    <div class="flex items-center mt-6">
+                        <img src="/assets/profile/Ellipse 24.png" alt="Alumni"
+                            class="w-14 h-14 rounded-full border-2 border-white">
+                        <div class="ml-4 text-left">
+                            <h4 class="font-semibold">Andi Saputra</h4>
+                            <p class="text-xs text-gray-200">Programmer - Startup Tech</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- </section> -->
+    </section>
+
+
+    <!-- CTA Box di atas Footer -->
+    <div class="relative -mt-10 z-10 max-w-6xl mx-auto px-6">
+        <div
+            class="bg-[#4EFFB2] rounded-2xl shadow-lg p-6 flex flex-col md:flex-row justify-between items-center card-glass gradient-border">
+            <p class="text-lg font-medium text-black text-center md:text-left mb-4 md:mb-0">
+                Tertarik Untuk Bergabung Dengan <br>
+                <span class="font-bold">SMK NU 1 Slawi</span> ayo daftar Sekarang !!
+            </p>
+            <a href="#pendaftaran"
+                class="bg-black text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-800 transition duration-300">
+                Pendaftaran
+            </a>
+        </div>
+    </div>
+
+    <!-- Footer Utama -->
+    <footer class="bg-white ">
+        <div class="max-w-6xl mx-auto px-6 py-10 grid grid-cols-1 md:grid-cols-4 gap-10">
+
+            <!-- Logo dan Deskripsi -->
+            <div>
+                <div class="mb-2">
+                    <img src="/assets/logo/Logo Web.png" alt="Logo" class="">
+                </div>
+                <p class="text-gray-700 text-sm leading-relaxed mb-4">
+                    <span class="font-bold">SMK NU 1 Slawi</span> memadukan ilmu-ilmu umum yang
+                    berbasis pada kurikulum yang dikeluarkan oleh Departemen Pendidikan Nasional dan
+                    ilmu-ilmu yang berbasis pada ajaran Islam ahli sunnah wal jama’ah (Nahdatul ‘Ulama).
+                </p>
+
+                <h3 class="font-semibold mb-2">Ikuti Kami</h3>
+                <div class="flex gap-3 text-xl text-gray-700 ">
+                    <a href="#" class="hover:text-green-600 transition duration-300"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="hover:text-green-600 transition duration-300"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="hover:text-green-600 transition duration-300"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="#" class="hover:text-green-600 transition duration-300"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+
+            <!-- Navigasi -->
+            <div>
+                <h3 class="font-bold mb-3 mt-16">Navigasi</h3>
+                <ul class="space-y-2 text-gray-700">
+                    <li><a href="#" class="hover:text-green-600 transition duration-300">Beranda</a></li>
+                    <li><a href="#" class="hover:text-green-600 transition duration-300">Tentang</a></li>
+                    <li><a href="#" class="hover:text-green-600 transition duration-300">Fasilitas</a></li>
+                    <li><a href="#" class="hover:text-green-600 transition duration-300">Kontak</a></li>
+                </ul>
+            </div>
+
+            <!-- Company -->
+            <div>
+                <h3 class="font-bold mb-3 mt-16">Company</h3>
+                <ul class="space-y-2 text-gray-700">
+                    <li><a href="#" class="hover:text-green-600 transition duration-300">About us</a></li>
+                    <li><a href="#" class="hover:text-green-600 transition duration-300">Partners</a></li>
+                    <li><a href="#" class="hover:text-green-600 transition duration-300">Customers</a></li>
+                    <li><a href="#" class="hover:text-green-600 transition duration-300">Contact us</a></li>
+                </ul>
+            </div>
+
+            <!-- Informasi -->
+            <div>
+                <h3 class="font-bold mb-3 mt-16">Informasi</h3>
+                <p class="text-gray-700 text-sm leading-relaxed transition duration-300">
+                    JL. Jend Ahmad Yani No.20 Slawi <br>
+                    Telp. (0283) 492695 – 4562312 <br>
+                    web. <a href="https://smknuslawi.sch.id/" target="_blank"
+                        class="text-green-600 hover:underline">https://smknuslawi.sch.id/</a>
+                </p>
+            </div>
+
+        </div>
+
+        <!-- Copyright -->
+        <div
+            class="border-t border-gray-200 py-4 px-6 flex flex-col md:flex-row justify-between items-center text-sm text-gray-600 max-w-6xl mx-auto">
+            <p>© 2025 All rights reserved | SMK NU 1 Slawi</p>
+            <p>Design and Developed by <span class="font-bold">FIREOWL</span></p>
+        </div>
+    </footer>
+
+    <!-- FontAwesome CDN untuk ikon sosmed -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+
+    <script src="script.js"></script>
+    <script src="scroll-animations.js"></script>
+    <script src="loading.js"></script>
+    <script src="glass-navbar.js"></script>
+</body>
+
+</html>
