@@ -109,3 +109,26 @@
   filter: blur(50px);
   z-index: -1;
 }
+
+/* 1) Jangan blur seluruh strip header */
+header.navbar-glass{
+  background: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+/* 2) Clip blur agar tidak bocor sisi kiri/kanan */
+#navcard{
+  overflow: hidden;          /* clip ke border-radius */
+  isolation: isolate;        /* cegah bleed backdrop-filter */
+  border-radius: 1rem;       /* samakan dengan rounded-2xl */
+}
+
+/* (opsional) kalau masih terasa terlalu putih, kurangi opasitasnya */
+#navcard.navbar-glass{
+  background-color: rgba(255,255,255,0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
