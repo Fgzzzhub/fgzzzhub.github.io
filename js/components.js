@@ -225,7 +225,7 @@ function applyImageHoverEffects(containerSelector, effect = 'zoom') {
  * document.querySelector('.container').appendChild(myImage);
  * 
  * // Advanced usage
- * const profilePic = img('/assets/profile.jpg', 'Profile Picture', {
+ * const profilePic = img('assets/profile.jpg', 'Profile Picture', {
  *   width: '32',
  *   height: '32',
  *   rounded: 'full',

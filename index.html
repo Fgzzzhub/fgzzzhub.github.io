@@ -1,26 +1,26 @@
 <!DOCTYPE html>
+
 <html lang="id">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>SMK NU 1 Slawi</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- SwiperJS CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet" />
     <!-- SwiperJS JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- Custom Components -->
-    <script src="/js/components.js"></script>
-
-    <link rel="stylesheet" href="/css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
+    <script src="js/components.js"></script>
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
     <!-- Custom Animations -->
-    <link rel="stylesheet" href="/css/animations.css">
+    <link href="css/animations.css" rel="stylesheet" />
     <!-- Glass Effects -->
-    <link rel="stylesheet" href="/css/glass-effects.css">
-    <link rel="stylesheet" href="/css/responsive.css">
+    <link href="css/glass-effects.css" rel="stylesheet" />
+    <link href="css/responsive.css" rel="stylesheet" />
     <style>
         body {
             font-family: 'Poppins', sans-serif;
@@ -31,7 +31,6 @@
             box-shadow: none !important;
         }
     </style>
-
     <script>
         tailwind.config = {
             theme: {
@@ -47,104 +46,99 @@
             }
         }
     </script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 
 <body class="bg-gray-50 font-poppins overflow-x-hidden">
-
-
     <!-- Navbar -->
     <header class="fixed top-4 inset-x-0 z-50"> <!-- transparan, full width -->
-        <div  class="navbar-glass mx-auto w-[90%] max-w-6xl rounded-2xl
-              shadow-lg flex items-center justify-between py-3 px-6 ring-1 ring-black/5">
+        <div
+            class="navbar-glass mx-auto w-[90%] max-w-6xl rounded-2xl shadow-lg flex items-center justify-between py-3 px-6 ring-1 ring-black/5">
             <!-- Logo -->
             <div class="flex items-center space-x-3" id="logo-container">
-                <img src="/assets/logo/Logo Web.png" alt="Logo" class="w-28 md:w-36">
+                <img alt="Logo" class="w-28 md:w-36" src="assets/logo/Logo Web.png" />
             </div>
-
             <!-- Mobile Menu Button -->
-            <button id="mobile-menu-button" class="md:hidden text-gray-700 focus:outline-none">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+            <button class="md:hidden text-gray-700 focus:outline-none" id="mobile-menu-button">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+                    <path d="M4 6h16M4 12h16m-7 6h7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                    </path>
                 </svg>
             </button>
-
             <!-- Desktop Menu -->
             <nav class="hidden md:flex space-x-6 text-gray-700 font-medium relative">
-                <a href="/"
-                    class="hover:text-hijautua text-sm transition duration-300 hover-underline font-semibold">Beranda</a>
-
+                <a class="hover:text-hijautua text-sm transition duration-300 hover-underline font-semibold"
+                    href=".">Beranda</a>
                 <!-- Tentang Kami (biarkan seperti semula) -->
                 <div class="relative group">
                     <button
                         class="hover:text-hijautua text-sm transition duration-300 hover-underline flex items-center">
                         Tentang Kami
-                        <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+                            <path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                            </path>
                         </svg>
                     </button>
                     <div
                         class="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
-                        <a href="/profil-sekolah.html"
-                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Profil
+                        <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                            href="profil-sekolah.html">Profil
                             Sekolah</a>
-                        <a href="/kegiatan-kesiswaan.html"
-                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Kegiatan
+                        <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                            href="kegiatan-kesiswaan.html">Kegiatan
                             Kesiswaan</a>
-                        <a href="/fasilitas-pendidikan.html"
-                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Fasilitas
+                        <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                            href="fasilitas-pendidikan.html">Fasilitas
                             Pendidikan</a>
                     </div>
                 </div>
-
                 <!-- Program Studi (dropdown ke modal) -->
                 <div class="relative group">
                     <button
                         class="hover:text-hijautua text-sm transition duration-300 hover-underline flex items-center">
                         Program Studi
-                        <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+                            <path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                            </path>
                         </svg>
                     </button>
                     <div
                         class="absolute left-0 mt-2 w-56 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
-                        <button onclick="openModal('tkj')"
-                            class="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Teknik
-                            Komputer & Jaringan</button>
-                        <button onclick="openModal('tkr')"
-                            class="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Teknik
-                            Kendaraan Ringan</button>
-                        <button onclick="openModal('mp')"
-                            class="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Manajemen
-                            Perkantoran</button>
-                        <button onclick="openModal('akl')"
-                            class="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Akuntansi
-                            Keuangan Lembaga</button>
+                        <button class="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"><a
+                                href="prodi/tkj.html">Teknik
+                                Komputer &amp; Jaringan</a></button>
+                        <button class="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                            <a href="prodi/tkj.html">Teknik Kendaraan Ringan</a></button>
+                        <button class="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"><a href="prodi/tkj.html">Manajemen
+                            Perkantoran</a></button>
+                        <button class="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"><a href="prodi/tkj.html">Akuntansi
+                            Keuangan Lembaga</a></button>
                     </div>
                 </div>
-
                 <!-- Layanan (biarkan seperti semula) -->
                 <div class="relative group">
                     <button
                         class="hover:text-hijautua text-sm transition duration-300 hover-underline flex items-center">
                         Layanan
-                        <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+                            <path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                            </path>
                         </svg>
                     </button>
                     <div
                         class="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
-                        <a href="/profil-sekolah.html"
-                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Kontak
+                        <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                            href="profil-sekolah.html">Kontak
                             Layanan</a>
-                        <a href="/kegiatan-kesiswaan.html"
-                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">BKK</a>
-                        <a href="/fasilitas-pendidikan.html"
-                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">LSP
+                        <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                            href="kegiatan-kesiswaan.html">BKK</a>
+                        <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                            href="fasilitas-pendidikan.html">LSP
                             P-1</a>
                     </div>
                 </div>
             </nav>
-
             <!-- Buttons -->
             <div class="hidden md:flex space-x-3">
                 <button
@@ -155,27 +149,21 @@
             </div>
         </div>
     </header>
-
     <!-- Modal -->
-    <div id="modalProdi" class="fixed inset-0 hidden bg-black bg-opacity-50 flex items-center justify-center z-50">
+    <div class="fixed inset-0 hidden bg-black bg-opacity-50 flex items-center justify-center z-50" id="modalProdi">
         <div class="bg-white rounded-xl shadow-lg max-w-lg w-full p-6 relative">
-            <button onclick="closeModal()" class="absolute top-3 right-3 text-gray-500 hover:text-red-500">✕</button>
-            <h2 id="modalTitle" class="text-xl font-semibold mb-3">Judul Prodi</h2>
-            <p id="modalContent" class="text-gray-600">Deskripsi prodi...</p>
+            <button class="absolute top-3 right-3 text-gray-500 hover:text-red-500" onclick="closeModal()">✕</button>
+            <h2 class="text-xl font-semibold mb-3" id="modalTitle">Judul Prodi</h2>
+            <p class="text-gray-600" id="modalContent">Deskripsi prodi...</p>
         </div>
     </div>
-
     <!-- Hero Section -->
-    <section style="background-image: url('/assets/implement/Frame%2039%201.png');">
-        <img src="assets/implement/Group 2347 (2).png" class="mt-28 mb-10 mx-auto block hidden md:block" alt="">
-        <img src="assets/implement/Hero Mobile.png" class="mt-28 mb-10 mx-auto block block md:hidden" alt="">
+    <section data-aos="fade-up" style="background-image: url('assets/implement/Frame%2039%201.png');">
+        <img alt="" class="mt-28 mb-10 mx-auto block hidden md:block" src="assets/implement/Group 2347 (2).png" />
+        <img alt="" class="mt-28 mb-10 mx-auto block block md:hidden" src="assets/implement/Hero Mobile.png" />
     </section>
-
-
-
-
     <!-- ====== SECTION: Berita Umum Terbaru ====== -->
-    <section class="py-16" id="berita">
+    <section class="py-16" data-aos="fade-up" id="berita">
         <div class="text-center mb-8">
             <p class="text-2xl md:text-3xl text-slate-800 font-medium">Informasi</p>
             <h2 class="text-3xl md:text-5xl font-extrabold tracking-tight mt-1">
@@ -184,41 +172,34 @@
                 </span>
             </h2>
         </div>
-
         <div class="relative max-w-6xl mx-auto overflow-hidden">
             <!-- Track / Stage -->
-            <div id="newsCarousel" class="relative h-[380px] md:h-[470px]"></div>
-
+            <div class="relative h-[380px] md:h-[470px]" id="newsCarousel"></div>
             <!-- Controls + Dots -->
             <div class="mt-8 flex items-center justify-center gap-6">
-                <button id="newsPrev" class="carousel-btn" aria-label="Sebelumnya">
+                <button aria-label="Sebelumnya" class="carousel-btn" id="newsPrev">
                     <!-- left chevron -->
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                        stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                    <svg class="h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 19l-7-7 7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                        </path>
                     </svg>
                 </button>
-
-                <div id="newsDots" class="flex items-center gap-2"></div>
-
-                <button id="newsNext" class="carousel-btn" aria-label="Berikutnya">
+                <div class="flex items-center gap-2" id="newsDots"></div>
+                <button aria-label="Berikutnya" class="carousel-btn" id="newsNext">
                     <!-- right chevron -->
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                        stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    <svg class="h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
                     </svg>
                 </button>
             </div>
         </div>
     </section>
-
-
-
     <!-- ================== SAMBUTAN / PIMPINAN ================== -->
-    <section id="sambutan" class="py-16 md:py-24 text-white overflow-visible"
-        style="background-image:url('/assets/implement/Frame%2039%202.png'); background-size:cover; background-position:center;">
+    <section class="py-16 md:py-24 text-white overflow-visible" data-aos="fade-up" id="sambutan"
+        style="background-image:url('assets/implement/Frame%2039%202.png'); background-size:cover; background-position:center;">
         <div class="max-w-6xl mx-auto px-4 md:px-6">
-
             <!-- Heading -->
             <div class="text-center mb-10 md:mb-12">
                 <p class="text-base md:text-lg/none opacity-90">Sambutan</p>
@@ -226,26 +207,23 @@
                     Pimpinan SMK NU 1 Slawi
                 </h2>
             </div>
-
             <!-- Grid: Foto + Teks -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
-
                 <!-- FOTO KEPALA SEKOLAH -->
                 <div class="relative flex justify-center md:justify-start overflow-visible" data-aos="fade-right">
                     <div class="relative isolate w-[min(460px,92vw)]">
                         <!-- komposit foto (sudah termasuk kotak hijau & shadow sesuai desain) -->
-                        <img src="/assets/implement/Group%202278.png" alt="Kepala Sekolah"
-                            class="relative z-10 pointer-events-none select-none" />
+                        <img alt="Kepala Sekolah" class="relative z-10 pointer-events-none select-none"
+                            src="assets/implement/Kepala School.png">
+                        </img>
                     </div>
                 </div>
-
                 <!-- TEKS SAMBUTAN -->
                 <div class="space-y-4" data-aos="fade-left">
                     <div>
                         <p class="font-semibold opacity-95">Kepala Sekolah</p>
                         <p class="font-bold underline underline-offset-4">Ali Saefudin, S.H., M.Pd.</p>
                     </div>
-
                     <p class="text-white/90 leading-7">
                         Assalamu’alaikum warahmatullahi wabarakatuh,
                         Puji syukur ke hadirat Allah SWT atas segala rahmat dan karunia-Nya, kita dapat berkumpul dalam
@@ -271,74 +249,63 @@
                     </p>
                 </div>
             </div>
-
             <!-- Divider -->
             <div class="my-10 md:my-12 border-t border-white/40"></div>
-
             <!-- Subheading Wakil Kepala -->
             <div class="text-center mb-8 md:mb-10">
                 <p class="text-base md:text-lg/none opacity-90">Sambutan</p>
                 <h3 class="text-2xl md:text-3xl font-extrabold">Wakil Kepala SMK NU 1 Slawi</h3>
             </div>
-
             <!-- Grid Wakil Kepala (isi foto & teks sesuai datamu) -->
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
                 <!-- Card -->
                 <article class="rounded-2xl p-3" data-aos="zoom-in">
-                    <img src="/assets/profile/wakasek-1.png" alt="" class="w-full h-80 object-scale-down rounded-xl">
+                    <img alt="" class="w-full h-80 object-scale-down rounded-xl" src="assets/profile/wakasek-1.png" />
                     <div class="mt-4 text-center">
                         <h4 class="font-bold">Priyo Basuki, S.H</h4>
                         <p class="text-xs text-white/80">WAKASEKBID Kesiswaan</p>
                     </div>
                 </article>
-
                 <article class="rounded-2xl p-3" data-aos="zoom-in">
-                    <img src="/assets/profile/wakasek-4.png" alt="" class="w-full h-80 object-scale-down rounded-xl">
+                    <img alt="" class="w-full h-80 object-scale-down rounded-xl" src="assets/profile/wakasek-4.png" />
                     <div class="mt-4 text-center">
                         <h4 class="font-bold">Khomarudin, S.Ag</h4>
                         <p class="text-xs text-white/80">WAKASEKBID Hubungan Masyarakat</p>
                     </div>
                 </article>
-
                 <article class="rounded-2xl p-3" data-aos="zoom-in">
-                    <img src="/assets/profile/wakasek-3.png" alt="" class="w-full h-80 object-scale-down rounded-xl">
+                    <img alt="" class="w-full h-80 object-scale-down rounded-xl" src="assets/profile/wakasek-3.png" />
                     <div class="mt-4 text-center">
                         <h4 class="font-bold">Dra. Hj. Nuraliyah, M.M.Pd</h4>
                         <p class="text-xs text-white/80">WAKASEKBID Sarana dan Prasarana</p>
                     </div>
                 </article>
-
                 <article class="rounded-2xl p-3" data-aos="zoom-in">
-                    <img src="/assets/profile/wakasek-2.png" alt="" class="w-full h-80 object-scale-down rounded-xl">
+                    <img alt="" class="w-full h-80 object-scale-down rounded-xl" src="assets/profile/wakasek-2.png" />
                     <div class="mt-4 text-center">
                         <h4 class="font-bold">Uli Azzahro, M.Pd</h4>
                         <p class="text-xs text-white/80">WAKASEKBID Kurikulum</p>
                     </div>
                 </article>
-
             </div>
         </div>
         <!-- ================== KAMPUS ================== -->
-        <section class="pt-12 md:pt-16">
+        <section class="pt-12 md:pt-16" data-aos="fade-up">
             <div class="max-w-6xl mx-auto px-4 md:px-6">
                 <!-- garis pembatas atas -->
                 <div class="border-t border-white/50 pt-6 md:pt-8 text-center text-white">
                     <p class="opacity-90">Kampus</p>
                     <h3 class="text-2xl md:text-3xl font-extrabold">SMK NU 1 Slawi</h3>
                 </div>
-
                 <!-- Cards -->
                 <div class="mt-6 md:mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
                     <!-- Kampus 1 -->
-                    <a href="#" class="group relative h-64 md:h-72 lg:h-80 rounded-2xl overflow-hidden bg-slate-200
-                  shadow-xl transition-transform duration-300 will-change-transform
-                  hover:scale-[1.04] hover:z-20 focus-visible:scale-[1.04] focus:outline-none"
-                        aria-label="Detail Kampus 1">
-                        <img src="/assets/component/kampus-1.png" alt="Kampus 1"
-                            class="absolute inset-0 w-full h-full object-cover">
+                    <a aria-label="Detail Kampus 1"
+                        class="group relative h-64 md:h-72 lg:h-80 rounded-2xl overflow-hidden bg-slate-200 shadow-xl transition-transform duration-300 will-change-transform hover:scale-[1.04] hover:z-20 focus-visible:scale-[1.04] focus:outline-none"
+                        href="#">
+                        <img alt="Kampus 1" class="absolute inset-0 w-full h-full object-cover"
+                            src="assets/component/kampus-1.png" />
                         <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent"></div>
-
-
                         <!-- meta -->
                         <div class="absolute left-4 right-4 bottom-4 text-white">
                             <p class="font-bold drop-shadow">Kampus 1</p>
@@ -348,17 +315,13 @@
                             </p>
                         </div>
                     </a>
-
                     <!-- Kampus 2 -->
-                    <a href="#" class="group relative h-64 md:h-72 lg:h-80 rounded-2xl overflow-hidden bg-slate-200
-                  shadow-xl transition-transform duration-300 will-change-transform
-                  hover:scale-[1.04] hover:z-20 focus-visible:scale-[1.04] focus:outline-none"
-                        aria-label="Detail Kampus 2">
-                        <img src="/assets/component/kampus-2.png" alt="Kampus 2"
-                            class="absolute inset-0 w-full h-full object-cover">
+                    <a aria-label="Detail Kampus 2"
+                        class="group relative h-64 md:h-72 lg:h-80 rounded-2xl overflow-hidden bg-slate-200 shadow-xl transition-transform duration-300 will-change-transform hover:scale-[1.04] hover:z-20 focus-visible:scale-[1.04] focus:outline-none"
+                        href="#">
+                        <img alt="Kampus 2" class="absolute inset-0 w-full h-full object-cover"
+                            src="assets/component/kampus-2.png" />
                         <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent"></div>
-
-
                         <div class="absolute left-4 right-4 bottom-4 text-white">
                             <p class="font-bold drop-shadow">Kampus 2</p>
                             <p class="text-[11px] md:text-xs opacity-90 leading-5">
@@ -369,47 +332,41 @@
                 </div>
             </div>
         </section>
-
         <!-- ================== PORTAL APLIKASI ================== -->
-        <section class="pb-12 md:pb-16">
+        <section class="pb-12 md:pb-16" data-aos="fade-up">
             <div class="max-w-6xl mx-auto px-4 md:px-6">
                 <div class="border-t border-white/50 mt-10 md:mt-12 pt-6 md:pt-8 text-center text-white">
                     <p class="opacity-90">Portal Aplikasi</p>
                     <h3 class="text-2xl md:text-3xl font-extrabold">SMK NU 1 Slawi</h3>
                 </div>
-
                 <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
                     <!-- Card: E-Learning -->
-                    <a href="#" class="group bg-white rounded-2xl p-8 md:p-10 text-center shadow-lg
-                           hover:-translate-y-1 hover:shadow-2xl transition ">
+                    <a class="group bg-white rounded-2xl p-8 md:p-10 text-center shadow-lg hover:-translate-y-1 hover:shadow-2xl transition"
+                        href="#">
                         <div class="flex justify-center items-center mt-10">
-                            <img src="assets/component/Simulation.png" alt="" class="w-1/2">
+                            <img alt="" class="w-1/2" src="assets/component/Simulation.png" />
                         </div>
                         <div class="mt-6 font-semibold text-gray-800">Skanu E-Learning</div>
                     </a>
-
                     <!-- Card: SPMB -->
-                    <a href="#" class="group bg-white rounded-2xl p-8 md:p-10 text-center shadow-lg
-                           hover:-translate-y-1 hover:shadow-2xl transition ">
+                    <a class="group bg-white rounded-2xl p-8 md:p-10 text-center shadow-lg hover:-translate-y-1 hover:shadow-2xl transition"
+                        href="#">
                         <div class="flex justify-center items-center mt-10">
-                            <img src="assets/component/News.png" alt="" class="w-1/2">
+                            <img alt="" class="w-1/2" src="assets/component/News.png" />
                         </div>
                         <div class="mt-6 font-semibold text-gray-800">SPMB Skanu</div>
                     </a>
                 </div>
             </div>
         </section>
-
     </section>
-
     <!-- ===================== APA KATA ALUMNI ===================== -->
-    <section id="alumni" class="py-16">
+    <section class="py-16" data-aos="fade-up" id="alumni">
         <div class="text-center mb-8 relative z-10">
             <h2 class="text-3xl md:text-4xl font-extrabold drop-shadow-sm">
                 Apa Kata Alumni ?
             </h2>
         </div>
-
         <div class="relative max-w-6xl mx-auto px-4">
             <!-- Slider -->
             <div class="swiper alumniSwiper pb-14">
@@ -418,30 +375,25 @@
                     <div class="swiper-slide">
                         <article class="t-card">
                             <div class="avatar-wrap">
-                                <img src="https://i.pravatar.cc/140?img=12" alt="" class="avatar">
+                                <img alt="" class="avatar" src="https://i.pravatar.cc/140?img=12" />
                             </div>
                             <div class="px-7 pt-16 pb-8 text-center">
                                 <h3 class="font-semibold text-slate-800">Aizen Sosuke</h3>
                                 <p class="text-slate-500 text-sm -mt-1">Alumni 1998</p>
-
                                 <div class="divider"></div>
-
                                 <p class="text-slate-600 leading-7 text-[14px]">
                                     “Sebagai alumni angkatan 2018, saya bangga pernah bersekolah di SMK NU 1 Slawi…”
                                 </p>
-
                                 <div class="divider mt-4"></div>
-
                                 <button class="major-btn">Teknik Komputer &amp; Jaringan</button>
                             </div>
                         </article>
                     </div>
-
                     <!-- SLIDE 2 -->
                     <div class="swiper-slide">
                         <article class="t-card">
                             <div class="avatar-wrap">
-                                <img src="https://i.pravatar.cc/140?img=32" alt="" class="avatar">
+                                <img alt="" class="avatar" src="https://i.pravatar.cc/140?img=32" />
                             </div>
                             <div class="px-7 pt-16 pb-8 text-center">
                                 <h3 class="font-semibold text-slate-800">Aizen Sosuke</h3>
@@ -454,12 +406,11 @@
                             </div>
                         </article>
                     </div>
-
                     <!-- SLIDE 3 -->
                     <div class="swiper-slide">
                         <article class="t-card">
                             <div class="avatar-wrap">
-                                <img src="https://i.pravatar.cc/140?img=7" alt="" class="avatar">
+                                <img alt="" class="avatar" src="https://i.pravatar.cc/140?img=7" />
                             </div>
                             <div class="px-7 pt-16 pb-8 text-center">
                                 <h3 class="font-semibold text-slate-800">Aizen Sosuke</h3>
@@ -475,108 +426,94 @@
                     <!-- Tambahkan slide lain sesuai kebutuhan -->
                 </div>
             </div>
-
             <!-- Controls + Dots (absolute) -->
             <div class="relative mt-6 h-12 max-w-6xl mx-auto">
-                <button class="alumniPrev navbtn absolute left-0 top-1/2 -translate-y-1/2" aria-label="Sebelumnya">
-                    <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                <button aria-label="Sebelumnya" class="alumniPrev navbtn absolute left-0 top-1/2 -translate-y-1/2">
+                    <svg class="h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+                        <path d="M15 19l-7-7 7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                        </path>
                     </svg>
                 </button>
-
                 <!-- DOTS di tengah -->
                 <div class="alumniPagination absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2"></div>
-
-                <button class="alumniNext navbtn absolute right-0 top-1/2 -translate-y-1/2" aria-label="Berikutnya">
-                    <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                <button aria-label="Berikutnya" class="alumniNext navbtn absolute right-0 top-1/2 -translate-y-1/2">
+                    <svg class="h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+                        <path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
                     </svg>
                 </button>
             </div>
-
         </div>
-
-
     </section>
-
     <!-- CTA Box di atas Footer -->
     <div class="relative -mt-10 z-10 max-w-6xl mx-auto px-6">
         <div
             class="bg-[#4EFFB2] rounded-2xl shadow-lg p-6 flex flex-col md:flex-row justify-between items-center card-glass gradient-border">
             <p class="text-lg font-medium text-black text-center md:text-left mb-4 md:mb-0">
-                Tertarik Untuk Bergabung Dengan <br>
+                Tertarik Untuk Bergabung Dengan <br />
                 <span class="font-bold">SMK NU 1 Slawi</span> ayo daftar Sekarang !!
             </p>
-            <a href="#pendaftaran"
-                class="bg-black text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-800 transition duration-300">
+            <a class="bg-black text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-800 transition duration-300"
+                href="#pendaftaran">
                 Pendaftaran
             </a>
         </div>
     </div>
-
     <!-- Footer Utama -->
     <footer class="bg-white">
         <div
             class="max-w-6xl mx-auto px-4 md:px-6 py-8 md:py-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 md:gap-10">
-
             <!-- Logo dan Deskripsi -->
             <div>
                 <div class="mb-2">
-                    <img src="/assets/logo/Logo Web.png" alt="Logo" class="">
+                    <img alt="Logo" class="" src="assets/logo/Logo Web.png" />
                 </div>
                 <p class="text-gray-700 text-sm leading-relaxed mb-4">
                     <span class="font-bold">SMK NU 1 Slawi</span> memadukan ilmu-ilmu umum yang
                     berbasis pada kurikulum yang dikeluarkan oleh Departemen Pendidikan Nasional dan
                     ilmu-ilmu yang berbasis pada ajaran Islam ahli sunnah wal jama’ah (Nahdatul ‘Ulama).
                 </p>
-
                 <h3 class="font-semibold mb-2">Ikuti Kami</h3>
-                <div class="flex gap-3 text-xl text-gray-700 ">
-                    <a href="#" class="hover:text-green-600 transition duration-300"><i class="fab fa-facebook"></i></a>
-                    <a href="#" class="hover:text-green-600 transition duration-300"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="hover:text-green-600 transition duration-300"><i
+                <div class="flex gap-3 text-xl text-gray-700">
+                    <a class="hover:text-green-600 transition duration-300" href="#"><i class="fab fa-facebook"></i></a>
+                    <a class="hover:text-green-600 transition duration-300" href="#"><i class="fab fa-twitter"></i></a>
+                    <a class="hover:text-green-600 transition duration-300" href="#"><i
                             class="fab fa-instagram"></i></a>
-                    <a href="#" class="hover:text-green-600 transition duration-300"><i class="fab fa-linkedin"></i></a>
+                    <a class="hover:text-green-600 transition duration-300" href="#"><i class="fab fa-linkedin"></i></a>
                 </div>
             </div>
-
             <!-- Navigasi -->
             <div>
                 <h3 class="font-bold mb-3 mt-16">Navigasi</h3>
                 <ul class="space-y-2 text-gray-700">
-                    <li><a href="/" class="hover:text-green-600 transition duration-300">Beranda</a></li>
-                    <li><a href="/profil-sekolah.html" class="hover:text-green-600 transition duration-300">Tentang</a>
+                    <li><a class="hover:text-green-600 transition duration-300" href=".">Beranda</a></li>
+                    <li><a class="hover:text-green-600 transition duration-300" href="profil-sekolah.html">Tentang</a>
                     </li>
-                    <li><a href="/fasilitas-pendidikan.html"
-                            class="hover:text-green-600 transition duration-300">Fasilitas</a></li>
-                    <li><a href="#" class="hover:text-green-600 transition duration-300">Kontak</a></li>
+                    <li><a class="hover:text-green-600 transition duration-300"
+                            href="fasilitas-pendidikan.html">Fasilitas</a></li>
+                    <li><a class="hover:text-green-600 transition duration-300" href="#">Kontak</a></li>
                 </ul>
             </div>
-
             <!-- Company -->
             <div>
                 <h3 class="font-bold mb-3 mt-16">Company</h3>
                 <ul class="space-y-2 text-gray-700">
-                    <li><a href="#" class="hover:text-green-600 transition duration-300">About us</a></li>
-                    <li><a href="#" class="hover:text-green-600 transition duration-300">Partners</a></li>
-                    <li><a href="#" class="hover:text-green-600 transition duration-300">Customers</a></li>
-                    <li><a href="#" class="hover:text-green-600 transition duration-300">Contact us</a></li>
+                    <li><a class="hover:text-green-600 transition duration-300" href="#">About us</a></li>
+                    <li><a class="hover:text-green-600 transition duration-300" href="#">Partners</a></li>
+                    <li><a class="hover:text-green-600 transition duration-300" href="#">Customers</a></li>
+                    <li><a class="hover:text-green-600 transition duration-300" href="#">Contact us</a></li>
                 </ul>
             </div>
-
             <!-- Informasi -->
             <div>
                 <h3 class="font-bold mb-3 mt-16">Informasi</h3>
                 <p class="text-gray-700 text-sm leading-relaxed transition duration-300">
-                    JL. Jend Ahmad Yani No.20 Slawi <br>
-                    Telp. (0283) 492695 – 4562312 <br>
-                    web. <a href="https://smknuslawi.sch.id/" target="_blank"
-                        class="text-green-600 hover:underline">https://smknuslawi.sch.id/</a>
+                    JL. Jend Ahmad Yani No.20 Slawi <br />
+                    Telp. (0283) 492695 – 4562312 <br />
+                    web. <a class="text-green-600 hover:underline" href="https://smknuslawi.sch.id/"
+                        target="_blank">https://smknuslawi.sch.id/</a>
                 </p>
             </div>
-
         </div>
-
         <!-- Copyright -->
         <div
             class="border-t border-gray-200 py-4 px-6 flex flex-col md:flex-row justify-between items-center text-sm text-gray-600 max-w-6xl mx-auto">
@@ -584,54 +521,51 @@
             <p>Design and Developed by <span class="font-bold">FIREOWL</span></p>
         </div>
     </footer>
-
     <!-- FontAwesome CDN untuk ikon sosmed -->
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-
-
-    <script src="/js/script.js"></script>
-    <script src="/js/scroll-animations.js"></script>
-    <script src="/js/loading.js"></script>
-    <script src="/js/glass-navbar.js"></script>
-    <script src="/js/modal.js"></script>
-
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/scroll-animations.js"></script>
+    <script src="js/loading.js"></script>
+    <script src="js/glass-navbar.js"></script>
+    <script src="js/modal.js"></script>
     <!-- Init Swiper -->
     <script>
-          (function(){
-    const container = document.querySelector('.alumniSwiper');
-    const slidesCount = container.querySelectorAll('.swiper-wrapper > .swiper-slide').length;
+            (function () {
+                const container = document.querySelector('.alumniSwiper');
+                const slidesCount = container.querySelectorAll('.swiper-wrapper > .swiper-slide').length;
 
-    // atur slidesPerView dinamis biar loop valid
-    const perMd = slidesCount >= 2 ? 2 : 1.2;
-    const perLg = slidesCount >= 4 ? 3 : (slidesCount >= 3 ? 2 : 1.2);
-    const useLoop = slidesCount > perLg;
+                // atur slidesPerView dinamis biar loop valid
+                const perMd = slidesCount >= 2 ? 2 : 1.2;
+                const perLg = slidesCount >= 4 ? 3 : (slidesCount >= 3 ? 2 : 1.2);
+                const useLoop = slidesCount > perLg;
 
-    new Swiper('.alumniSwiper', {
-      // --- tampilan ---
-      centeredSlides: true,
-      spaceBetween: 28,
-      slidesPerView: 1.05,
-      breakpoints: {
-        640:  { slidesPerView: 1.2 },
-        768:  { slidesPerView: perMd, spaceBetween: 28 },
-        1024: { slidesPerView: perLg, spaceBetween: 32 }
-      },
+                new Swiper('.alumniSwiper', {
+                    // --- tampilan ---
+                    centeredSlides: true,
+                    spaceBetween: 28,
+                    slidesPerView: 1.05,
+                    breakpoints: {
+                        640: { slidesPerView: 1.2 },
+                        768: { slidesPerView: perMd, spaceBetween: 28 },
+                        1024: { slidesPerView: perLg, spaceBetween: 32 }
+                    },
 
-      // --- perilaku ---
-      loop: useLoop,             // hanya loop jika jumlah slide > perView desktop
-      rewind: !useLoop,          // kalau tidak cukup, rewind ke awal/akhir
-      loopAdditionalSlides: 2,   // biar aman saat duplikasi
-      grabCursor: true,
-      observeParents: true,
-      observer: true,
+                    // --- perilaku ---
+                    loop: useLoop,             // hanya loop jika jumlah slide > perView desktop
+                    rewind: !useLoop,          // kalau tidak cukup, rewind ke awal/akhir
+                    loopAdditionalSlides: 2,   // biar aman saat duplikasi
+                    grabCursor: true,
+                    observeParents: true,
+                    observer: true,
 
-      // --- kontrol ---
-      navigation: { nextEl: '.alumniNext', prevEl: '.alumniPrev' },
-      pagination: { el: '.alumniPagination', clickable: true },
-      keyboard: { enabled: true }
-    });
-  })();
+                    // --- kontrol ---
+                    navigation: { nextEl: '.alumniNext', prevEl: '.alumniPrev' },
+                    pagination: { el: '.alumniPagination', clickable: true },
+                    keyboard: { enabled: true }
+                });
+            })();
     </script>
+    <script>AOS.init({ once: true, duration: 700, offset: 100, easing: 'ease-out-quart' });</script>
 </body>
 
 </html>

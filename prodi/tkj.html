@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+
+<html lang="id">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>SMK NU 1 Slawi - TKJ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- SwiperJS CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet" />
+    <!-- SwiperJS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Custom Components -->
+    <script src="../js/components.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Style Css -->
+    <link href="../css/style.css" rel="stylesheet" />
+    <link href="../css/animations.css" rel="stylesheet" />
+    <link href="../css/glass-effects.css" rel="stylesheet" />
+    <link href="../css/responsive.css" rel="stylesheet" />
+    <link href="../css/slider.css" rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        header {
+            background: transparent !important;
+            box-shadow: none !important;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        hijautua: '#01665E',
+                        hijauh: '#117F58',
+                        bg1: '#34B589',
+                        bg2: '#1CA374',
+                        bg3: '#99ccaf',
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+
+<body class="bg-gray-50 font-poppins overflow-x-hidden">
+<!-- Navbar -->
+<header class="fixed top-4 inset-x-0 z-50"> <!-- transparan, full width -->
+    <div
+        class="navbar-glass mx-auto w-[90%] max-w-6xl rounded-2xl shadow-lg flex items-center justify-between py-3 px-6 ring-1 ring-black/5">
+        <!-- Logo -->
+        <div class="flex items-center space-x-3" id="logo-container">
+            <img alt="Logo" class="w-28 md:w-36" src="../assets/logo/Logo Web.png" />
+        </div>
+        <!-- Mobile Menu Button -->
+        <button class="md:hidden text-gray-700 focus:outline-none" id="mobile-menu-button">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+                <path d="M4 6h16M4 12h16m-7 6h7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                </path>
+            </svg>
+        </button>
+        <!-- Desktop Menu -->
+        <nav class="hidden md:flex space-x-6 text-gray-700 font-medium relative">
+            <a class="hover:text-hijautua text-sm transition duration-300 hover-underline font-semibold"
+                href=".">Beranda</a>
+            <!-- Tentang Kami (biarkan seperti semula) -->
+            <div class="relative group">
+                <button
+                    class="hover:text-hijautua text-sm transition duration-300 hover-underline flex items-center">
+                    Tentang Kami
+                    <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+                        <path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                        </path>
+                    </svg>
+                </button>
+                <div
+                    class="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                    <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                        href="../profil-sekolah.html">Profil
+                        Sekolah</a>
+                    <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                        href="../kegiatan-kesiswaan.html">Kegiatan
+                        Kesiswaan</a>
+                    <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                        href="../fasilitas-pendidikan.html">Fasilitas
+                        Pendidikan</a>
+                </div>
+            </div>
+            <!-- Program Studi (dropdown ke modal) -->
+            <div class="relative group">
+                <button
+                    class="hover:text-hijautua text-sm transition duration-300 hover-underline flex items-center">
+                    Program Studi
+                    <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+                        <path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                        </path>
+                    </svg>
+                </button>
+                <div
+                    class="absolute left-0 mt-2 w-56 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                    <button class="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"><a
+                            href="tkj.html">Teknik
+                            Komputer &amp; Jaringan</a></button>
+                    <button class="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                        <a href="tkj.html">Teknik Kendaraan Ringan</a></button>
+                    <button class="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"><a href="tkj.html">Manajemen
+                        Perkantoran</a></button>
+                    <button class="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"><a href="tkj.html">Akuntansi
+                        Keuangan Lembaga</a></button>
+                </div>
+            </div>
+            <!-- Layanan (biarkan seperti semula) -->
+            <div class="relative group">
+                <button
+                    class="hover:text-hijautua text-sm transition duration-300 hover-underline flex items-center">
+                    Layanan
+                    <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+                        <path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                        </path>
+                    </svg>
+                </button>
+                <div
+                    class="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                    <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                        href="profil-sekolah.html">Kontak
+                        Layanan</a>
+                    <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                        href="kegiatan-kesiswaan.html">BKK</a>
+                    <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                        href="fasilitas-pendidikan.html">LSP
+                        P-1</a>
+                </div>
+            </div>
+        </nav>
+        <!-- Buttons -->
+        <div class="hidden md:flex space-x-3">
+            <button
+                class="border-2 border-hijautua text-hijautua px-5 py-2 rounded-lg hover:bg-hijautua hover:text-white transition duration-300 text-sm">Login</button>
+            <button
+                class="bg-hijautua text-white px-5 py-2 rounded-lg hover:bg-white hover:text-hijautua border-2 border-hijautua transition duration-300 text-sm">Sign
+                up</button>
+        </div>
+    </div>
+</header>
+<!-- Hero Image -->
+<img alt="Header" class="relative absolute inset-0 w-full h-full object-cover -z-10"
+src="/assets/background/Header-TKJ.png" />
+    <!-- ============ BERITA TENTANG TKJ ============ -->
+    <section class="py-10 -mt-24 bg-white" data-aos="fade-up">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex items-center gap-1">
+                <h3 class="text-xl font-medium text-hijautua my-4">Berita Tentang TKJ</h3>
+                <hr class="flex-1 h-1 bg-hijautua rounded-full" />
+            </div>
+            <div class="relative overflow-visible">
+                <!-- Slider -->
+                <div class="swiper beritaSwiper pb-8">
+                    <div class="swiper-wrapper"><!-- slides injected by JS --></div>
+                </div>
+                <!-- Arrows -->
+                <button aria-label="Sebelumnya"
+                    class="btnPrev absolute -left-6 md:-left-10 top-1/2 -translate-y-1/2 z-10">
+                    <svg class="w-8 h-8 md:w-10 md:h-10" fill="none" stroke="#111" viewbox="0 0 24 24">
+                        <path d="M15 19l-7-7 7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                        </path>
+                    </svg>
+                </button>
+                <button aria-label="Berikutnya"
+                    class="btnNext absolute -right-6 md:-right-10 top-1/2 -translate-y-1/2 z-10">
+                    <svg class="w-8 h-8 md:w-10 md:h-10" fill="none" stroke="#111" viewbox="0 0 24 24">
+                        <path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+    <!-- ================== SAMBUTAN / PIMPINAN ================== -->
+    <section class="md:py-64 py-48 text-white overflow-visible" data-aos="fade-up" id="sambutan"
+        style="background-image:url('/assets/background/bg\ prodi.png'); background-size:cover; background-position:center;">
+        <div class="max-w-6xl mx-auto px-4 md:px-6">
+            <!-- Heading -->
+            <div class="text-center mb-10 md:mb-12">
+                <p class="text-base md:text-lg/none opacity-90">Sambutan</p>
+                <h2 class="text-2xl md:text-4xl font-extrabold tracking-tight text-white">
+                    Ketua Prodi TKJ
+                </h2>
+            </div>
+            <!-- Grid: Foto + Teks -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+                <!-- FOTO Kaprodi TKJ -->
+                <div class="relative flex justify-center md:justify-start overflow-visible" data-aos="fade-right">
+                    <div class="relative isolate w-[min(460px,92vw)]">
+                        <!-- komposit foto (sudah termasuk kotak hijau & shadow sesuai desain) -->
+                        <img alt="Kaprodi TKJ" class="relative z-10 pointer-events-none select-none"
+                            src="../assets/implement/Kaprodi-TKJ.png">
+                        </img>
+                    </div>
+                </div>
+                <!-- TEKS SAMBUTAN -->
+                <div class="space-y-4" data-aos="fade-left">
+                    <div>
+                        <p class="font-semibold opacity-95">Ketua Prodi</p>
+                        <p class="font-bold underline underline-offset-4">Rohmi Maysari, S.Kom.</p>
+                    </div>
+                    <p class="text-white/90 leading-7">
+                        Assalamu'alaikum warahmatullahi wabarakatuh,
+                        Puji syukur ke hadirat Allah SWT atas segala rahmat dan karunia-Nya, kita dapat berkumpul dalam
+                        suasana yang penuh semangat dan optimisme ini.
+
+                    </p>
+                    <p class="text-white/90 leading-7">
+                        SMK NU 1 Slawi senantiasa berkomitmen untuk mencetak generasi muda yang kompeten, kuat, cerdas,
+                        dan berakhlak mulia. Dalam dunia yang semakin maju dan dinamis, lulusan SMK memiliki peran yang
+                        sangat strategis sebagai motor penggerak perubahan di masyarakat. Dengan bekal ilmu pengetahuan,
+                        keterampilan, serta karakter yang baik, siswa-siswi SMK NU 1 Slawi siap menghadapi tantangan
+                        global dan berkontribusi bagi kemajuan bangsa.
+                    </p>
+                    <p class="text-white/90 leading-7">
+                        Oleh karena itu, di SMK NU 1 Slawi, kami tidak hanya mendidik siswa untuk menguasai keterampilan
+                        teknis, tetapi juga menanamkan nilai-nilai moral dan keagamaan yang kuat, sehingga mereka dapat
+                        menjadi sumber daya manusia yang tidak hanya cerdas dan terampil, tetapi juga berakhlak mulia
+                    </p>
+                </div>
+            </div>
+            <!-- Divider -->
+            <div class="flex items-center gap-1 my-12">
+                <h3 class="text-xl font-medium text-white my-4">Visi &amp; Misi</h3>
+                <hr class="flex-1 h-1 bg-white rounded-full" />
+            </div>
+            <!-- ====== VISI & MISI (layout seperti contoh) ====== -->
+            <section class="pb-12 md:pb-16" data-aos="fade-up">
+                <div class="w-full px-4">
+                    <!-- Card: VISI (kiri) -->
+                    <article
+                        class="bg-white rounded-2xl shadow-[0_14px_40px_rgba(0,0,0,.18)] ring-1 ring-black/5 p-6 md:p-8 md:w-[82%]">
+                        <div class="flex items-start gap-3">
+                            <span
+                                class="grid place-items-center shrink-0 w-10 h-10 rounded-full bg-[#EAF7F0] text-[#117F58]">
+                                <!-- ikon lampu -->
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8.5 14a5.5 5.5 0 1 1 7 0M9 17h6M10 21h4" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2"></path>
+                                </svg>
+                            </span>
+                            <h3 class="text-2xl md:text-3xl font-bold text-[#117F58]">Visi</h3>
+                        </div>
+                        <!-- garis + aksen (mulai setelah ikon) -->
+                        <div class="relative mt-2">
+                            <div class="h-[2px] bg-[#0f5135]/30 ml-[52px]"></div>
+                            <span class="absolute left-[52px] -top-[1px] h-[3px] w-24 bg-[#117F58] rounded-full"></span>
+                        </div>
+                        <p class="mt-4 text-slate-700 leading-7">
+                            Menjadi sekolah berbasis revolusi industri 4.0, menghasilkan tamatan yang profesional,
+                            intelektual,
+                            kompetitif, dan berjiwa wirausaha dilandasi pengetahuan agama islam ahlus sunnah waljama’ah,
+                            berakhlakul
+                            karimah dan cinta tanah air.
+                        </p>
+                    </article>
+                    <!-- Card: MISI (kanan, sedikit turun & geser) -->
+                    <article
+                        class="bg-white rounded-2xl shadow-[0_14px_40px_rgba(0,0,0,.18)] ring-1 ring-black/5 p-6 md:p-8 md:w-[82%] md:ml-auto mt-8">
+                        <div class="flex items-start gap-3">
+                            <span
+                                class="grid place-items-center shrink-0 w-10 h-10 rounded-full bg-[#EAF7F0] text-[#117F58]">
+                                <!-- ikon target -->
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 6v6l4 2m4 0a8 8 0 1 1-16 0 8 8 0 0 1 16 0z" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2"></path>
+                                </svg>
+                            </span>
+                            <h3 class="text-2xl md:text-3xl font-bold text-[#117F58]">Misi</h3>
+                        </div>
+                        <!-- garis + aksen (mulai setelah ikon) -->
+                        <div class="relative mt-2">
+                            <div class="h-[2px] bg-[#0f5135]/30 ml-[52px]"></div>
+                            <span class="absolute left-[52px] -top-[1px] h-[3px] w-24 bg-[#117F58] rounded-full"></span>
+                        </div>
+                        <ol class="mt-4 text-slate-700 leading-7 list-decimal ml-8">
+                            <li>Memfasilitasi peserta didik seluas-luasnya menjadi peserta didik unggul dalam prestasi
+                                belajar dan sukses di masyarakat.</li>
+                            <li>Menghasilkan tamatan yang bertanggung jawab, menguasai IPTEK berbasis revolusi industri
+                                4.0 untuk bersaing di era global dan berjiwa wirausaha.</li>
+                        </ol>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </section>
+    <section class="py-12 text-white overflow-visible" data-aos="fade-up">
+        <div class="max-w-6xl mx-auto px-4 md:px-6">
+            <!-- =================== GALLERY KEGIATAN =================== -->
+            <section class="py-10" data-aos="fade-up">
+                <div class="max-w-6xl mx-auto px-4">
+                    <div class="relative">
+                        <!-- Slider -->
+                        <div class="swiper gallerySwiper">
+                            <div class="swiper-wrapper">
+                                <!-- Ganti src gambarnya sesuai asetmu -->
+                                <div class="swiper-slide">
+                                    <figure class="frame"><img alt="" class="img" src="../assets/berita/anbk.jpeg" />
+                                    </figure>
+                                </div>
+                                <div class="swiper-slide">
+                                    <figure class="frame"><img alt="" class="img" src="../assets/berita/pramuka.jpeg" />
+                                    </figure>
+                                </div>
+                                <div class="swiper-slide">
+                                    <figure class="frame"><img alt="" class="img" src="../assets/berita/anbk.jpeg" />
+                                    </figure>
+                                </div>
+                                <div class="swiper-slide">
+                                    <figure class="frame"><img alt="" class="img" src="../assets/berita/pramuka.jpeg" />
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                        <button aria-label="Sebelumnya" class="galPrev navRound mt-2">
+                            <svg class="w-5 h-5" fill="none" stroke="#000" viewbox="0 0 24 24">
+                                <path d="M15 19l-7-7 7-7" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2"></path>
+                            </svg>
+                        </button>
+                        <button aria-label="Berikutnya" class="galNext navRound float-right mt-2">
+                            <svg class="w-5 h-5" fill="none" stroke="#000" viewbox="0 0 24 24">
+                                <path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                                </path>
+                            </svg>
+                        </button>
+                        <!-- Dots -->
+                        <div class="galDots mt-6 flex justify-center"></div>
+                    </div>
+                </div>
+            </section>
+            <div class="flex items-center gap-1">
+                <h3 class="text-xl font-medium text-hijautua my-4">Profil Guru</h3>
+                <hr class="flex-1 h-1 bg-hijautua rounded-full" />
+            </div>
+            <!-- Grid Wakil Kepala (isi foto & teks sesuai datamu) -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+                <!-- Card -->
+                <article class="rounded-2xl p-3" data-aos="zoom-in">
+                    <img alt="" class="w-full h-80 object-scale-down rounded-xl"
+                        src="../assets/profile/wakasek-1.png" />
+                    <div class="mt-4 text-center">
+                        <h4 class="font-bold text-hijautua">Priyo Basuki, S.H</h4>
+                        <p class="text-xs text-hijautua">WAKASEKBID Kesiswaan</p>
+                    </div>
+                </article>
+                <article class="rounded-2xl p-3" data-aos="zoom-in">
+                    <img alt="" class="w-full h-80 object-scale-down rounded-xl"
+                        src="../assets/profile/wakasek-4.png" />
+                    <div class="mt-4 text-center">
+                        <h4 class="font-bold text-hijautua">Khomarudin, S.Ag</h4>
+                        <p class="text-xs text-hijautua">WAKASEKBID Hubungan Masyarakat</p>
+                    </div>
+                </article>
+                <article class="rounded-2xl p-3" data-aos="zoom-in">
+                    <img alt="" class="w-full h-80 object-scale-down rounded-xl"
+                        src="../assets/profile/wakasek-3.png" />
+                    <div class="mt-4 text-center">
+                        <h4 class="font-bold text-hijautua">Dra. Hj. Nuraliyah, M.M.Pd</h4>
+                        <p class="text-xs text-hijautua">WAKASEKBID Sarana dan Prasarana</p>
+                    </div>
+                </article>
+                <article class="rounded-2xl p-3" data-aos="zoom-in">
+                    <img alt="" class="w-full h-80 object-scale-down rounded-xl"
+                        src="../assets/profile/wakasek-2.png" />
+                    <div class="mt-4 text-center">
+                        <h4 class="font-bold text-hijautua">Uli Azzahro, M.Pd</h4>
+                        <p class="text-xs text-hijautua">WAKASEKBID Kurikulum</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+    <!-- ========== ALUMNI PRODI ========== -->
+    <section class="pt-10 pb-16 md:pt-14" data-aos="fade-up"
+        style="background-image:url('assets/implement/bg-alumni.png');background-size:cover;background-position:top center;background-repeat:no-repeat;">
+        <div class="max-w-6xl mx-auto px-4 md:px-6">
+            <div class="flex items-center gap-1">
+                <h3 class="text-xl font-medium text-hijautua my-4">Alumni Prodi</h3>
+                <hr class="flex-1 h-1 bg-hijautua rounded-full" />
+            </div>
+            <!-- Grid 2x2 (1 kolom di mobile) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+                <!-- Card -->
+                <figure
+                    class="rounded-xl overflow-hidden shadow-[0_12px_30px_rgba(0,0,0,.18)] ring-1 ring-black/5 transition-transform hover:scale-[1.01]">
+                    <img alt="Alumni 1" class="w-full h-full object-cover aspect-[16/9]" loading="lazy"
+                        src="../assets/galeri/Rectangle 146.png" />
+                </figure>
+                <figure
+                    class="rounded-xl overflow-hidden shadow-[0_12px_30px_rgba(0,0,0,.18)] ring-1 ring-black/5 transition-transform hover:scale-[1.01]">
+                    <img alt="Alumni 2" class="w-full h-full object-cover aspect-[16/9]" loading="lazy"
+                        src="../assets/galeri/Rectangle 147.png" />
+                </figure>
+                <figure
+                    class="rounded-xl overflow-hidden shadow-[0_12px_30px_rgba(0,0,0,.18)] ring-1 ring-black/5 transition-transform hover:scale-[1.01]">
+                    <img alt="Alumni 3" class="w-full h-full object-cover aspect-[16/9]" loading="lazy"
+                        src="../assets/galeri/Rectangle 148.png" />
+                </figure>
+                <figure
+                    class="rounded-xl overflow-hidden shadow-[0_12px_30px_rgba(0,0,0,.18)] ring-1 ring-black/5 transition-transform hover:scale-[1.01]">
+                    <img alt="Alumni 4" class="w-full h-full object-cover aspect-[16/9]" loading="lazy"
+                        src="../assets/galeri/Rectangle 149.png" />
+                </figure>
+            </div>
+        </div>
+    </section>
+    <!-- CTA Box di atas Footer -->
+    <div class="relative -mt-10 z-10 max-w-6xl mx-auto px-6">
+        <div
+            class="bg-[#4EFFB2] rounded-2xl shadow-lg p-6 flex flex-col md:flex-row justify-between items-center card-glass gradient-border">
+            <p class="text-lg font-medium text-black text-center md:text-left mb-4 md:mb-0">
+                Tertarik Untuk Bergabung Dengan <br />
+                <span class="font-bold">SMK NU 1 Slawi</span> ayo daftar Sekarang !!
+            </p>
+            <a class="bg-black text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-800 transition duration-300"
+                href="../#pendaftaran">
+                Pendaftaran
+            </a>
+        </div>
+    </div>
+    <!-- Footer Utama -->
+    <footer class="bg-white">
+        <div
+            class="max-w-6xl mx-auto px-4 md:px-6 py-8 md:py-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 md:gap-10">
+            <!-- Logo dan Deskripsi -->
+            <div>
+                <div class="mb-2">
+                    <img alt="Logo" class="" src="../assets/logo/Logo Web.png" />
+                </div>
+                <p class="text-gray-700 text-sm leading-relaxed mb-4">
+                    <span class="font-bold">SMK NU 1 Slawi</span> memadukan ilmu-ilmu umum yang
+                    berbasis pada kurikulum yang dikeluarkan oleh Departemen Pendidikan Nasional dan
+                    ilmu-ilmu yang berbasis pada ajaran Islam ahli sunnah wal jama’ah (Nahdatul ‘Ulama).
+                </p>
+                <h3 class="font-semibold mb-2">Ikuti Kami</h3>
+                <div class="flex gap-3 text-xl text-gray-700">
+                    <a class="hover:text-green-600 transition duration-300" href="../#"><i
+                            class="fab fa-facebook"></i></a>
+                    <a class="hover:text-green-600 transition duration-300" href="../#"><i
+                            class="fab fa-twitter"></i></a>
+                    <a class="hover:text-green-600 transition duration-300" href="../#"><i
+                            class="fab fa-instagram"></i></a>
+                    <a class="hover:text-green-600 transition duration-300" href="../#"><i
+                            class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <!-- Navigasi -->
+            <div>
+                <h3 class="font-bold mb-3 mt-16">Navigasi</h3>
+                <ul class="space-y-2 text-gray-700">
+                    <li><a class="hover:text-green-600 transition duration-300" href="..">Beranda</a></li>
+                    <li><a class="hover:text-green-600 transition duration-300"
+                            href="../profil-sekolah.html">Tentang</a>
+                    </li>
+                    <li><a class="hover:text-green-600 transition duration-300"
+                            href="../fasilitas-pendidikan.html">Fasilitas</a></li>
+                    <li><a class="hover:text-green-600 transition duration-300" href="../#">Kontak</a></li>
+                </ul>
+            </div>
+            <!-- Company -->
+            <div>
+                <h3 class="font-bold mb-3 mt-16">Company</h3>
+                <ul class="space-y-2 text-gray-700">
+                    <li><a class="hover:text-green-600 transition duration-300" href="../#">About us</a></li>
+                    <li><a class="hover:text-green-600 transition duration-300" href="../#">Partners</a></li>
+                    <li><a class="hover:text-green-600 transition duration-300" href="../#">Customers</a></li>
+                    <li><a class="hover:text-green-600 transition duration-300" href="../#">Contact us</a></li>
+                </ul>
+            </div>
+            <!-- Informasi -->
+            <div>
+                <h3 class="font-bold mb-3 mt-16">Informasi</h3>
+                <p class="text-gray-700 text-sm leading-relaxed transition duration-300">
+                    JL. Jend Ahmad Yani No.20 Slawi <br />
+                    Telp. (0283) 492695 – 4562312 <br />
+                    web. <a class="text-green-600 hover:underline" href="https://smknuslawi.sch.id/"
+                        target="_blank">https://smknuslawi.sch.id/</a>
+                </p>
+            </div>
+        </div>
+        <!-- Copyright -->
+        <div
+            class="border-t border-gray-200 py-4 px-6 flex flex-col md:flex-row justify-between items-center text-sm text-gray-600 max-w-6xl mx-auto">
+            <p>© 2025 All rights reserved | SMK NU 1 Slawi</p>
+            <p>Design and Developed by <span class="font-bold">FIREOWL</span></p>
+        </div>
+    </footer>
+    <!-- FontAwesome CDN untuk ikon sosmed -->
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/scroll-animations.js"></script>
+    <script src="../js/loading.js"></script>
+    <script src="../js/glass-navbar.js"></script>
+    <script src="../js/modal.js"></script>
+    <script src="../js/slider.js"></script>
+    <!-- Init Swiper -->
+    <script>
+            (function () {
+                const container = document.querySelector('.alumniSwiper');
+                const slidesCount = container.querySelectorAll('.swiper-wrapper > .swiper-slide').length;
+
+                // atur slidesPerView dinamis biar loop valid
+                const perMd = slidesCount >= 2 ? 2 : 1.2;
+                const perLg = slidesCount >= 4 ? 3 : (slidesCount >= 3 ? 2 : 1.2);
+                const useLoop = slidesCount > perLg;
+
+                new Swiper('.alumniSwiper', {
+                    // --- tampilan ---
+                    centeredSlides: true,
+                    spaceBetween: 28,
+                    slidesPerView: 1.05,
+                    breakpoints: {
+                        640: { slidesPerView: 1.2 },
+                        768: { slidesPerView: perMd, spaceBetween: 28 },
+                        1024: { slidesPerView: perLg, spaceBetween: 32 }
+                    },
+
+                    // --- perilaku ---
+                    loop: useLoop,             // hanya loop jika jumlah slide > perView desktop
+                    rewind: !useLoop,          // kalau tidak cukup, rewind ke awal/akhir
+                    loopAdditionalSlides: 2,   // biar aman saat duplikasi
+                    grabCursor: true,
+                    observeParents: true,
+                    observer: true,
+
+                    // --- kontrol ---
+                    navigation: { nextEl: '.alumniNext', prevEl: '.alumniPrev' },
+                    pagination: { el: '.alumniPagination', clickable: true },
+                    keyboard: { enabled: true }
+                });
+            })();
+    </script>
+    <script>AOS.init({ once: true, duration: 700, offset: 100, easing: 'ease-out-quart' });</script>
+</body>
+
+</html>

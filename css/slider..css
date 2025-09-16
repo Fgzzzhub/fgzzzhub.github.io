@@ -1,0 +1,65 @@
+.berita-card{
+    background:#fff; border-radius:18px; box-shadow:0 10px 30px rgba(0,0,0,.12);
+    overflow:hidden; border:1px solid rgba(15,23,42,.06);
+  }
+  .berita-img{ width:100%; aspect-ratio:16/9; object-fit:cover; display:block; }
+  .berita-title{
+    font-weight:700; color:#0f172a; margin-top:.75rem; margin-bottom:.25rem;
+    display:-webkit-box; -webkit-line-clamp:1; -webkit-box-orient:vertical; overflow:hidden;
+  }
+  .berita-excerpt{
+    color:#475569; font-size:.94rem; line-height:1.55;
+    display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden;
+  }
+  .btn-more{
+    display:inline-block; padding:.55rem 1rem; border-radius:.5rem; font-weight:600;
+    background:#0e7a58; color:#fff;
+  }
+  .beritaSwiper{ overflow:visible; } /* biar shadow/arrow tidak ke-clip */
+  .btnPrev, .btnNext{ background:transparent; }
+
+   /* wadah */
+   .gallerySwiper{ overflow: visible; padding-bottom: 0.25rem; }
+   /* ukuran & state slide */
+   .gallerySwiper .swiper-slide{
+     transition: transform .45s cubic-bezier(.22,.61,.36,1), filter .45s, opacity .45s;
+     transform: scale(.88);
+     opacity: .25;
+     filter: grayscale(60%) blur(1px);
+   }
+   .gallerySwiper .swiper-slide-prev,
+   .gallerySwiper .swiper-slide-next{
+     transform: scale(.93);
+     opacity: .45;
+     filter: grayscale(30%) blur(.5px);
+   }
+   .gallerySwiper .swiper-slide-active{
+     transform: scale(1);
+     opacity: 1;
+     filter: none;
+   }
+
+   /* bingkai gambar */
+   .frame{ border-radius: 8px; overflow: hidden; background:#e5e7eb; box-shadow: 0 16px 40px rgba(0,0,0,.18); }
+   .img{ width:100%; aspect-ratio: 16/9; object-fit: cover; display:block; }
+
+   /* panah bulat hitam */
+   .navRound{
+     position: absolute; top: 50%; transform: translateY(-50%);
+     height: 44px; width: 44px; border-radius: 9999px;
+     background: #111; display:grid; place-items:center;
+     box-shadow: 0 8px 24px rgba(0,0,0,.25);
+     transition: transform .2s ease;
+     z-index: 10;
+   }
+   .navRound:hover{ transform: translateY(-50%) scale(1.04); }
+   /* posisi responsif (mendekati tampilan contoh) */
+   .galPrev{ left: clamp(0.5rem, 8vw, 7rem); }
+   .galNext{ right: clamp(0.5rem, 8vw, 7rem); }
+
+   /* dots */
+   .galDots{ gap: 10px; }
+   .galDots .swiper-pagination-bullet{
+     width: 12px; height: 12px; border-radius: 9999px; background:#cbd5e1; opacity:1;
+   }
+   .galDots .swiper-pagination-bullet-active{ background:#0f7a5a; } 
