@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Detail Modul | E-Learning SKANU</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <script defer src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { hijautua:'#01665E' },
+          fontFamily: { poppins:['Poppins','ui-sans-serif','system-ui'] }
+        }
+      }
+    }
+  </script>
+  <style>
+    body{font-family:'Poppins',sans-serif}
+    .grid-overlay{
+      background-image:linear-gradient(rgba(0,0,0,0) 0 0),
+        radial-gradient(circle at 1px 1px, rgba(255,255,255,.15) 1px, transparent 1px);
+      background-size:100% 100%,22px 22px;
+    }
+    /* animasi accordion (tanpa lib) */
+    .acc-panel{ display:grid; grid-template-rows:0fr; transition:grid-template-rows .28s ease; }
+    .acc-panel > div{ overflow:hidden; }
+    .acc-item[data-open="true"] .acc-panel{ grid-template-rows:1fr; }
+    .acc-item[data-open="true"] .acc-chevron{ transform:rotate(180deg); }
+    .tag{ @apply inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-semibold bg-slate-100 text-slate-700; }
+  </style>
+</head>
+<body class="bg-gray-50">
+
+  <!-- ====== NAVBAR KAMU (optional, pakai yang sudah ada) ====== -->
+
+  <!-- Hero -->
+  <header class="relative isolate overflow-hidden">
+    <div class="absolute inset-0 grid-overlay bg-[url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1600&auto=format&fit=crop')] bg-cover bg-center"></div>
+    <div class="absolute inset-0 bg-hijautua/85 mix-blend-multiply"></div>
+    <div class="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 text-white">
+      <div class="text-center" data-aos="fade-down">
+        <p class="text-sm tracking-widest uppercase text-white/80">Modul Pembelajaran</p>
+        <h1 id="modulTitle" class="mt-1 text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight drop-shadow">
+          Produktif TKJ — Dasar Konfigurasi Jaringan
+        </h1>
+        <p id="modulMeta" class="mt-2 text-white/90">Guru: Pak Ahmad • Kelas: TKJ12 • 6 Bab</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-16">
+
+    <!-- Header aksi -->
+    <div class="mt-8 flex flex-wrap items-center justify-between gap-3" data-aos="fade-up">
+      <div class="flex items-center gap-3">
+        <div class="h-2 w-40 bg-slate-200 rounded-full overflow-hidden">
+          <div id="progressBar" class="h-full bg-hijautua" style="width:35%"></div>
+        </div>
+        <span id="progressText" class="text-sm text-slate-600">Progres: 35%</span>
+      </div>
+      <div class="flex gap-2">
+        <button id="expandAll" class="rounded-full px-4 py-2 text-sm font-semibold text-hijautua ring-2 ring-hijautua bg-white hover:bg-slate-50">
+          Buka Semua
+        </button>
+        <button id="collapseAll" class="rounded-full px-4 py-2 text-sm text-hijautua ring-2 ring-hijautua/40 hover:ring-hijautua bg-white">
+          Tutup Semua
+        </button>
+      </div>
+    </div>
+
+    <!-- DETAIL MODUL / ACCORDION -->
+    <section id="modulDetail" class="mt-6 space-y-4">
+
+      <!-- Item contoh (dirender via JS juga boleh, tapi disediakan contoh statis satu) -->
+      <article class="acc-item rounded-2xl bg-white ring-1 ring-slate-200 shadow" data-open="true" data-aos="fade-up">
+        <!-- Header -->
+        <button type="button" class="w-full flex items-center justify-between gap-4 p-4 text-left acc-btn">
+
+          <div class="flex items-start gap-3">
+            <span class="grid place-items-center h-10 w-10 rounded-xl bg-emerald-100 text-hijautua">
+              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 19h16M7 19V6h10v13M9 10h6M9 14h6"/>
+              </svg>
+            </span>
+            <div>
+              <h3 class="font-bold text-slate-900">Bab 1 — Pengenalan DHCP</h3>
+              <p class="text-sm text-slate-500">3 subjudul • Est. 25 menit</p>
+            </div>
+          </div>
+          <svg class="acc-chevron h-5 w-5 text-slate-500 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="m6 9 6 6 6-6"/>
+          </svg>
+        </button>
+        <!-- Panel -->
+        <div class="acc-panel">
+          <div>
+            <div class="px-4 pb-4">
+              <ul class="space-y-3">
+                <li class="rounded-xl ring-1 ring-slate-200 p-3 flex items-start gap-3">
+                  <span class="tag">Materi</span>
+                  <div class="flex-1">
+                    <p class="font-medium text-slate-900">Apa itu DHCP & Cara Kerjanya</p>
+                    <p class="text-xs text-slate-500 mt-0.5">PDF • 10 menit</p>
+                  </div>
+                  <a href="#" class="rounded-lg bg-hijautua text-white text-xs px-3 py-1.5">Baca</a>
+                </li>
+                <li class="rounded-xl ring-1 ring-slate-200 p-3 flex items-start gap-3">
+                  <span class="tag">Video</span>
+                  <div class="flex-1">
+                    <p class="font-medium text-slate-900">Topologi Sederhana & Alur IP</p>
+                    <p class="text-xs text-slate-500 mt-0.5">YouTube • 8 menit</p>
+                  </div>
+                  <a href="#" class="rounded-lg ring-2 ring-hijautua text-hijautua text-xs px-3 py-1.5 hover:bg-slate-50">Tonton</a>
+                </li>
+                <li class="rounded-xl ring-1 ring-slate-200 p-3 flex items-start gap-3">
+                  <span class="tag">Kuis</span>
+                  <div class="flex-1">
+                    <p class="font-medium text-slate-900">Kuis Singkat DHCP</p>
+                    <p class="text-xs text-slate-500 mt-0.5">5 soal • 7 menit</p>
+                  </div>
+                  <a href="#" class="rounded-lg bg-hijautua text-white text-xs px-3 py-1.5">Mulai</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Item lainnya akan di-generate dari data di bawah -->
+      <div id="accordionRoot" class="space-y-4"></div>
+
+    </section>
+  </main>
+
+  <!-- ====== FOOTER KAMU (optional) ====== -->
+
+  <script>
+    // Init AOS
+    window.addEventListener('load', () => AOS.init({ duration: 700, once: true, offset: 80 }));
+
+    // ===== Data contoh modul (bisa kamu ganti dari API) =====
+    const MODUL = {
+      judul: 'Produktif TKJ — Dasar Konfigurasi Jaringan',
+      guru: 'Pak Ahmad',
+      kelas: 'TKJ12',
+      progres: 35,
+      bab: [
+        {
+          id: 'bab-2',
+          title: 'Bab 2 — Instalasi & Setup DHCP Server',
+          est: '30 menit',
+          items: [
+            { type:'Materi', title:'Instalasi DHCP di Ubuntu 22.04', meta:'PDF • 12 menit', action:'Baca', href:'#' },
+            { type:'Materi', title:'Konfigurasi dhcpd.conf (scope, lease, router)', meta:'PDF • 10 menit', action:'Baca', href:'#' },
+            { type:'Video',  title:'Demo Praktik: DHCP di VirtualBox', meta:'Video • 8 menit', action:'Tonton', href:'#' },
+          ]
+        },
+        {
+          id: 'bab-3',
+          title: 'Bab 3 — DHCP Relay & VLAN Dasar',
+          est: '28 menit',
+          items: [
+            { type:'Materi', title:'Konsep Relay (IP Helper-Address)', meta:'PDF • 10 menit', action:'Baca', href:'#' },
+            { type:'Materi', title:'DHCP pada Jaringan Multi-VLAN', meta:'PDF • 10 menit', action:'Baca', href:'#' },
+            { type:'Kuis',   title:'Kuis Relay & VLAN', meta:'6 soal • 8 menit', action:'Mulai', href:'#' },
+          ]
+        },
+        {
+          id: 'bab-4',
+          title: 'Bab 4 — Troubleshooting Umum',
+          est: '20 menit',
+          items: [
+            { type:'Materi', title:'Cek Lease & Log', meta:'PDF • 8 menit', action:'Baca', href:'#' },
+            { type:'Materi', title:'Masalah Umum & Solusi', meta:'PDF • 7 menit', action:'Baca', href:'#' },
+            { type:'Video',  title:'Studi Kasus: IP Tidak Dapat', meta:'Video • 5 menit', action:'Tonton', href:'#' },
+          ]
+        }
+      ]
+    };
+
+    // ===== Render meta & progres
+    document.getElementById('modulTitle').textContent = MODUL.judul;
+    document.getElementById('modulMeta').textContent = `Guru: ${MODUL.guru} • Kelas: ${MODUL.kelas} • ${MODUL.bab.length} Bab`;
+    document.getElementById('progressBar').style.width = MODUL.progres + '%';
+    document.getElementById('progressText').textContent = `Progres: ${MODUL.progres}%`;
+
+    // ===== Util templates
+    const tagClass = 'inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-semibold bg-slate-100 text-slate-700';
+    const btnPrimary = 'rounded-lg bg-hijautua text-white text-xs px-3 py-1.5 hover:opacity-90';
+    const btnGhost   = 'rounded-lg ring-2 ring-hijautua text-hijautua text-xs px-3 py-1.5 hover:bg-slate-50';
+
+    function itemLi(it){
+      const btn = it.action === 'Baca' || it.action === 'Mulai' ? btnPrimary : btnGhost;
+      return `
+        <li class="rounded-xl ring-1 ring-slate-200 p-3 flex items-start gap-3">
+          <span class="${tagClass}">${it.type}</span>
+          <div class="flex-1">
+            <p class="font-medium text-slate-900">${it.title}</p>
+            <p class="text-xs text-slate-500 mt-0.5">${it.meta}</p>
+          </div>
+          <a href="${it.href}" class="${btn}">${it.action}</a>
+        </li>`;
+    }
+
+    function accItem(b){
+      const count = b.items.length;
+      const id = b.id || b.title.toLowerCase().replace(/[^a-z0-9]+/g,'-');
+      return `
+      <article id="${id}" class="acc-item rounded-2xl bg-white ring-1 ring-slate-200 shadow" data-open="false" data-aos="fade-up">
+        <button type="button" class="w-full flex items-center justify-between gap-4 p-4 text-left acc-btn">
+          <div class="flex items-start gap-3">
+            <span class="grid place-items-center h-10 w-10 rounded-xl bg-emerald-100 text-hijautua">
+              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 19h16M7 19V6h10v13M9 10h6M9 14h6"/>
+              </svg>
+            </span>
+            <div>
+              <h3 class="font-bold text-slate-900">${b.title}</h3>
+              <p class="text-sm text-slate-500">${count} subjudul • Est. ${b.est}</p>
+            </div>
+          </div>
+          <svg class="acc-chevron h-5 w-5 text-slate-500 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="m6 9 6 6 6-6"/>
+          </svg>
+        </button>
+        <div class="acc-panel"><div>
+          <div class="px-4 pb-4">
+            <ul class="space-y-3">
+              ${b.items.map(itemLi).join('')}
+            </ul>
+          </div>
+        </div></div>
+      </article>`;
+    }
+
+    // Render accordion items
+    const root = document.getElementById('accordionRoot');
+    root.innerHTML = MODUL.bab.map(accItem).join('');
+
+    // ===== Interaksi accordion
+    function toggleItem(el, force){
+      const open = force!==undefined ? !!force : el.dataset.open!=='true';
+      el.setAttribute('data-open', open ? 'true' : 'false');
+      // aksesibilitas
+      const btn = el.querySelector('.acc-btn');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    }
+
+    // init semua item
+    document.querySelectorAll('.acc-item').forEach(item=>{
+      const btn = item.querySelector('.acc-btn');
+      btn.setAttribute('aria-controls', item.id || '');
+      btn.setAttribute('aria-expanded', item.dataset.open==='true' ? 'true' : 'false');
+      btn.addEventListener('click', ()=> toggleItem(item));
+    });
+
+    // Expand/Collapse all
+    document.getElementById('expandAll').addEventListener('click', ()=>{
+      document.querySelectorAll('.acc-item').forEach(el=>toggleItem(el, true));
+    });
+    document.getElementById('collapseAll').addEventListener('click', ()=>{
+      document.querySelectorAll('.acc-item').forEach(el=>toggleItem(el, false));
+    });
+
+    // Buka bab dari hash (contoh: modul-detail.html#bab-3)
+    if (location.hash){
+      const target = document.querySelector(location.hash);
+      if (target && target.classList.contains('acc-item')) toggleItem(target, true);
+    }
+
+    // ===== Accordion logic: multi-open + expand/collapse all =====
+(() => {
+  const container = document.getElementById('modulDetail'); // parent section
+  const getItems   = () => Array.from(container.querySelectorAll('.acc-item'));
+
+  function openItem(el){ el.setAttribute('data-open','true'); el.querySelector('.acc-btn')?.setAttribute('aria-expanded','true'); }
+  function closeItem(el){ el.setAttribute('data-open','false'); el.querySelector('.acc-btn')?.setAttribute('aria-expanded','false'); }
+  function toggleItem(el){ el.getAttribute('data-open')==='true' ? closeItem(el) : openItem(el); }
+
+  function openAll(){ getItems().forEach(openItem); updateActions(); }
+  function closeAll(){ getItems().forEach(closeItem); updateActions(); }
+
+  function updateActions(){
+    const items = getItems();
+    const opened = items.filter(i => i.getAttribute('data-open')==='true').length;
+    const all = items.length;
+    // disable/enable tombol biar “semestinya”
+    document.getElementById('expandAll')?.toggleAttribute('disabled', opened===all);
+    document.getElementById('collapseAll')?.toggleAttribute('disabled', opened===0);
+  }
+
+  // Event delegation: klik header accordion
+  container.addEventListener('click', (e) => {
+    const btn = e.target.closest('.acc-btn');
+    if (!btn) return;
+    const item = btn.closest('.acc-item');
+    if (!item) return;
+    toggleItem(item);
+    updateActions();
+  });
+
+  // Tombol aksi global
+  document.getElementById('expandAll')?.addEventListener('click', openAll);
+  document.getElementById('collapseAll')?.addEventListener('click', closeAll);
+
+  // Inisialisasi ARIA untuk semua item (boleh terbuka bersamaan)
+  getItems().forEach(item => {
+    const btn = item.querySelector('.acc-btn');
+    btn?.setAttribute('aria-expanded', item.getAttribute('data-open')==='true' ? 'true' : 'false');
+    if (item.id) btn?.setAttribute('aria-controls', item.id);
+  });
+
+  // Opsional: otomatis buka item dari hash (#bab-3)
+  if (location.hash) {
+    const target = document.querySelector(location.hash);
+    if (target && target.classList.contains('acc-item')) openItem(target);
+  }
+
+  updateActions();
+})();
+
+  </script>
+</body>
+</html>

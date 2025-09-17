@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+
+<html lang="id">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>E - Learning SKANU</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- SwiperJS CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet" />
+    <!-- SwiperJS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Custom Components -->
+    <script src="../js/components.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Style Css -->
+    <link href="../css/style.css" rel="stylesheet" />
+    <link href="../css/animations.css" rel="stylesheet" />
+    <link href="../css/glass-effects.css" rel="stylesheet" />
+    <link href="../css/responsive.css" rel="stylesheet" />
+    <link href="../css/slider.css" rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        header {
+            background: transparent !important;
+            box-shadow: none !important;
+        }
+
+        /* Hide scrollbar for horizontal scrollers */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        /* Smooth edges for the hero image overlay pattern */
+        .grid-overlay {
+            background-image: linear-gradient(rgba(0, 0, 0, .0) 0 0),
+                radial-gradient(circle at 1px 1px, rgba(255, 255, 255, .15) 1px, transparent 1px);
+            background-size: 100% 100%, 22px 22px;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        hijautua: '#01665E',
+                        hijauh: '#117F58',
+                        bg1: '#34B589',
+                        bg2: '#1CA374',
+                        bg3: '#99ccaf',
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+
+<body class="bg-gray-50 font-poppins overflow-x-hidden">
+
+    <!-- Navbar -->
+    <header class="fixed top-4 inset-x-0 z-50">
+        <div
+          class="navbar-glass relative mx-auto w-[90%] max-w-6xl rounded-2xl shadow-lg
+                 flex items-center gap-4 py-3 px-6 ring-1 ring-black/5">
+          <!-- Left: Logo -->
+          <div class="flex items-center space-x-3 flex-none" id="logo-container">
+            <img alt="Logo" class="w-28 md:w-36" src="../assets/logo/Logo Web.png" />
+          </div>
+      
+          <!-- Center: NAV (true center on desktop) -->
+          <nav
+            class="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2
+                   space-x-6 text-gray-700 font-medium">
+            <a class="hover:text-hijautua text-sm transition duration-300 hover-underline font-semibold"
+               href="../e-learning/index.html">Beranda</a>
+            <a class="hover:text-hijautua text-sm transition duration-300 hover-underline font-semibold"
+               href="../e-learning/modul.html">Modul Pembelajaran</a>
+            <a class="hover:text-hijautua text-sm transition duration-300 hover-underline font-semibold"
+               href="#">Tugas</a>
+            <a class="hover:text-hijautua text-sm transition duration-300 hover-underline font-semibold"
+               href="../e-learning/ujian.html">Ujian</a>
+          </nav>
+      
+          <!-- Right: profile (desktop) + hamburger (mobile) -->
+          <div class="flex items-center gap-3 ml-auto flex-none">
+            <!-- Profile only on desktop -->
+            <img src="../assets/profile/Ellipse 24.png" alt="Profil"
+                 class="w-10 cursor-pointer hidden md:block">
+            <!-- Mobile Menu Button on the far right -->
+            <button class="md:hidden text-gray-700 focus:outline-none" id="mobile-menu-button" aria-label="Menu">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path d="M4 6h16M4 12h16m-7 6h7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </header>
+      
+    <!-- Hero Image -->
+    <img alt="Header" class="relative absolute inset-0 w-full h-full object-cover -z-10"
+        src="/assets/background/e-learning.png" />
+
+    <!-- PAGE WRAPPER -->
+    <div class="min-h-screen pt-24 z-20 -mt-24">
+        <!-- HERO / HEADER -->
+        <header class="relative isolate overflow-hidden">
+            <div
+                class="absolute inset-0 grid-overlay bg-[url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1600&auto=format&fit=crop')] bg-cover bg-center">
+            </div>
+            <div class="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 lg:py-16 text-white ">
+
+                <!-- Search + Filter Bar -->
+                <form id="searchForm" class="mt-8" role="search" aria-label="Cari materi">
+                    <div class="mx-auto max-w-5xl flex flex-col gap-3 sm:flex-row sm:items-center">
+                        <!-- Search box -->
+                        <label for="q" class="sr-only">Cari materi</label>
+                        <div class="relative flex-1">
+                            <svg class="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-emerald-700"
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="11" cy="11" r="7" />
+                                <path d="m21 21-4.3-4.3" />
+                            </svg>
+                            <input id="q" name="q" type="search" placeholder="Cari materi belajarmu di sini…"
+                                class="w-full rounded-full bg-white/95 pl-12 pr-4 py-3 text-slate-800 shadow ring-1 ring-black/10 focus:outline-none focus:ring-2 focus:ring-white/60 focus:ring-offset-2 focus:ring-offset-emerald-600 placeholder:text-slate-400" />
+                        </div>
+
+                        <!-- Kelas select (custom dropdown, tetap sinkron dengan #kelas) -->
+                        <div class="relative w-full sm:w-[360px] text-black" id="kelasSelectRoot">
+                            <!-- native select disembunyikan untuk kompatibel dengan script -->
+                            <select id="kelas" name="kelas" class="sr-only" aria-hidden="true" tabindex="-1">
+                                <option value="tkj12" selected>Kelas 12 – TKJ</option>
+                                <option value="mp12">Kelas 12 – Manajemen Perkantoran</option>
+                                <option value="tkr12">Kelas 12 – Teknik Kendaraan Ringan</option>
+                                <option value="akl12">Kelas 12 – Akuntansi</option>
+                                <option value="tsm10">Kelas 10 – Teknik Sepeda Motor</option>
+                            </select>
+
+                            <!-- tombol tampilan -->
+                            <button type="button" id="kelasBtn" aria-haspopup="listbox" aria-expanded="false" class="relative w-full rounded-full bg-white/95 ring-1 ring-black/10 shadow
+             focus:outline-none focus:ring-2 focus:ring-white/60 focus:ring-offset-2
+             focus:ring-offset-emerald-600 pl-12 sm:pl-28 pr-10 py-3 text-left">
+                                <!-- icon + label -->
+                                <span
+                                    class="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 flex items-center gap-2 text-slate-500 text-sm">
+                                    <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M22 10 12 5 2 10l10 5 10-5ZM6 12v5a6 6 0 0 0 12 0v-5" />
+                                    </svg>
+                                    <span class="hidden sm:inline">Pilih Kelas :</span>
+                                </span>
+
+                                <span id="kelasText" class="block text-slate-800 font-medium truncate pl-3">Kelas 12 –
+                                    TKJ</span>
+
+                                <!-- chevron -->
+                                <svg id="kelasChevron"
+                                    class="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 h-5 w-5 text-emerald-700 transition-transform"
+                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="m6 9 6 6 6-6" />
+                                </svg>
+                            </button>
+
+                            <!-- menu -->
+                            <ul id="kelasMenu" role="listbox" class="absolute z-50 mt-2 w-full max-h-64 overflow-auto rounded-xl border border-emerald-200 bg-white shadow-lg
+               opacity-0 invisible scale-95 origin-top transition-all">
+                                <li><button type="button" data-value="tkj12"
+                                        class="w-full text-left px-4 py-3 hover:bg-emerald-50 focus:bg-emerald-50 focus:outline-none">Kelas
+                                        12 – Teknik Komputer dan Jaringan</button></li>
+                                <li><button type="button" data-value="tkr12"
+                                        class="w-full text-left px-4 py-3 hover:bg-emerald-50 focus:bg-emerald-50 focus:outline-none">Kelas
+                                        12 – Teknik Kendaraan Ringan</button></li>
+                                <li><button type="button" data-value="tsm10"
+                                        class="w-full text-left px-4 py-3 hover:bg-emerald-50 focus:bg-emerald-50 focus:outline-none">Kelas
+                                        12 – Teknik Sepeda Motor</button></li>
+                                <li><button type="button" data-value="mp12"
+                                        class="w-full text-left px-4 py-3 hover:bg-emerald-50 focus:bg-emerald-50 focus:outline-none">Kelas
+                                        12 – Manajemen Perkantoran</button></li>
+                                <li><button type="button" data-value="akl12"
+                                        class="w-full text-left px-4 py-3 hover:bg-emerald-50 focus:bg-emerald-50 focus:outline-none">Kelas
+                                        12 – Akuntansi</button></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+        </header>
+        <main class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-16">
+
+            <!-- MATA PELAJARAN -->
+            <section class="pt-10" aria-labelledby="mapel-heading">
+                <h2 id="mapel-heading" class="text-hijautua font-medium text-xl md:text-2xl" data-aos="fade-up">
+                    Mata Pelajaran
+                </h2>
+
+                <!-- Scrollable subject chips -->
+                <div class="mt-4 overflow-x-auto no-scrollbar" data-aos="fade-up" data-aos-delay="50">
+                    <ul id="subjects" class="flex gap-4 min-w-full pb-3">
+
+                        <!-- B. Indonesia -->
+                        <li class="subject" data-name="B. Indonesia">
+                            <button
+                                class="group w-[200px] sm:w-[240px] aspect-[9/5] flex items-center gap-4 rounded-2xl border-2 border-emerald-200 bg-white shadow hover:border-emerald-400 focus:outline-none focus:ring-4 focus:ring-emerald-100 px-5">
+                                <span
+                                    class="grid place-items-center h-12 w-12 rounded-xl bg-emerald-100 text-emerald-700">
+                                    <!-- text icon -->
+                                    <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M4 6h16M8 12h8M10 18h4" />
+                                    </svg>
+                                </span>
+                                <span class="text-left">
+                                    <span class="block text-slate-900 font-semibold">B. Indonesia</span>
+                                    <span class="block text-slate-500 text-sm">Literasi &amp; EYD</span>
+                                </span>
+                            </button>
+                        </li>
+
+                        <!-- PKN -->
+                        <li class="subject" data-name="PKN">
+                            <button
+                                class="group w-[200px] sm:w-[240px] aspect-[9/5] flex items-center gap-4 rounded-2xl border-2 border-emerald-200 bg-white shadow hover:border-emerald-400 focus:outline-none focus:ring-4 focus:ring-emerald-100 px-5">
+                                <span
+                                    class="grid place-items-center h-12 w-12 rounded-xl bg-emerald-100 text-emerald-700">
+                                    <!-- shield icon -->
+                                    <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z" />
+                                    </svg>
+                                </span>
+                                <span class="text-left">
+                                    <span class="block text-slate-900 font-semibold">PKN</span>
+                                    <span class="block text-slate-500 text-sm">Kewarganegaraan</span>
+                                </span>
+                            </button>
+                        </li>
+
+                        <!-- Produktif TKJ -->
+                        <li class="subject" data-name="Produktif TKJ">
+                            <button
+                                class="group w-[200px] sm:w-[240px] aspect-[9/5] flex items-center gap-4 rounded-2xl border-2 border-emerald-200 bg-white shadow hover:border-emerald-400 focus:outline-none focus:ring-4 focus:ring-emerald-100 px-5">
+                                <span
+                                    class="grid place-items-center h-12 w-12 rounded-xl bg-emerald-100 text-emerald-700">
+                                    <!-- network icon -->
+                                    <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <circle cx="6" cy="12" r="3" />
+                                        <circle cx="18" cy="6" r="3" />
+                                        <circle cx="18" cy="18" r="3" />
+                                        <path d="M8.6 10.6 15.4 7.4M8.6 13.4 15.4 16.6" />
+                                    </svg>
+                                </span>
+                                <span class="text-left">
+                                    <span class="block text-slate-900 font-semibold">Produktif TKJ</span>
+                                    <span class="block text-slate-500 text-sm">Jaringan &amp; Server</span>
+                                </span>
+                            </button>
+                        </li>
+
+                        <!-- Semua Mapel -->
+                        <li class="subject" data-name="Semua Mapel">
+                            <button
+                                class="group w-[200px] sm:w-[240px] aspect-[9/5] flex items-center gap-4 rounded-2xl border-2 border-dashed border-emerald-300 bg-emerald-50/40 hover:bg-emerald-50 hover:border-emerald-400 focus:outline-none focus:ring-4 focus:ring-emerald-100 px-5">
+                                <span
+                                    class="grid place-items-center h-12 w-12 rounded-xl bg-white text-emerald-700 ring-1 ring-emerald-200">
+                                    <!-- dashed box icon -->
+                                    <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-dasharray="4 3" stroke-width="2">
+                                        <rect x="4" y="4" width="16" height="16" rx="3" />
+                                    </svg>
+                                </span>
+                                <span class="text-left">
+                                    <span class="block text-slate-900 font-semibold">Semua Mapel</span>
+                                    <span class="block text-slate-500 text-sm">Lihat lainnya</span>
+                                </span>
+                            </button>
+                        </li>
+
+                    </ul>
+                </div>
+            </section>
+
+            <!-- FORUM DISKUSI -->
+            <section class="pt-10" aria-labelledby="forum-heading">
+                <div class="flex items-center justify-between" data-aos="fade-up">
+                    <h2 id="forum-heading" class="text-hijautua font-medium text-xl md:text-2xl">Forum Diskusi</h2>
+                    <button id="btnBuatTopik"
+                        class="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-medium text-emerald-800 shadow ring-1 ring-emerald-200 hover:bg-emerald-50">
+                        <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 5v14M5 12h14" />
+                        </svg>
+                        Buat Topik
+                    </button>
+                </div>
+
+                <div id="forumGrid" class="mt-5 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+                    <!-- Cards injected by script -->
+                </div>
+
+                <div class="mt-6 flex justify-end" data-aos="fade-up" data-aos-delay="50">
+                    <a href="#"
+                        class="inline-flex items-center gap-2 rounded-xl border-hijautua border-2 px-5 py-2.5 text-sm font-semibold text-hijautua transition duration-300 shadow hover:bg-hijautua hover:text-white focus:outline-none focus:ring-4 focus:ring-emerald-200">
+                        Lihat Selengkapnya
+                        <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="m9 18 6-6-6-6" />
+                        </svg>
+                    </a>
+                </div>
+            </section>
+
+        </main>
+
+<!-- Modal: Daftar Tugas -->
+<div id="tugasModal" class="fixed inset-0 z-[10000] hidden">
+    <!-- backdrop -->
+    <div class="absolute inset-0 bg-black/60 backdrop-blur-sm" data-close="backdrop"></div>
+  
+    <!-- dialog -->
+    <div class="relative mx-auto my-10 w-[92%] max-w-3xl">
+      <div class="rounded-2xl bg-white shadow-xl ring-1 ring-black/10">
+        <div class="flex items-center justify-between p-4 border-b">
+          <h3 class="text-xl font-bold text-slate-900">Tugas</h3>
+          <button id="tugasClose"
+            class="rounded-full p-2 hover:bg-slate-100 focus:outline-none" aria-label="Tutup">
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 6 6 18M6 6l12 12"/>
+            </svg>
+          </button>
+        </div>
+  
+        <div id="tugasList" class="p-4 space-y-3 max-h-[70vh] overflow-auto">
+          <!-- items di-render via JS -->
+        </div>
+  
+        <div class="p-4 border-t text-right">
+          <button id="tugasTutup"
+            class="inline-flex items-center gap-2 rounded-xl border-2 border-hijautua px-4 py-2 text-sm font-semibold text-hijautua hover:bg-hijautua hover:text-white">
+            Tutup
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+        <!-- CTA Box di atas Footer -->
+        <div class="relative -mt-10 z-10 max-w-6xl mx-auto px-6">
+            <div
+                class="bg-[#4EFFB2] rounded-2xl shadow-lg p-6 flex flex-col md:flex-row justify-between items-center card-glass gradient-border">
+                <p class="text-lg font-medium text-black text-center md:text-left mb-4 md:mb-0">
+                    Tertarik Untuk Bergabung Dengan <br />
+                    <span class="font-bold">SMK NU 1 Slawi</span> ayo daftar Sekarang !!
+                </p>
+                <a class="bg-black text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-800 transition duration-300"
+                    href="../#pendaftaran">
+                    Pendaftaran
+                </a>
+            </div>
+        </div>
+
+        <!-- Footer Utama -->
+        <footer class="bg-white">
+            <div
+                class="max-w-6xl mx-auto px-4 md:px-6 py-8 md:py-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 md:gap-10">
+                <!-- Logo dan Deskripsi -->
+                <div>
+                    <div class="mb-2">
+                        <img alt="Logo" class="" src="../assets/logo/Logo Web.png" />
+                    </div>
+                    <p class="text-gray-700 text-sm leading-relaxed mb-4">
+                        <span class="font-bold">SMK NU 1 Slawi</span> memadukan ilmu-ilmu umum yang
+                        berbasis pada kurikulum yang dikeluarkan oleh Departemen Pendidikan Nasional dan
+                        ilmu-ilmu yang berbasis pada ajaran Islam ahli sunnah wal jama’ah (Nahdatul ‘Ulama).
+                    </p>
+                    <h3 class="font-semibold mb-2">Ikuti Kami</h3>
+                    <div class="flex gap-3 text-xl text-gray-700">
+                        <a class="hover:text-green-600 transition duration-300" href="../#"><i
+                                class="fab fa-facebook"></i></a>
+                        <a class="hover:text-green-600 transition duration-300" href="../#"><i
+                                class="fab fa-twitter"></i></a>
+                        <a class="hover:text-green-600 transition duration-300" href="../#"><i
+                                class="fab fa-instagram"></i></a>
+                        <a class="hover:text-green-600 transition duration-300" href="../#"><i
+                                class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <!-- Navigasi -->
+                <div>
+                    <h3 class="font-bold mb-3 mt-16">Navigasi</h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li><a class="hover:text-green-600 transition duration-300" href="..">Beranda</a></li>
+                        <li><a class="hover:text-green-600 transition duration-300"
+                                href="../profil-sekolah.html">Tentang</a>
+                        </li>
+                        <li><a class="hover:text-green-600 transition duration-300"
+                                href="../fasilitas-pendidikan.html">Fasilitas</a></li>
+                        <li><a class="hover:text-green-600 transition duration-300" href="../#">Kontak</a></li>
+                    </ul>
+                </div>
+                <!-- Company -->
+                <div>
+                    <h3 class="font-bold mb-3 mt-16">Company</h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li><a class="hover:text-green-600 transition duration-300" href="../#">About us</a></li>
+                        <li><a class="hover:text-green-600 transition duration-300" href="../#">Partners</a></li>
+                        <li><a class="hover:text-green-600 transition duration-300" href="../#">Customers</a></li>
+                        <li><a class="hover:text-green-600 transition duration-300" href="../#">Contact us</a></li>
+                    </ul>
+                </div>
+                <!-- Informasi -->
+                <div>
+                    <h3 class="font-bold mb-3 mt-16">Informasi</h3>
+                    <p class="text-gray-700 text-sm leading-relaxed transition duration-300">
+                        JL. Jend Ahmad Yani No.20 Slawi <br />
+                        Telp. (0283) 492695 – 4562312 <br />
+                        web. <a class="text-green-600 hover:underline" href="https://smknuslawi.sch.id/"
+                            target="_blank">https://smknuslawi.sch.id/</a>
+                    </p>
+                </div>
+            </div>
+            <!-- Copyright -->
+            <div
+                class="border-t border-gray-200 py-4 px-6 flex flex-col md:flex-row justify-between items-center text-sm text-gray-600 max-w-6xl mx-auto">
+                <p>© 2025 All rights reserved | SMK NU 1 Slawi</p>
+                <p>Design and Developed by <span class="font-bold">FIREOWL</span></p>
+            </div>
+        </footer>
+
+        <script src="../js/e-learning.js"></script>
+        <!-- FontAwesome CDN untuk ikon sosmed -->
+        <script crossorigin="anonymous" src="https://kit.fontawesome.com/a076d05399.js"></script>
+        <script src="../js/script.js"></script>
+        <script src="../js/scroll-animations.js"></script>
+        <script src="../js/loading.js"></script>
+        <script src="../js/glass-navbar.js"></script>
+        <script src="../js/modal.js"></script>
+        <script>AOS.init({ once: true, duration: 700, offset: 100, easing: 'ease-out-quart' });</script>
+</body>
+
+</html>

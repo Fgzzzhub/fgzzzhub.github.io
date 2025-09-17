@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Registrasi SPMB SKANU</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { brand:'#12694B' } /* warna primer khusus SPMB */
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style> body{font-family:'Poppins',sans-serif} </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+
+  <main class="max-w-6xl mx-auto px-4 md:px-6 py-10 md:py-14">
+    <div class="flex items-center justify-between flex-wrap gap-4">
+      <h1 class="text-2xl md:text-3xl font-bold text-brand">Pendaftaran SPMB SKANU</h1>
+      <a href="login.html" class="text-sm text-brand font-semibold hover:underline">Sudah punya akun? Login</a>
+    </div>
+
+    <div class="mt-6 grid grid-cols-1 lg:grid-cols-5 gap-8">
+      <!-- Intro / Highlight -->
+      <aside class="lg:col-span-2">
+        <div class="rounded-3xl p-6 bg-gradient-to-br from-brand to-emerald-500 text-white">
+          <h2 class="text-xl font-bold">Mulai perjalananmu di SKANU</h2>
+          <p class="mt-2 text-white/90">Isi formulir berikut dengan data yang valid. Kamu dapat melanjutkan pengisian berkas setelah akun dibuat.</p>
+          <ul class="mt-4 space-y-2 text-white/90 text-sm list-disc pl-5">
+            <li>Gunakan email aktif & nomor WhatsApp</li>
+            <li>Pilih program keahlian yang diminati</li>
+            <li>Konfirmasi via email untuk aktivasi akun</li>
+          </ul>
+        </div>
+      </aside>
+
+      <!-- Form -->
+      <section class="lg:col-span-3">
+        <form class="bg-white rounded-2xl shadow ring-1 ring-black/10 p-6 md:p-8 space-y-4" action="#" method="post">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-sm font-semibold text-slate-700" for="nama">Nama Lengkap</label>
+              <input id="nama" name="nama" type="text" required
+                     class="mt-1 w-full rounded-xl border border-brand/40 focus:border-brand focus:ring-2 focus:ring-brand/20 px-4 py-3 outline-none bg-white" />
+            </div>
+            <div>
+              <label class="block text-sm font-semibold text-slate-700" for="nisn">NISN</label>
+              <input id="nisn" name="nisn" type="text" inputmode="numeric" minlength="10" maxlength="10"
+                     class="mt-1 w-full rounded-xl border border-brand/40 focus:border-brand focus:ring-2 focus:ring-brand/20 px-4 py-3 outline-none bg-white" />
+            </div>
+            <div>
+              <label class="block text-sm font-semibold text-slate-700" for="email">Email</label>
+              <input id="email" name="email" type="email" required
+                     class="mt-1 w-full rounded-xl border border-brand/40 focus:border-brand focus:ring-2 focus:ring-brand/20 px-4 py-3 outline-none bg-white" />
+            </div>
+            <div>
+              <label class="block text-sm font-semibold text-slate-700" for="wa">No. WhatsApp</label>
+              <input id="wa" name="wa" type="tel" placeholder="08xxxxxxxxxx" required
+                     class="mt-1 w-full rounded-xl border border-brand/40 focus:border-brand focus:ring-2 focus:ring-brand/20 px-4 py-3 outline-none bg-white" />
+            </div>
+            <div>
+              <label class="block text-sm font-semibold text-slate-700" for="asal">Asal Sekolah</label>
+              <input id="asal" name="asal" type="text"
+                     class="mt-1 w-full rounded-xl border border-brand/40 focus:border-brand focus:ring-2 focus:ring-brand/20 px-4 py-3 outline-none bg-white" />
+            </div>
+            <div>
+              <label class="block text-sm font-semibold text-slate-700" for="jurusan">Program Keahlian</label>
+              <select id="jurusan" name="jurusan" required
+                      class="mt-1 w-full rounded-xl border border-brand/40 focus:border-brand focus:ring-2 focus:ring-brand/20 px-4 py-3 outline-none bg-white">
+                <option value="">Pilih program</option>
+                <option>Teknik Komputer & Jaringan (TKJ)</option>
+                <option>Rekayasa Perangkat Lunak (RPL)</option>
+                <option>Multimedia (MM)</option>
+                <option>Akuntansi</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-sm font-semibold text-slate-700" for="password">Password</label>
+              <div class="relative mt-1">
+                <input id="password" name="password" type="password" required
+                       class="w-full rounded-xl border border-brand/40 focus:border-brand focus:ring-2 focus:ring-brand/20 px-4 py-3 pr-10 outline-none bg-white" />
+                <button type="button" id="togglePass" class="absolute right-3 top-1/2 -translate-y-1/2 p-1 text-slate-500 hover:text-brand" aria-label="Tampilkan password">
+                  <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7Z"/><circle cx="12" cy="12" r="3"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div>
+              <label class="block text-sm font-semibold text-slate-700" for="password2">Konfirmasi Password</label>
+              <input id="password2" name="password2" type="password" required
+                     class="mt-1 w-full rounded-xl border border-brand/40 focus:border-brand focus:ring-2 focus:ring-brand/20 px-4 py-3 outline-none bg-white" />
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3 pt-2">
+            <input id="setuju" type="checkbox" required class="mt-1 h-4 w-4 rounded border-brand/50 text-brand focus:ring-brand/40" />
+            <label for="setuju" class="text-sm text-slate-700">
+              Saya menyetujui <a href="#" class="text-brand font-semibold hover:underline">Syarat & Ketentuan</a> serta <a href="#" class="text-brand font-semibold hover:underline">Kebijakan Privasi</a>.
+            </label>
+          </div>
+
+          <button class="w-full rounded-xl bg-brand text-white font-semibold py-3 hover:opacity-90">Daftar Sekarang</button>
+          <p class="text-sm text-slate-600 text-center">Setelah mendaftar, cek email untuk aktivasi akun.</p>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <script>
+    alert("Halaman ini akan diarahkan ke website SPMB Skanu")
+    const pass1 = document.getElementById('password');
+    document.getElementById('togglePass').addEventListener('click', ()=> {
+      pass1.type = pass1.type === 'password' ? 'text':'password';
+    });
+  </script>
+</body>
+</html>

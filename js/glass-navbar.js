@@ -26,33 +26,33 @@ document.addEventListener('DOMContentLoaded', () => {
   
     
   // Add decorative elements to the page
-  addDecorativeElements();
+  // addDecorativeElements();
 });
 
 // Function to add decorative elements to the page
 function addDecorativeElements() {
   // Add decorative circles to the hero section
-  const heroSection = document.querySelector('section');
-  if (heroSection) {
-    const circle1 = document.createElement('div');
-    circle1.className = 'decorative-circle';
-    circle1.style.width = '300px';
-    circle1.style.height = '300px';
-    circle1.style.top = '20%';
-    circle1.style.left = '10%';
+  // const heroSection = document.querySelector('section');
+  // if (heroSection) {
+  //   const circle1 = document.createElement('div');
+  //   circle1.className = 'decorative-circle';
+  //   circle1.style.width = '300px';
+  //   circle1.style.height = '300px';
+  //   circle1.style.top = '20%';
+  //   circle1.style.left = '10%';
     
-    const circle2 = document.createElement('div');
-    circle2.className = 'decorative-circle';
-    circle2.style.width = '200px';
-    circle2.style.height = '200px';
-    circle2.style.bottom = '30%';
-    circle2.style.right = '15%';
+  //   const circle2 = document.createElement('div');
+  //   circle2.className = 'decorative-circle';
+  //   circle2.style.width = '200px';
+  //   circle2.style.height = '200px';
+  //   circle2.style.bottom = '30%';
+  //   circle2.style.right = '15%';
     
-    heroSection.style.position = 'relative';
-    heroSection.style.overflow = 'hidden';
-    heroSection.appendChild(circle1);
-    heroSection.appendChild(circle2);
-  }
+  //   heroSection.style.position = 'relative';
+  //   heroSection.style.overflow = 'hidden';
+  //   heroSection.appendChild(circle1);
+  //   heroSection.appendChild(circle2);
+  // }
   
   // Add gradient text effect to headings
   const headings = document.querySelectorAll('h1, h2');

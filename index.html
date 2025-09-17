@@ -141,26 +141,19 @@
             </nav>
             <!-- Buttons -->
             <div class="hidden md:flex space-x-3">
-                <button
-                    class="border-2 border-hijautua text-hijautua px-5 py-2 rounded-lg hover:bg-hijautua hover:text-white transition duration-300 text-sm">Login</button>
-                <button
-                    class="bg-hijautua text-white px-5 py-2 rounded-lg hover:bg-white hover:text-hijautua border-2 border-hijautua transition duration-300 text-sm">Sign
-                    up</button>
+                <a
+                    class="border-2 border-hijautua text-hijautua px-5 py-2 rounded-lg hover:bg-hijautua hover:text-white transition duration-300 text-sm" href="../auth/login.html">Login</a>
+                <a
+                    class="bg-hijautua text-white px-5 py-2 rounded-lg hover:bg-white hover:text-hijautua border-2 border-hijautua transition duration-300 text-sm" href="../auth/register.html">Sign
+                    up</a>
             </div>
         </div>
     </header>
-    <!-- Modal -->
-    <div class="fixed inset-0 hidden bg-black bg-opacity-50 flex items-center justify-center z-50" id="modalProdi">
-        <div class="bg-white rounded-xl shadow-lg max-w-lg w-full p-6 relative">
-            <button class="absolute top-3 right-3 text-gray-500 hover:text-red-500" onclick="closeModal()">✕</button>
-            <h2 class="text-xl font-semibold mb-3" id="modalTitle">Judul Prodi</h2>
-            <p class="text-gray-600" id="modalContent">Deskripsi prodi...</p>
-        </div>
-    </div>
+
     <!-- Hero Section -->
     <section data-aos="fade-up" style="background-image: url('assets/implement/Frame%2039%201.png');">
-        <img alt="" class="mt-28 mb-10 mx-auto block hidden md:block" src="assets/implement/Group 2347 (2).png" />
-        <img alt="" class="mt-28 mb-10 mx-auto block block md:hidden" src="assets/implement/Hero Mobile.png" />
+        <img alt="" class="pt-28 pb-10 mb-10 mx-auto block hidden md:block" src="assets/implement/Group 2347 (2).png" />
+        <img alt="" class="pt-28 pb-10 mx-auto block block md:hidden" src="assets/implement/Hero Mobile.png" />
     </section>
     <!-- ====== SECTION: Berita Umum Terbaru ====== -->
     <section class="py-16" data-aos="fade-up" id="berita">
@@ -342,7 +335,7 @@
                 <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
                     <!-- Card: E-Learning -->
                     <a class="group bg-white rounded-2xl p-8 md:p-10 text-center shadow-lg hover:-translate-y-1 hover:shadow-2xl transition"
-                        href="#">
+                        href="e-learning/index.html">
                         <div class="flex justify-center items-center mt-10">
                             <img alt="" class="w-1/2" src="assets/component/Simulation.png" />
                         </div>
@@ -350,7 +343,7 @@
                     </a>
                     <!-- Card: SPMB -->
                     <a class="group bg-white rounded-2xl p-8 md:p-10 text-center shadow-lg hover:-translate-y-1 hover:shadow-2xl transition"
-                        href="#">
+                        href="auth/register.html">
                         <div class="flex justify-center items-center mt-10">
                             <img alt="" class="w-1/2" src="assets/component/News.png" />
                         </div>
@@ -453,7 +446,7 @@
                 <span class="font-bold">SMK NU 1 Slawi</span> ayo daftar Sekarang !!
             </p>
             <a class="bg-black text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-800 transition duration-300"
-                href="#pendaftaran">
+                href="./auth/register.html">
                 Pendaftaran
             </a>
         </div>
