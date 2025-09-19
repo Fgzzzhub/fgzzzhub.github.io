@@ -75,12 +75,24 @@ function card(e) {
   </div>
 </div>
 <div class="mt-5 flex justify-end">
-  ${e.status === 'upcoming'
-            ? `<button disabled class="rounded-xl border-2 border-slate-300 px-4 py-2 text-sm text-slate-400 cursor-not-allowed">Belum Dibuka</button>`
-            : e.status === 'ongoing'
-                ? `<button class="rounded-xl bg-hijautua px-4 py-2 text-sm font-semibold text-white hover:opacity-90">Lanjutkan Ujian</button>`
-                : `<button class="rounded-xl px-4 py-2 text-sm ring-2 ring-hijautua text-hijautua hover:bg-slate-50">Lihat Hasil</button>`}
+  ${
+    e.status === 'upcoming'
+      ? `<a href="ujian-detail.html?id=${e.id}"
+            class="rounded-xl border-2 border-slate-300 px-4 py-2 text-sm text-slate-400 cursor-not-allowed pointer-events-none">
+           Belum Dibuka
+         </a>`
+      : e.status === 'ongoing'
+        ? `<a href="ujian-detail.html?id=${e.id}"
+              class="rounded-xl bg-hijautua px-4 py-2 text-sm font-semibold text-white hover:opacity-90">
+             Lanjutkan Ujian
+           </a>`
+        : `<a href="ujian-detail.html?id=${e.id}"
+              class="rounded-xl px-4 py-2 text-sm ring-2 ring-hijautua text-hijautua hover:bg-slate-50">
+             Lihat Hasil
+           </a>`
+  }
 </div>
+
 </article>`;
 }
 

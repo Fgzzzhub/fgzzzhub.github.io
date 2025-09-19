@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Detail Ujian | E-Learning SKANU</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <!-- Style -->
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/animations.css" />
+  <link rel="stylesheet" href="../css/glass-effects.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+  <link rel="stylesheet" href="../css/slider.css" />
+
+  <script defer src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { hijautua: '#01665E', bg1:'#34B589', bg2:'#1CA374', bg3:'#99ccaf' },
+          fontFamily: { poppins: ['Poppins','ui-sans-serif','system-ui'] }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: 'Poppins', sans-serif; }
+    .grid-overlay{
+      background-image: linear-gradient(rgba(0,0,0,0) 0 0),
+        radial-gradient(circle at 1px 1px, rgba(255,255,255,.15) 1px, transparent 1px);
+      background-size: 100% 100%, 22px 22px;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50">
+  <!-- Navbar (sama pola seperti ujian.html) -->
+  <header class="fixed top-4 inset-x-0 z-50" data-el-nav>
+    <div class="navbar-glass relative mx-auto w-[90%] max-w-6xl rounded-2xl shadow-lg
+                flex items-center justify-between gap-4 py-3 px-6 ring-1 ring-black/5">
+      <!-- Left -->
+      <div class="flex items-center space-x-3 flex-none">
+        <img alt="Logo" class="w-28 md:w-36" src="../assets/logo/Logo Web.png" />
+      </div>
+      <!-- Center -->
+      <nav class="hidden md:flex md:absolute md:left-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2
+                  space-x-6 text-gray-700 font-medium">
+        <a class="hover:text-hijautua text-sm transition duration-300 hover-underline font-semibold" href="../e-learning/index.html">Beranda</a>
+        <a class="hover:text-hijautua text-sm transition duration-300 hover-underline font-semibold" href="../e-learning/modul.html">Modul Pembelajaran</a>
+        <a class="hover:text-hijautua text-sm transition duration-300 hover-underline font-semibold" href="#">Tugas</a>
+        <a class="hover:text-hijautua text-sm transition duration-300 hover-underline font-semibold" href="../e-learning/ujian.html">Ujian</a>
+      </nav>
+      <!-- Right -->
+      <div class="flex items-center gap-3 ml-auto flex-none">
+        <img src="../assets/profile/Ellipse 24.png" alt="Profil" class="w-10 cursor-pointer hidden md:block">
+        <button class="md:hidden text-gray-700 focus:outline-none" id="mobile-menu-button" aria-label="Menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16m-7 6h7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero bg -->
+  <img alt="Header" class="relative absolute inset-0 w-full h-full object-cover -z-10" src="/assets/background/Ujian.png" />
+
+  <!-- Hero -->
+  <header class="relative isolate overflow-hidden">
+    <div class="absolute inset-0 grid-overlay bg-[url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1600&auto=format&fit=crop')] bg-cover bg-center"></div>
+    <div class="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 text-slate-900 bg-gray-100">
+      <div class="flex items-center gap-3 mb-4">
+        <a href="ujian.html" class="inline-flex items-center gap-2 rounded-full bg-white/90 px-3 py-2 text-hijautua ring-1 ring-black/10 hover:bg-white">
+          <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+          <span class="text-sm font-semibold">Kembali</span>
+        </a>
+        <span id="statusChip" class="chip bg-slate-100 text-slate-700"></span>
+      </div>
+
+      <h1 id="examTitle" class="text-3xl md:text-4xl font-extrabold drop-shadow" data-aos="fade-down">Detail Ujian</h1>
+      <p id="examMeta" class="mt-2 text-slate-600" data-aos="fade-down" data-aos-delay="50"></p>
+
+      <div class="mt-6 grid gap-4 sm:grid-cols-3">
+        <div class="rounded-xl bg-white/95 p-4 ring-1 ring-black/10 text-slate-800" data-aos="fade-up">
+          <p class="text-xs text-slate-500">Jadwal</p>
+          <p id="examSchedule" class="font-semibold mt-1"></p>
+        </div>
+        <div class="rounded-xl bg-white/95 p-4 ring-1 ring-black/10 text-slate-800" data-aos="fade-up" data-aos-delay="50">
+          <p class="text-xs text-slate-500">Durasi</p>
+          <p id="examDuration" class="font-semibold mt-1"></p>
+        </div>
+        <div class="rounded-xl bg-white/95 p-4 ring-1 ring-black/10 text-slate-800" data-aos="fade-up" data-aos-delay="100">
+          <p class="text-xs text-slate-500">Jumlah Soal</p>
+          <p id="examQuestions" class="font-semibold mt-1"></p>
+        </div>
+      </div>
+
+      <!-- Countdown -->
+      <div id="countWrap" class="mt-6 hidden" data-aos="fade-up">
+        <p id="countLabel" class="text-emerald-50 mb-1 text-sm"></p>
+        <div class="rounded-2xl bg-white/95 ring-1 ring-black/10 text-slate-900 inline-flex items-center gap-4 px-5 py-3">
+          <span id="d">00</span> hari
+          <span id="h">00</span> jam
+          <span id="m">00</span> menit
+          <span id="s">00</span> detik
+        </div>
+      </div>
+
+      <!-- Actions -->
+      <div class="mt-6 flex flex-wrap gap-3" data-aos="fade-up" data-aos-delay="150">
+        <button id="btnStart" class="rounded-xl bg-hijautua text-white px-5 py-2.5 font-semibold hover:opacity-90">Mulai Ujian</button>
+        <button id="btnResult" class="rounded-xl ring-2 ring-hijautua text-hijautua px-5 py-2.5 font-semibold hover:bg-white/10 hidden">Lihat Hasil</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 pb-16">
+    <section class="mt-8 grid gap-5 md:grid-cols-3">
+      <article class="md:col-span-2 rounded-2xl bg-white p-5 ring-1 ring-slate-200 shadow" data-aos="fade-up">
+        <h2 class="font-bold text-slate-900 mb-2">Petunjuk Ujian</h2>
+        <ul id="examRules" class="list-disc pl-5 text-slate-700 space-y-1">
+          <!-- inject via JS -->
+        </ul>
+      </article>
+      <aside class="rounded-2xl bg-white p-5 ring-1 ring-slate-200 shadow" data-aos="fade-up" data-aos-delay="50">
+        <h3 class="font-bold text-slate-900 mb-2">Informasi</h3>
+        <div class="space-y-2 text-sm text-slate-700">
+          <p><span class="text-slate-500">Guru Pengampu:</span> <span id="examTeacher" class="font-medium">-</span></p>
+          <p><span class="text-slate-500">Kelas:</span> <span id="examClass" class="font-medium">-</span></p>
+          <p><span class="text-slate-500">Status:</span> <span id="examStatusText" class="font-medium">-</span></p>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <!-- footer sama seperti halaman lain, opsional ditambahkan -->
+
+  <!-- Scripts -->
+  <script src="../js/el-nav.js"></script>
+  <script src="../js/ujian-detail.js"></script>
+  <script>AOS.init({ once:true, duration:700, offset:100, easing:'ease-out-quart' });</script>
+</body>
+</html>
