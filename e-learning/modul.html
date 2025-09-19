@@ -1,73 +1,83 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Modul Pembelajaran | E-Learning SKANU</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 
-     <!-- Style Css -->
-     <link href="../css/style.css" rel="stylesheet" />
-     <link href="../css/animations.css" rel="stylesheet" />
-     <link href="../css/glass-effects.css" rel="stylesheet" />
-     <link href="../css/responsive.css" rel="stylesheet" />
-     <link href="../css/slider.css" rel="stylesheet" />
+  <!-- Style Css -->
+  <link href="../css/style.css" rel="stylesheet" />
+  <link href="../css/animations.css" rel="stylesheet" />
+  <link href="../css/glass-effects.css" rel="stylesheet" />
+  <link href="../css/responsive.css" rel="stylesheet" />
+  <link href="../css/slider.css" rel="stylesheet" />
 
   <script defer src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
-          colors: { hijautua: '#01665E', bg1:'#34B589', bg2:'#1CA374', bg3:'#99ccaf' },
-          fontFamily: { poppins:['Poppins','ui-sans-serif','system-ui'] }
+          colors: { hijautua: '#01665E', bg1: '#34B589', bg2: '#1CA374', bg3: '#99ccaf' },
+          fontFamily: { poppins: ['Poppins', 'ui-sans-serif', 'system-ui'] }
         }
       }
     }
   </script>
   <style>
-    body{font-family:'Poppins',sans-serif}
-    .no-scrollbar::-webkit-scrollbar{display:none}
-    .no-scrollbar{-ms-overflow-style:none;scrollbar-width:none}
-    .grid-overlay{
-      background-image:linear-gradient(rgba(0,0,0,0) 0 0),
-        radial-gradient(circle at 1px 1px, rgba(255,255,255,.15) 1px, transparent 1px);
-      background-size:100% 100%,22px 22px;
+    body {
+      font-family: 'Poppins', sans-serif
+    }
+
+    .no-scrollbar::-webkit-scrollbar {
+      display: none
+    }
+
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none
+    }
+
+    .grid-overlay {
+      background-image: linear-gradient(rgba(0, 0, 0, 0) 0 0),
+        radial-gradient(circle at 1px 1px, rgba(255, 255, 255, .15) 1px, transparent 1px);
+      background-size: 100% 100%, 22px 22px;
     }
   </style>
 </head>
+
 <body class="bg-gray-50">
 
   <!-- Navbar -->
-  <header class="fixed top-4 inset-x-0 z-50">
-    <div
-      class="navbar-glass relative mx-auto w-[90%] max-w-6xl rounded-2xl shadow-lg
-             flex items-center gap-4 py-3 px-6 ring-1 ring-black/5">
+  <header class="fixed top-4 inset-x-0 z-50" data-el-nav>
+
+    <div class="navbar-glass relative mx-auto w-[90%] max-w-6xl rounded-2xl shadow-lg
+          flex items-center justify-between gap-4 py-3 px-6 ring-1 ring-black/5">
       <!-- Left: Logo -->
       <div class="flex items-center space-x-3 flex-none" id="logo-container">
         <img alt="Logo" class="w-28 md:w-36" src="../assets/logo/Logo Web.png" />
       </div>
-  
+
       <!-- Center: NAV (true center on desktop) -->
-      <nav
-        class="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2
-               space-x-6 text-gray-700 font-medium">
+      <nav class="hidden md:flex md:absolute md:left-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2
+         space-x-6 text-gray-700 font-medium">
         <a class="hover:text-hijautua text-sm transition duration-300 hover-underline font-semibold"
-           href="../e-learning/index.html">Beranda</a>
+          href="../e-learning/index.html">Beranda</a>
         <a class="hover:text-hijautua text-sm transition duration-300 hover-underline font-semibold"
-           href="../e-learning/modul.html">Modul Pembelajaran</a>
+          href="../e-learning/modul.html">Modul Pembelajaran</a>
+        <a class="hover:text-hijautua text-sm transition duration-300 hover-underline font-semibold" href="#">Tugas</a>
         <a class="hover:text-hijautua text-sm transition duration-300 hover-underline font-semibold"
-           href="#">Tugas</a>
-        <a class="hover:text-hijautua text-sm transition duration-300 hover-underline font-semibold"
-           href="../e-learning/ujian.html">Ujian</a>
+          href="../e-learning/ujian.html">Ujian</a>
       </nav>
-  
+
       <!-- Right: profile (desktop) + hamburger (mobile) -->
       <div class="flex items-center gap-3 ml-auto flex-none">
         <!-- Profile only on desktop -->
-        <img src="../assets/profile/Ellipse 24.png" alt="Profil"
-             class="w-10 cursor-pointer hidden md:block">
+        <img src="../assets/profile/Ellipse 24.png" alt="Profil" class="w-10 cursor-pointer hidden md:block">
         <!-- Mobile Menu Button on the far right -->
         <button class="md:hidden text-gray-700 focus:outline-none" id="mobile-menu-button" aria-label="Menu">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -77,14 +87,16 @@
       </div>
     </div>
   </header>
-  
+
   <!-- Hero Image -->
   <img alt="Header" class="relative absolute inset-0 w-full h-full object-cover -z-10"
-  src="/assets/background/Modul Pembelajaran.png" />
+    src="/assets/background/Modul Pembelajaran.png" />
 
   <!-- Hero -->
   <header class="relative isolate overflow-hidden">
-    <div class="absolute inset-0 grid-overlay bg-[url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1600&auto=format&fit=crop')] bg-cover bg-center"></div>
+    <div
+      class="absolute inset-0 grid-overlay bg-[url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1600&auto=format&fit=crop')] bg-cover bg-center">
+    </div>
     <div class="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 text-white">
 
       <!-- Search + Filter -->
@@ -93,68 +105,68 @@
           <div class="relative flex-1">
             <svg class="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-hijautua"
               viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/>
+              <circle cx="11" cy="11" r="7" />
+              <path d="m21 21-4.3-4.3" />
             </svg>
             <input id="q" type="search" placeholder="Cari modul, topik, atau guru…"
-              class="w-full rounded-full bg-white/95 pl-12 pr-4 py-3 text-slate-800 shadow ring-1 ring-black/10 focus:outline-none focus:ring-2 focus:ring-white/60 focus:ring-offset-2 focus:ring-offset-hijautua placeholder:text-slate-400"/>
+              class="w-full rounded-full bg-white/95 pl-12 pr-4 py-3 text-slate-800 shadow ring-1 ring-black/10 focus:outline-none focus:ring-2 focus:ring-white/60 focus:ring-offset-2 focus:ring-offset-hijautua placeholder:text-slate-400" />
           </div>
 
-           <!-- Kelas select (custom dropdown, tetap sinkron dengan #kelas) -->
-           <div class="relative w-full sm:w-[360px] text-black" id="kelasSelectRoot">
+          <!-- Kelas select (custom dropdown, tetap sinkron dengan #kelas) -->
+          <div class="relative w-full sm:w-[360px] text-black" id="kelasSelectRoot">
             <!-- native select disembunyikan untuk kompatibel dengan script -->
             <select id="kelas" name="kelas" class="sr-only" aria-hidden="true" tabindex="-1">
-                <option value="tkj12" selected>Kelas 12 – TKJ</option>
-                <option value="mp12">Kelas 12 – Manajemen Perkantoran</option>
-                <option value="tkr12">Kelas 12 – Teknik Kendaraan Ringan</option>
-                <option value="akl12">Kelas 12 – Akuntansi</option>
-                <option value="tsm10">Kelas 10 – Teknik Sepeda Motor</option>
+              <option value="TKJ12" selected>Kelas 12 – TKJ</option>
+              <option value="MP12">Kelas 12 – Manajemen Perkantoran</option>
+              <option value="AKL12">Kelas 12 – Akuntansi</option>
+              <option value="TSM10">Kelas 10 – Teknik Sepeda Motor</option>
+              <option value="TKR12">Kelas 12 – Teknik Kendaraan Ringan</option>
             </select>
 
             <!-- tombol tampilan -->
             <button type="button" id="kelasBtn" aria-haspopup="listbox" aria-expanded="false" class="relative w-full rounded-full bg-white/95 ring-1 ring-black/10 shadow
 focus:outline-none focus:ring-2 focus:ring-white/60 focus:ring-offset-2
 focus:ring-offset-emerald-600 pl-12 sm:pl-28 pr-10 py-3 text-left">
-                <!-- icon + label -->
-                <span
-                    class="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 flex items-center gap-2 text-slate-500 text-sm">
-                    <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                        stroke-width="2">
-                        <path d="M22 10 12 5 2 10l10 5 10-5ZM6 12v5a6 6 0 0 0 12 0v-5" />
-                    </svg>
-                    <span class="hidden sm:inline">Pilih Kelas :</span>
-                </span>
-
-                <span id="kelasText" class="block text-slate-800 font-medium truncate pl-3">Kelas 12 –
-                    TKJ</span>
-
-                <!-- chevron -->
-                <svg id="kelasChevron"
-                    class="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 h-5 w-5 text-emerald-700 transition-transform"
-                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="m6 9 6 6 6-6" />
+              <!-- icon + label -->
+              <span
+                class="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 flex items-center gap-2 text-slate-500 text-sm">
+                <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 10 12 5 2 10l10 5 10-5ZM6 12v5a6 6 0 0 0 12 0v-5" />
                 </svg>
+                <span class="hidden sm:inline">Pilih Kelas :</span>
+              </span>
+
+              <span id="kelasText" class="block text-slate-800 font-medium truncate pl-3">Kelas 12 –
+                TKJ</span>
+
+              <!-- chevron -->
+              <svg id="kelasChevron"
+                class="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 h-5 w-5 text-emerald-700 transition-transform"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="m6 9 6 6 6-6" />
+              </svg>
             </button>
 
             <!-- menu -->
             <ul id="kelasMenu" role="listbox" class="absolute z-50 mt-2 w-full max-h-64 overflow-auto rounded-xl border border-emerald-200 bg-white shadow-lg
 opacity-0 invisible scale-95 origin-top transition-all">
-                <li><button type="button" data-value="tkj12"
-                        class="w-full text-left px-4 py-3 hover:bg-emerald-50 focus:bg-emerald-50 focus:outline-none">Kelas
-                        12 – Teknik Komputer dan Jaringan</button></li>
-                <li><button type="button" data-value="tkr12"
-                        class="w-full text-left px-4 py-3 hover:bg-emerald-50 focus:bg-emerald-50 focus:outline-none">Kelas
-                        12 – Teknik Kendaraan Ringan</button></li>
-                <li><button type="button" data-value="tsm10"
-                        class="w-full text-left px-4 py-3 hover:bg-emerald-50 focus:bg-emerald-50 focus:outline-none">Kelas
-                        12 – Teknik Sepeda Motor</button></li>
-                <li><button type="button" data-value="mp12"
-                        class="w-full text-left px-4 py-3 hover:bg-emerald-50 focus:bg-emerald-50 focus:outline-none">Kelas
-                        12 – Manajemen Perkantoran</button></li>
-                <li><button type="button" data-value="akl12"
-                        class="w-full text-left px-4 py-3 hover:bg-emerald-50 focus:bg-emerald-50 focus:outline-none">Kelas
-                        12 – Akuntansi</button></li>
+              <li><button type="button" data-value="TKJ12"
+                  class="w-full text-left px-4 py-3 hover:bg-emerald-50 focus:bg-emerald-50 focus:outline-none">Kelas
+                  12 – Teknik Komputer dan Jaringan</button></li>
+              <li><button type="button" data-value="MP12"
+                  class="w-full text-left px-4 py-3 hover:bg-emerald-50 focus:bg-emerald-50 focus:outline-none">Kelas
+                  12 – Manajemen Perkantoran</button></li>
+              <li><button type="button" data-value="AKL12"
+                  class="w-full text-left px-4 py-3 hover:bg-emerald-50 focus:bg-emerald-50 focus:outline-none">Kelas
+                  12 – Akuntansi</button></li>
+              <li><button type="button" data-value="TSM10"
+                  class="w-full text-left px-4 py-3 hover:bg-emerald-50 focus:bg-emerald-50 focus:outline-none">Kelas
+                  10 – Teknik Sepeda Motor</button></li>
+              <li><button type="button" data-value="TKR12"
+                  class="w-full text-left px-4 py-3 hover:bg-emerald-50 focus:bg-emerald-50 focus:outline-none">Kelas
+                  12 – Teknik Kendaraan Ringan</button></li>
             </ul>
-        </div>
+          </div>
         </div>
       </form>
     </div>
@@ -164,11 +176,18 @@ opacity-0 invisible scale-95 origin-top transition-all">
 
     <!-- Kategori chips -->
     <div class="mt-8 flex flex-wrap gap-2" data-aos="fade-up" id="chips">
-      <button data-kat="" class="kat-chip active rounded-full px-4 py-2 text-sm font-semibold text-hijautua ring-2 ring-hijautua bg-white">Semua</button>
-      <button data-kat="matematika" class="kat-chip rounded-full px-4 py-2 text-sm text-hijautua ring-2 ring-hijautua/40 hover:ring-hijautua bg-white">Matematika</button>
-      <button data-kat="bindo" class="kat-chip rounded-full px-4 py-2 text-sm text-hijautua ring-2 ring-hijautua/40 hover:ring-hijautua bg-white">B. Indonesia</button>
-      <button data-kat="bing" class="kat-chip rounded-full px-4 py-2 text-sm text-hijautua ring-2 ring-hijautua/40 hover:ring-hijautua bg-white">B. Inggris</button>
-      <button data-kat="produktif" class="kat-chip rounded-full px-4 py-2 text-sm text-hijautua ring-2 ring-hijautua/40 hover:ring-hijautua bg-white">Produktif</button>
+      <button data-kat=""
+        class="kat-chip active rounded-full px-4 py-2 text-sm font-semibold text-hijautua ring-2 ring-hijautua bg-white">Semua</button>
+      <button data-kat="matematika"
+        class="kat-chip rounded-full px-4 py-2 text-sm text-hijautua ring-2 ring-hijautua/40 hover:ring-hijautua bg-white">Matematika</button>
+      <button data-kat="bindo"
+        class="kat-chip rounded-full px-4 py-2 text-sm text-hijautua ring-2 ring-hijautua/40 hover:ring-hijautua bg-white">B.
+        Indonesia</button>
+      <button data-kat="bing"
+        class="kat-chip rounded-full px-4 py-2 text-sm text-hijautua ring-2 ring-hijautua/40 hover:ring-hijautua bg-white">B.
+        Inggris</button>
+      <button data-kat="produktif"
+        class="kat-chip rounded-full px-4 py-2 text-sm text-hijautua ring-2 ring-hijautua/40 hover:ring-hijautua bg-white">Produktif</button>
     </div>
 
     <!-- Grid modul -->
@@ -177,29 +196,28 @@ opacity-0 invisible scale-95 origin-top transition-all">
     </section>
   </main>
 
-  
-    <!-- Modal: Daftar Tugas -->
-<div id="tugasModal" class="fixed inset-0 z-[10000] hidden">
+
+  <!-- Modal: Daftar Tugas -->
+  <div id="tugasModal" class="fixed inset-0 z-[10000] hidden">
     <!-- backdrop -->
     <div class="absolute inset-0 bg-black/60 backdrop-blur-sm" data-close="backdrop"></div>
-  
+
     <!-- dialog -->
     <div class="relative mx-auto my-10 w-[92%] max-w-3xl">
       <div class="rounded-2xl bg-white shadow-xl ring-1 ring-black/10">
         <div class="flex items-center justify-between p-4 border-b">
           <h3 class="text-xl font-bold text-slate-900">Tugas</h3>
-          <button id="tugasClose"
-            class="rounded-full p-2 hover:bg-slate-100 focus:outline-none" aria-label="Tutup">
+          <button id="tugasClose" class="rounded-full p-2 hover:bg-slate-100 focus:outline-none" aria-label="Tutup">
             <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M18 6 6 18M6 6l12 12"/>
+              <path d="M18 6 6 18M6 6l12 12" />
             </svg>
           </button>
         </div>
-  
+
         <div id="tugasList" class="p-4 space-y-3 max-h-[70vh] overflow-auto">
           <!-- items di-render via JS -->
         </div>
-  
+
         <div class="p-4 border-t text-right">
           <button id="tugasTutup"
             class="inline-flex items-center gap-2 rounded-xl border-2 border-hijautua px-4 py-2 text-sm font-semibold text-hijautua hover:bg-hijautua hover:text-white">
@@ -213,96 +231,94 @@ opacity-0 invisible scale-95 origin-top transition-all">
   <!-- CTA Box di atas Footer -->
   <div class="relative -mt-10 z-10 max-w-6xl mx-auto px-6">
     <div
-        class="bg-[#4EFFB2] rounded-2xl shadow-lg p-6 flex flex-col md:flex-row justify-between items-center card-glass gradient-border">
-        <p class="text-lg font-medium text-black text-center md:text-left mb-4 md:mb-0">
-            Tertarik Untuk Bergabung Dengan <br />
-            <span class="font-bold">SMK NU 1 Slawi</span> ayo daftar Sekarang !!
-        </p>
-        <a class="bg-black text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-800 transition duration-300"
-            href="../#pendaftaran">
-            Pendaftaran
-        </a>
+      class="bg-[#4EFFB2] rounded-2xl shadow-lg p-6 flex flex-col md:flex-row justify-between items-center card-glass gradient-border">
+      <p class="text-lg font-medium text-black text-center md:text-left mb-4 md:mb-0">
+        Tertarik Untuk Bergabung Dengan <br />
+        <span class="font-bold">SMK NU 1 Slawi</span> ayo daftar Sekarang !!
+      </p>
+      <a class="bg-black text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-800 transition duration-300"
+        href="../#pendaftaran">
+        Pendaftaran
+      </a>
     </div>
-</div>
+  </div>
 
-<!-- Footer Utama -->
-<footer class="bg-white">
+  <!-- Footer Utama -->
+  <footer class="bg-white">
     <div
-        class="max-w-6xl mx-auto px-4 md:px-6 py-8 md:py-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 md:gap-10">
-        <!-- Logo dan Deskripsi -->
-        <div>
-            <div class="mb-2">
-                <img alt="Logo" class="" src="../assets/logo/Logo Web.png" />
-            </div>
-            <p class="text-gray-700 text-sm leading-relaxed mb-4">
-                <span class="font-bold">SMK NU 1 Slawi</span> memadukan ilmu-ilmu umum yang
-                berbasis pada kurikulum yang dikeluarkan oleh Departemen Pendidikan Nasional dan
-                ilmu-ilmu yang berbasis pada ajaran Islam ahli sunnah wal jama’ah (Nahdatul ‘Ulama).
-            </p>
-            <h3 class="font-semibold mb-2">Ikuti Kami</h3>
-            <div class="flex gap-3 text-xl text-gray-700">
-                <a class="hover:text-green-600 transition duration-300" href="../#"><i
-                        class="fab fa-facebook"></i></a>
-                <a class="hover:text-green-600 transition duration-300" href="../#"><i
-                        class="fab fa-twitter"></i></a>
-                <a class="hover:text-green-600 transition duration-300" href="../#"><i
-                        class="fab fa-instagram"></i></a>
-                <a class="hover:text-green-600 transition duration-300" href="../#"><i
-                        class="fab fa-linkedin"></i></a>
-            </div>
+      class="max-w-6xl mx-auto px-4 md:px-6 py-8 md:py-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 md:gap-10">
+      <!-- Logo dan Deskripsi -->
+      <div>
+        <div class="mb-2">
+          <img alt="Logo" class="" src="../assets/logo/Logo Web.png" />
         </div>
-        <!-- Navigasi -->
-        <div>
-            <h3 class="font-bold mb-3 mt-16">Navigasi</h3>
-            <ul class="space-y-2 text-gray-700">
-                <li><a class="hover:text-green-600 transition duration-300" href="..">Beranda</a></li>
-                <li><a class="hover:text-green-600 transition duration-300"
-                        href="../profil-sekolah.html">Tentang</a>
-                </li>
-                <li><a class="hover:text-green-600 transition duration-300"
-                        href="../fasilitas-pendidikan.html">Fasilitas</a></li>
-                <li><a class="hover:text-green-600 transition duration-300" href="../#">Kontak</a></li>
-            </ul>
+        <p class="text-gray-700 text-sm leading-relaxed mb-4">
+          <span class="font-bold">SMK NU 1 Slawi</span> memadukan ilmu-ilmu umum yang
+          berbasis pada kurikulum yang dikeluarkan oleh Departemen Pendidikan Nasional dan
+          ilmu-ilmu yang berbasis pada ajaran Islam ahli sunnah wal jama’ah (Nahdatul ‘Ulama).
+        </p>
+        <h3 class="font-semibold mb-2">Ikuti Kami</h3>
+        <div class="flex gap-3 text-xl text-gray-700">
+          <a class="hover:text-green-600 transition duration-300" href="../#"><i class="fab fa-facebook"></i></a>
+          <a class="hover:text-green-600 transition duration-300" href="../#"><i class="fab fa-twitter"></i></a>
+          <a class="hover:text-green-600 transition duration-300" href="../#"><i class="fab fa-instagram"></i></a>
+          <a class="hover:text-green-600 transition duration-300" href="../#"><i class="fab fa-linkedin"></i></a>
         </div>
-        <!-- Company -->
-        <div>
-            <h3 class="font-bold mb-3 mt-16">Company</h3>
-            <ul class="space-y-2 text-gray-700">
-                <li><a class="hover:text-green-600 transition duration-300" href="../#">About us</a></li>
-                <li><a class="hover:text-green-600 transition duration-300" href="../#">Partners</a></li>
-                <li><a class="hover:text-green-600 transition duration-300" href="../#">Customers</a></li>
-                <li><a class="hover:text-green-600 transition duration-300" href="../#">Contact us</a></li>
-            </ul>
-        </div>
-        <!-- Informasi -->
-        <div>
-            <h3 class="font-bold mb-3 mt-16">Informasi</h3>
-            <p class="text-gray-700 text-sm leading-relaxed transition duration-300">
-                JL. Jend Ahmad Yani No.20 Slawi <br />
-                Telp. (0283) 492695 – 4562312 <br />
-                web. <a class="text-green-600 hover:underline" href="https://smknuslawi.sch.id/"
-                    target="_blank">https://smknuslawi.sch.id/</a>
-            </p>
-        </div>
+      </div>
+      <!-- Navigasi -->
+      <div>
+        <h3 class="font-bold mb-3 mt-16">Navigasi</h3>
+        <ul class="space-y-2 text-gray-700">
+          <li><a class="hover:text-green-600 transition duration-300" href="..">Beranda</a></li>
+          <li><a class="hover:text-green-600 transition duration-300" href="../profil-sekolah.html">Tentang</a>
+          </li>
+          <li><a class="hover:text-green-600 transition duration-300" href="../fasilitas-pendidikan.html">Fasilitas</a>
+          </li>
+          <li><a class="hover:text-green-600 transition duration-300" href="../#">Kontak</a></li>
+        </ul>
+      </div>
+      <!-- Company -->
+      <div>
+        <h3 class="font-bold mb-3 mt-16">Company</h3>
+        <ul class="space-y-2 text-gray-700">
+          <li><a class="hover:text-green-600 transition duration-300" href="../#">About us</a></li>
+          <li><a class="hover:text-green-600 transition duration-300" href="../#">Partners</a></li>
+          <li><a class="hover:text-green-600 transition duration-300" href="../#">Customers</a></li>
+          <li><a class="hover:text-green-600 transition duration-300" href="../#">Contact us</a></li>
+        </ul>
+      </div>
+      <!-- Informasi -->
+      <div>
+        <h3 class="font-bold mb-3 mt-16">Informasi</h3>
+        <p class="text-gray-700 text-sm leading-relaxed transition duration-300">
+          JL. Jend Ahmad Yani No.20 Slawi <br />
+          Telp. (0283) 492695 – 4562312 <br />
+          web. <a class="text-green-600 hover:underline" href="https://smknuslawi.sch.id/"
+            target="_blank">https://smknuslawi.sch.id/</a>
+        </p>
+      </div>
     </div>
     <!-- Copyright -->
     <div
-        class="border-t border-gray-200 py-4 px-6 flex flex-col md:flex-row justify-between items-center text-sm text-gray-600 max-w-6xl mx-auto">
-        <p>© 2025 All rights reserved | SMK NU 1 Slawi</p>
-        <p>Design and Developed by <span class="font-bold">FIREOWL</span></p>
+      class="border-t border-gray-200 py-4 px-6 flex flex-col md:flex-row justify-between items-center text-sm text-gray-600 max-w-6xl mx-auto">
+      <p>© 2025 All rights reserved | SMK NU 1 Slawi</p>
+      <p>Design and Developed by <span class="font-bold">FIREOWL</span></p>
     </div>
-</footer>
+  </footer>
 
-<script src="../js/el-nav.js"></script>
-<script src="../js/modul.js"></script>
-<script src="../js/e-learning.js"></script>
-<!-- FontAwesome CDN untuk ikon sosmed -->
-<script crossorigin="anonymous" src="https://kit.fontawesome.com/a076d05399.js"></script>
-<script src="../js/script.js"></script>
-<script src="../js/scroll-animations.js"></script>
-<script src="../js/loading.js"></script>
-<script src="../js/glass-navbar.js"></script>
-<script src="../js/modal.js"></script>
-<script>AOS.init({ once: true, duration: 700, offset: 100, easing: 'ease-out-quart' });</script>
+  <script src="../js/el-nav.js"></script>
+  <script src="../js/modul.js"></script>
+  <script src="../js/e-learning.js"></script>
+  <!-- FontAwesome CDN untuk ikon sosmed -->
+  <script crossorigin="anonymous" src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <script src="../js/script.js"></script>
+  <script src="../js/scroll-animations.js"></script>
+  <script src="../js/loading.js"></script>
+  <script src="../js/glass-navbar.js"></script>
+  <script src="../js/modal.js"></script>
+  <!-- <script src="../js/modules-data.js"></script> -->
+
+  <script>AOS.init({ once: true, duration: 700, offset: 100, easing: 'ease-out-quart' });</script>
 </body>
+
 </html>

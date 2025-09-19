@@ -1,15 +1,16 @@
 // AOS
 window.addEventListener('load', ()=>AOS.init({duration:700,once:true,offset:80}));
 
-// Data dummy modul
+// Data dummy modul (dengan slug untuk routing ke modul-detail)
 const MODULES = [
-  {id:1, kat:'produktif', judul:'Dasar Konfigurasi DHCP Server', guru:'Pak Ahmad', kelas:'tkj12', progres:35, bab:6},
-  {id:2, kat:'matematika', judul:'Persamaan Kuadrat & Aplikasinya', guru:'Bu Nisa', kelas:'tkj12', progres:80, bab:8},
-  {id:3, kat:'bing', judul:'Tenses for Everyday Conversation', guru:'Mr. John', kelas:'rpl12', progres:20, bab:5},
-  {id:4, kat:'bindo', judul:'Teks Eksplanasi & EYD', guru:'Bu Sari', kelas:'mm12', progres:55, bab:7},
-  {id:5, kat:'produktif', judul:'VLAN & Trunking (Cisco/PT)', guru:'Pak Dwi', kelas:'tkj12', progres:10, bab:9},
-  {id:6, kat:'matematika', judul:'Trigonometri Lanjut', guru:'Pak Seto', kelas:'akl12', progres:0, bab:10},
+  {id:1, slug:'produktif-tkj',    kat:'produktif',  judul:'Dasar Konfigurasi DHCP Server',      guru:'Pak Ahmad', kelas:'TKJ12', progres:35, bab:6},
+  {id:2, slug:'matematika-kuadrat', kat:'matematika', judul:'Persamaan Kuadrat & Aplikasinya',   guru:'Bu Nisa',   kelas:'TKJ12', progres:80, bab:8},
+  {id:3, slug:'bing-tenses',      kat:'bing',        judul:'Tenses for Everyday Conversation',  guru:'Mr. John',  kelas:'TKJ12', progres:20, bab:5},
+  {id:4, slug:'bindo-eksplanasi', kat:'bindo',       judul:'Teks Eksplanasi & EYD',             guru:'Bu Sari',   kelas:'MP12',  progres:55, bab:7},
+  {id:5, slug:'produktif-vlan',   kat:'produktif',   judul:'VLAN & Trunking (Cisco/PT)',        guru:'Pak Dwi',   kelas:'TKJ12', progres:10, bab:9},
+  {id:6, slug:'matematika-trigonometri', kat:'matematika', judul:'Trigonometri Lanjut',        guru:'Pak Seto',  kelas:'AKL12', progres:0,  bab:10},
 ];
+
 
 const grid = document.getElementById('moduleGrid');
 const inputQ = document.getElementById('q');
@@ -46,11 +47,14 @@ function card(m){
       </div>
     </div>
     <div class="mt-4 flex justify-end gap-2">
-      <button class="rounded-xl ring-2 ring-hijautua text-hijautua px-4 py-2 text-sm hover:bg-slate-50"><a href="modul-detail.html">Detail</a></button>
-      <button class="rounded-xl bg-hijautua text-white px-4 py-2 text-sm font-semibold hover:opacity-90"><a href="modul-detail.html">${m.progres>0?'Lanjutkan':'Mulai'}</a></button>
+      <a class="rounded-xl ring-2 ring-hijautua text-hijautua px-4 py-2 text-sm hover:bg-slate-50"
+         href="modul-detail.html?m=${m.slug}">Detail</a>
+      <a class="rounded-xl bg-hijautua text-white px-4 py-2 text-sm font-semibold hover:opacity-90"
+         href="modul-detail.html?m=${m.slug}">${m.progres>0?'Lanjutkan':'Mulai'}</a>
     </div>
   </article>`;
 }
+
 
 function render(){
   const q = (inputQ.value||'').toLowerCase();

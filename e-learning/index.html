@@ -70,10 +70,10 @@
 <body class="bg-gray-50 font-poppins overflow-x-hidden">
 
     <!-- Navbar -->
-    <header class="fixed top-4 inset-x-0 z-50">
-        <div
-          class="navbar-glass relative mx-auto w-[90%] max-w-6xl rounded-2xl shadow-lg
-                 flex items-center gap-4 py-3 px-6 ring-1 ring-black/5">
+    <header class="fixed top-4 inset-x-0 z-50" data-el-nav>
+
+        <div class="navbar-glass relative mx-auto w-[90%] max-w-6xl rounded-2xl shadow-lg
+            flex items-center justify-between gap-4 py-3 px-6 ring-1 ring-black/5">
           <!-- Left: Logo -->
           <div class="flex items-center space-x-3 flex-none" id="logo-container">
             <img alt="Logo" class="w-28 md:w-36" src="../assets/logo/Logo Web.png" />
@@ -81,8 +81,8 @@
       
           <!-- Center: NAV (true center on desktop) -->
           <nav
-            class="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2
-                   space-x-6 text-gray-700 font-medium">
+    class="hidden md:flex md:absolute md:left-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2
+           space-x-6 text-gray-700 font-medium">
             <a class="hover:text-hijautua text-sm transition duration-300 hover-underline font-semibold"
                href="../e-learning/index.html">Beranda</a>
             <a class="hover:text-hijautua text-sm transition duration-300 hover-underline font-semibold"
@@ -444,7 +444,6 @@
         <script src="../js/e-learning.js"></script>
         <!-- FontAwesome CDN untuk ikon sosmed -->
         <script crossorigin="anonymous" src="https://kit.fontawesome.com/a076d05399.js"></script>
-        <script src="../js/script.js"></script>
         <script src="../js/scroll-animations.js"></script>
         <script src="../js/loading.js"></script>
         <script src="../js/glass-navbar.js"></script>
